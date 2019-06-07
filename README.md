@@ -1,2 +1,2 @@
-# JDND_internal
-Internal repository for the Java Developer Nanodegree (JDND) program.
+# JEND_internal
+Internal repository for the Java Enterprise Nanodegree (JDND) program.
