@@ -10,10 +10,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.Length;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 @Entity
 @Table(name = "user")
@@ -33,6 +34,18 @@ public class User {
 	@JsonIgnore
     private Cart cart;
 	
+	@JsonProperty(access = Access.WRITE_ONLY)
+	@Column(nullable = false)
+	private String password;
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public Cart getCart() {
 		return cart;
 	}
