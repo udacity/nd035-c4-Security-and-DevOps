@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/auth-course.iml" filepath="$PROJECT_DIR$/auth-course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/nd035-c4-Security-and-DevOps.iml" filepath="$PROJECT_DIR$/.idea/nd035-c4-Security-and-DevOps.iml" />
     </modules>
   </component>
 </project>
