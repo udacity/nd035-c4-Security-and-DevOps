@@ -1,1 +1,0 @@
--- write sql to create member table
