@@ -8,10 +8,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories("com.example.demo.model.persistence.repositories")
 @EntityScan("com.example.demo.model.persistence")
 @SpringBootApplication
-public class SareetaApplication {
+public class eCommerceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SareetaApplication.class, args);
+		SpringApplication.run(eCommerceApplication.class, args);
 	}
 
 }
