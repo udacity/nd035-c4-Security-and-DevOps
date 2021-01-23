@@ -32,9 +32,9 @@ public class User {
 	private String password;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "cart_id", referencedColumnName = "id")
+	@JoinColumn(name = "cart_id", referencedColumnName = "id")
 	@JsonIgnore
-    private Cart cart;
+	private Cart cart;
 	
 	public Cart getCart() {
 		return cart;
