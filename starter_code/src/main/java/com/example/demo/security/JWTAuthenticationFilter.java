@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
-    @Autowired
-    AuthenticationManager authenticationManager;
+
+    private AuthenticationManager authenticationManager;
 
     public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
