@@ -2,6 +2,8 @@ package com.example.demo.controllers;
 
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +24,8 @@ import com.example.demo.model.requests.CreateUserRequest;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
+
+	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -55,12 +59,16 @@ public class UserController {
 		String confirmPassword = createUserRequest.getConfirmPassword();
 
 		if (password.length() < 7 || !password.equals(confirmPassword)) {
+			logger.info("Could not create user {}. Either password does not meet minimum requirement or does not match.", user.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
 
 		user.setPassword(bCryptPasswordEncoder.encode(password));
 
 		userRepository.save(user);
+
+		logger.info("Successfully created user: {}", user.getUsername());
+
 		return ResponseEntity.ok(user);
 	}
 	

@@ -2,6 +2,8 @@ package com.example.demo.security;
 
 import com.example.demo.model.persistence.User;
 import com.example.demo.model.persistence.repositories.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,6 +15,8 @@ import java.util.Collections;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
+    private static final Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);
+
     @Autowired
     private UserRepository userRepository;
 
@@ -21,6 +25,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         User user = userRepository.findByUsername(username);
 
         if (user == null) {
+            logger.error("Error: Could not find user {}", username);
             throw new UsernameNotFoundException(username);
         }
 
