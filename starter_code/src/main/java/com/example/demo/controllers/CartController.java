@@ -22,15 +22,19 @@ import com.example.demo.model.requests.ModifyCartRequest;
 @RestController
 @RequestMapping("/api/cart")
 public class CartController {
+	public CartController( CartRepository cartRepository, ItemRepository itemRepository, UserRepository userRepository) {
+		this.userRepository = userRepository;
+		this.cartRepository = cartRepository;
+		this.itemRepository = itemRepository;
+	}
+
+	private final UserRepository userRepository;
 	
-	@Autowired
-	private UserRepository userRepository;
+
+	private final CartRepository cartRepository;
 	
-	@Autowired
-	private CartRepository cartRepository;
-	
-	@Autowired
-	private ItemRepository itemRepository;
+
+	private final ItemRepository itemRepository;
 	
 	@PostMapping("/addToCart")
 	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
@@ -43,9 +47,11 @@ public class CartController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
+
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.addItem(item.get()));
 		cartRepository.save(cart);
+
 		return ResponseEntity.ok(cart);
 	}
 	
