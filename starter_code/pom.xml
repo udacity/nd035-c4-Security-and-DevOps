@@ -44,6 +44,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/tomcat-maven-plugin -->
+		<dependency>
+		    <groupId>org.codehaus.mojo</groupId>
+		    <artifactId>tomcat-maven-plugin</artifactId>
+		    <version>1.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
