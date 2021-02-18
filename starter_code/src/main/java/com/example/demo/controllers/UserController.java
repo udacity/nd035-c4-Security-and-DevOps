@@ -1,5 +1,7 @@
 package com.example.demo.controllers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +27,15 @@ public class UserController {
 
 	public  final BCryptPasswordEncoder bCryptPasswordEncoder;
 
+	private static final Logger log = LoggerFactory.getLogger(UserController.class);
+
+	public UserController() {
+		userRepository =null;
+		cartRepository = null;
+		bCryptPasswordEncoder = null;
+
+	}
+
 	public UserController(UserRepository userRepository, CartRepository cartRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
 		this.userRepository = userRepository;
 		this.cartRepository = cartRepository;
@@ -45,8 +56,10 @@ public class UserController {
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
-		user.setUsername(createUserRequest.getUsername());
+		var userName =createUserRequest.getUsername();
+		user.setUsername(userName);
 		Cart cart = new Cart();
+		log.info("user name: "+ userName);
 		cartRepository.save(cart);
 		user.setCart(cart);
 
@@ -57,9 +70,9 @@ public class UserController {
 
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getConfirmPassword()));
-		userRepository.save(user);
+		final var save = userRepository.save(user);
 
-		return ResponseEntity.ok(user);
+		return ResponseEntity.ok(save);
 	}
 	
 }
