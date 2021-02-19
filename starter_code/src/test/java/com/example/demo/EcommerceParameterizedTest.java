@@ -9,7 +9,9 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+import static org.junit.Assert.assertEquals;
+
 
 @RunWith(Parameterized.class)
 public class EcommerceParameterizedTest {
@@ -30,7 +32,7 @@ public class EcommerceParameterizedTest {
     }
     @Test
     public void verifyInputName(){
-        assertNotEquals(input, output);
+        assertEquals(input, output);
 
     }
 

@@ -56,7 +56,7 @@ public class UserController {
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
-		var userName =createUserRequest.getUsername();
+		String userName =createUserRequest.getUsername();
 		user.setUsername(userName);
 		Cart cart = new Cart();
 		log.info("user name: "+ userName);
@@ -70,9 +70,9 @@ public class UserController {
 
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getConfirmPassword()));
-		final var save = userRepository.save(user);
+		final User savedUser = userRepository.save(user);
 
-		return ResponseEntity.ok(save);
+		return ResponseEntity.ok(savedUser);
 	}
 	
 }

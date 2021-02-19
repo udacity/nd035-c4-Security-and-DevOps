@@ -1,16 +1,12 @@
 package com.example.demo;
 
 import org.junit.*;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class SareetaApplicationTests {
 
 	@AfterClass
@@ -34,7 +30,6 @@ public class SareetaApplicationTests {
 	}
 
 	@Test
-	@Order(1)
 	public void contextLoads() {
 	}
 
