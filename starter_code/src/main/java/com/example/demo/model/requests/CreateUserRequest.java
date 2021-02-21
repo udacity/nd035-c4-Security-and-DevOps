@@ -1,6 +1,7 @@
 package com.example.demo.model.requests;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.context.annotation.Bean;
 
 import javax.persistence.Column;
 

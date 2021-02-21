@@ -21,30 +21,22 @@ import com.example.demo.model.requests.CreateUserRequest;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
-
 	@Autowired
 	private UserRepository userRepository;
-
 	@Autowired
 	private  CartRepository cartRepository;
-
 	@Autowired
 	public   BCryptPasswordEncoder bCryptPasswordEncoder;
-
 	private static final Logger log = LoggerFactory.getLogger(UserController.class);
-
-
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
 		return ResponseEntity.of(userRepository.findById(id));
 	}
-	
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
 	}
-	
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
@@ -54,16 +46,13 @@ public class UserController {
 		log.info("user name: "+ userName);
 		cartRepository.save(cart);
 		user.setCart(cart);
-
 		if(createUserRequest.getPassword().length() < 7
 				|| !createUserRequest.getConfirmPassword()
 				.equals(createUserRequest.getPassword())){
 			ResponseEntity.badRequest().build();
-
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getConfirmPassword()));
-		final User savedUser = userRepository.save(user);
-
+		userRepository.save(user);
 		return ResponseEntity.ok(user);
 	}
 	

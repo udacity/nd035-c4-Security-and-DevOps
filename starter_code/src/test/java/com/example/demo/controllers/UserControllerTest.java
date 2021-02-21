@@ -89,5 +89,4 @@ public class UserControllerTest {
         assertNotNull("test",u.getUsername());
     }
 
-
 }

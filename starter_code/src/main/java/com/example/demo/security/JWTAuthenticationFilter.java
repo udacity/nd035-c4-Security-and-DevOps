@@ -40,6 +40,7 @@ public class JWTAuthenticationFilter extends  UsernamePasswordAuthenticationFilt
             throw new RuntimeException(e);
         }
     }
+    //After successful login, create JWT and set as Bearer tocken
     @Override
     protected void successfulAuthentication(HttpServletRequest req,
                                             HttpServletResponse res,

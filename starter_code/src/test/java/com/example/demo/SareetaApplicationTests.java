@@ -1,8 +1,7 @@
 package com.example.demo;
 
-import com.example.demo.controllers.CartControllerTest;
-import com.example.demo.controllers.ItemControllerTest;
-import com.example.demo.controllers.UserControllerTest;
+import com.example.demo.controllers.*;
+import com.example.demo.security.UserAuthTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -12,7 +11,9 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         UserControllerTest.class,
         CartControllerTest.class,
-        ItemControllerTest.class
+        ItemControllerTest.class,
+        OrderControllerTest.class,
+        UserAuthTest.class
 
 })
 public class SareetaApplicationTests {
