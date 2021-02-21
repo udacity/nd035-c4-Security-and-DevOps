@@ -17,6 +17,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 @Table(name = "item")
 public class Item {
+	public Item(Long id, String name, BigDecimal price, String description) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.description = description;
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +40,11 @@ public class Item {
 	@Column(nullable = false)
 	@JsonProperty
 	private String description;
-	
+
+	public Item() {
+
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

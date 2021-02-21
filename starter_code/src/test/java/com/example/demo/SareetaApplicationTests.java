@@ -1,43 +1,23 @@
 package com.example.demo;
 
-import org.junit.*;
+import com.example.demo.controllers.CartControllerTest;
+import com.example.demo.controllers.ItemControllerTest;
+import com.example.demo.controllers.UserControllerTest;
+import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.runners.Suite;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+
+@RunWith(Suite.class)
+@Suite.SuiteClasses({
+        UserControllerTest.class,
+        CartControllerTest.class,
+        ItemControllerTest.class
+
+})
 public class SareetaApplicationTests {
-
-	@AfterClass
-	public static void afterClass() throws Exception {
-
-	}
-
-	@Before
-	public void setUp() throws Exception {
-
-	}
-
-	@BeforeClass
-	public static void beforeClass() throws Exception {
-
-	}
-
-	@After
-	public void tearDown() throws Exception {
-
-	}
-
-	@Test
-	public void contextLoads() {
-	}
-
-	@Test
-	public void name() {
-	}
-
-
-
+    @Test
+    public void contextLoads() {
+    }
 
 }

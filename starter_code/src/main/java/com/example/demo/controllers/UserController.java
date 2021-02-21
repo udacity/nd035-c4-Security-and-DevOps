@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,27 +21,18 @@ import com.example.demo.model.requests.CreateUserRequest;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
-	
-	private final UserRepository userRepository;
-	
-	private final CartRepository cartRepository;
 
-	public  final BCryptPasswordEncoder bCryptPasswordEncoder;
+	@Autowired
+	private UserRepository userRepository;
+
+	@Autowired
+	private  CartRepository cartRepository;
+
+	@Autowired
+	public   BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	private static final Logger log = LoggerFactory.getLogger(UserController.class);
 
-	public UserController() {
-		userRepository =null;
-		cartRepository = null;
-		bCryptPasswordEncoder = null;
-
-	}
-
-	public UserController(UserRepository userRepository, CartRepository cartRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
-		this.userRepository = userRepository;
-		this.cartRepository = cartRepository;
-		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-	}
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
@@ -72,7 +64,7 @@ public class UserController {
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getConfirmPassword()));
 		final User savedUser = userRepository.save(user);
 
-		return ResponseEntity.ok(savedUser);
+		return ResponseEntity.ok(user);
 	}
 	
 }
