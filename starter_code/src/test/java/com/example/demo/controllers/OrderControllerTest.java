@@ -55,6 +55,15 @@ public class OrderControllerTest {
         // Test if submit works
         when(userRepository.findByUsername("naruto")).thenReturn(user);
         when(orderRepository.findById(1L)).thenReturn(java.util.Optional.of(userOrder));
+        ResponseEntity<UserOrder> failedResponse = orderController.submit("notNaruto");
+
+        // not found
+        assertNotNull(failedResponse);
+        assertEquals(404, failedResponse.getStatusCodeValue());
+
+        // Test if submit works
+        when(userRepository.findByUsername("naruto")).thenReturn(user);
+        when(orderRepository.findById(1L)).thenReturn(java.util.Optional.of(userOrder));
         ResponseEntity<UserOrder> responseEntity = orderController.submit("naruto");
 
         assertNotNull(responseEntity);
@@ -65,11 +74,16 @@ public class OrderControllerTest {
         when(userRepository.findByUsername("naruto")).thenReturn(user);
         when(orderRepository.findByUser(user)).thenReturn(Collections.singletonList(userOrder));
         ResponseEntity<List<UserOrder>> responseEntity2 = orderController.getOrdersForUser("naruto");
+        ResponseEntity<List<UserOrder>> failedResponseEntity2 = orderController.getOrdersForUser("notNaruo");
 
         assertNotNull(responseEntity2);
         assertEquals(200, responseEntity2.getStatusCodeValue());
         assertEquals(1, responseEntity2.getBody().size());
         assertEquals("ramen", responseEntity2.getBody().get(0).getItems().get(0).getName());
+
+        // when checking the history of invalid user
+        assertNotNull(failedResponseEntity2);
+        assertEquals(404, failedResponseEntity2.getStatusCodeValue());
 
     }
 

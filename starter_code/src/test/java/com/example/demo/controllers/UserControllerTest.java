@@ -40,8 +40,14 @@ public class UserControllerTest {
         CreateUserRequest newUser = new CreateUserRequest();
         newUser.setUsername("johnDoe");
         newUser.setPassword("shipud");
-        newUser.setConfirmPassword("shipud");
+        newUser.setConfirmPassword("ship");
 
+        // when passwords don't match
+        ResponseEntity<User> failedResponse = userController.createUser(newUser);
+        assertNotNull(failedResponse);
+        assertEquals(400, failedResponse.getStatusCodeValue());
+
+        newUser.setConfirmPassword("shipud");
         ResponseEntity<User> response = userController.createUser(newUser);
 
         assertNotNull(response);
@@ -70,9 +76,15 @@ public class UserControllerTest {
         assert body != null;
         when(userRepository.findById(body.getId())).thenReturn(Optional.of(body));
         ResponseEntity<User> response = userController.findById(body.getId());
+        ResponseEntity<User> failedResponse = userController.findById(7L);
 
+        // when user is found
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
+
+        // when user is not found
+        assertNotNull(failedResponse);
+        assertEquals(404, failedResponse.getStatusCodeValue());
     }
 
     @Test
@@ -92,9 +104,15 @@ public class UserControllerTest {
         assert body != null;
         when(userRepository.findByUsername(body.getUsername())).thenReturn(body);
         ResponseEntity<User> response = userController.findByUserName(body.getUsername());
+        ResponseEntity<User> failedResponse = userController.findByUserName("notNaruto");
 
+        // when user is found
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
+
+        // when user is not found
+        assertNotNull(failedResponse);
+        assertEquals(404, failedResponse.getStatusCodeValue());
     }
 
 }
