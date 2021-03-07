@@ -41,12 +41,12 @@ public class CartController {
 		log.info("Add to cart username is ", request.getUsername());
 
 		if(user == null) {
-			log.debug(request.getUsername(), " does not exist");
+			log.warn(request.getUsername(), " does not exist");
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
-			log.debug("item id - ", request.getItemId(), " does not exist");
+			log.warn("item id - ", request.getItemId(), " does not exist");
 
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
@@ -63,13 +63,13 @@ public class CartController {
 		log.info("Remove item to cart username is ", request.getUsername());
 
 		if(user == null) {
-			log.debug(request.getUsername(), " does not exist");
+			log.warn(request.getUsername(), " does not exist");
 
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
-			log.debug("item id - ", request.getItemId(), " does not exist");
+			log.warn("item id - ", request.getItemId(), " does not exist");
 
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}

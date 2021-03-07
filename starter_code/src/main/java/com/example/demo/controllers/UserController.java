@@ -61,7 +61,7 @@ public class UserController {
 
 		if (rawPassword.length() > 7 ||
 				!rawPassword.equals(createUserRequest.getConfirmPassword())) {
-			log.error("Please check password for username ", username);
+			log.warn("Please check password for username ", username);
 
 			return ResponseEntity.badRequest().build();
 		}
