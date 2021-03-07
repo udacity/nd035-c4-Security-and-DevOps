@@ -1,0 +1,146 @@
+2021-03-06 20:19:40,844 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on users-mbp.lan with PID 20440 (/Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps/starter_code/target/classes started by Margarita in /Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps)
+2021-03-06 20:19:40,865 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-03-06 20:19:42,742 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$af71e9e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 20:19:43,069 INFO o.s.w.c.ContextLoader [main] Root WebApplicationContext: initialization completed in 2045 ms
+2021-03-06 20:19:43,339 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-03-06 20:19:43,380 INFO o.h.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-03-06 20:19:43,382 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
+2021-03-06 20:19:43,478 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-03-06 20:19:43,578 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-06 20:19:44,233 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:19:44,803 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78e7b83, org.springframework.security.web.context.SecurityContextPersistenceFilter@350be5ec, org.springframework.security.web.header.HeaderWriterFilter@14983265, org.springframework.web.filter.CorsFilter@6761f75b, org.springframework.security.web.authentication.logout.LogoutFilter@5b634e24, com.example.demo.security.JWTAuthenticationFilter@7c8a91e2, com.example.demo.security.JWTAuthenticationVerficationFilter@c7443f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5464aeec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e41e6ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74e175c7, org.springframework.security.web.session.SessionManagementFilter@724c26e0, org.springframework.security.web.access.ExceptionTranslationFilter@4e67e090, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d3768ce]
+2021-03-06 20:19:44,901 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:19:45,068 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 4.715 seconds (JVM running for 7.159)
+2021-03-06 20:20:01,054 INFO o.s.w.s.DispatcherServlet [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-03-06 20:20:01,078 INFO o.s.w.s.DispatcherServlet [http-nio-8081-exec-1] Completed initialization in 22 ms
+2021-03-06 20:20:57,568 INFO o.h.h.i.QueryTranslatorFactoryInitiator [http-nio-8081-exec-5] HHH000397: Using ASTQueryTranslatorFactory
+2021-03-06 20:30:55,322 INFO o.s.s.c.ThreadPoolTaskExecutor [Thread-3] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:30:55,379 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:31:04,738 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on users-mbp.lan with PID 21138 (/Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps/starter_code/target/classes started by Margarita in /Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps)
+2021-03-06 20:31:04,767 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-03-06 20:31:06,686 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2fd3535b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 20:31:07,061 INFO o.s.w.c.ContextLoader [main] Root WebApplicationContext: initialization completed in 2199 ms
+2021-03-06 20:31:07,321 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-03-06 20:31:07,368 INFO o.h.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-03-06 20:31:07,369 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
+2021-03-06 20:31:07,480 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-03-06 20:31:07,602 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-06 20:31:08,265 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:31:08,808 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@637c8632, org.springframework.security.web.context.SecurityContextPersistenceFilter@50628080, org.springframework.security.web.header.HeaderWriterFilter@5f8d4b51, org.springframework.web.filter.CorsFilter@156eeff1, org.springframework.security.web.authentication.logout.LogoutFilter@6956eb58, com.example.demo.security.JWTAuthenticationFilter@34001c5d, com.example.demo.security.JWTAuthenticationVerficationFilter@30e15628, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1add90e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5036a286, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37ab1b10, org.springframework.security.web.session.SessionManagementFilter@5e5a2b74, org.springframework.security.web.access.ExceptionTranslationFilter@297454f7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1be12e05]
+2021-03-06 20:31:08,987 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:31:09,163 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 5.069 seconds (JVM running for 7.15)
+2021-03-06 20:32:26,726 INFO o.s.s.c.ThreadPoolTaskExecutor [Thread-3] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:32:26,785 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:35:31,149 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on users-mbp.lan with PID 21449 (/Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps/starter_code/target/classes started by Margarita in /Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps)
+2021-03-06 20:35:31,165 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-03-06 20:35:32,977 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$27cbf777] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 20:35:33,342 INFO o.s.w.c.ContextLoader [main] Root WebApplicationContext: initialization completed in 2090 ms
+2021-03-06 20:35:33,645 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-03-06 20:35:33,718 INFO o.h.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-03-06 20:35:33,720 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
+2021-03-06 20:35:33,874 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-03-06 20:35:34,012 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-06 20:35:35,366 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:35:35,962 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7fb9a83c, org.springframework.security.web.context.SecurityContextPersistenceFilter@361483eb, org.springframework.security.web.header.HeaderWriterFilter@72015156, org.springframework.web.filter.CorsFilter@517d9cd5, org.springframework.security.web.authentication.logout.LogoutFilter@85f5f55, com.example.demo.security.JWTAuthenticationFilter@5216532a, com.example.demo.security.JWTAuthenticationVerficationFilter@862624f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35e357b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6fbfd28b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3aa8c337, org.springframework.security.web.session.SessionManagementFilter@bb38c49, org.springframework.security.web.access.ExceptionTranslationFilter@638d624a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46c9ee28]
+2021-03-06 20:35:36,063 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:35:36,338 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 5.898 seconds (JVM running for 8.021)
+2021-03-06 20:38:07,113 INFO o.s.s.c.ThreadPoolTaskExecutor [Thread-3] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:38:07,130 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:38:19,630 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on users-mbp.lan with PID 21666 (/Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps/starter_code/target/classes started by Margarita in /Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps)
+2021-03-06 20:38:19,639 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-03-06 20:38:21,500 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9e1a3de8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 20:38:21,863 INFO o.s.w.c.ContextLoader [main] Root WebApplicationContext: initialization completed in 2043 ms
+2021-03-06 20:38:22,164 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-03-06 20:38:22,226 INFO o.h.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-03-06 20:38:22,229 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
+2021-03-06 20:38:22,474 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-03-06 20:38:22,585 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-06 20:38:23,357 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:38:24,093 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b53e6fc, org.springframework.security.web.context.SecurityContextPersistenceFilter@394331a8, org.springframework.security.web.header.HeaderWriterFilter@4a7e469d, org.springframework.web.filter.CorsFilter@391e2a, org.springframework.security.web.authentication.logout.LogoutFilter@62732be7, com.example.demo.security.JWTAuthenticationFilter@641cea11, com.example.demo.security.JWTAuthenticationVerficationFilter@4e3d36c2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5470753a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b0c38f2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4add4dff, org.springframework.security.web.session.SessionManagementFilter@85f5f55, org.springframework.security.web.access.ExceptionTranslationFilter@129e45eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2fc0ad21]
+2021-03-06 20:38:24,207 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:38:24,380 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 5.717 seconds (JVM running for 10.381)
+2021-03-06 20:38:29,584 INFO o.s.s.c.ThreadPoolTaskExecutor [Thread-3] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:38:29,595 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:38:42,034 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on users-mbp.lan with PID 21700 (/Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps/starter_code/target/classes started by Margarita in /Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps)
+2021-03-06 20:38:42,049 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-03-06 20:38:42,945 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-03-06 20:38:43,059 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 106ms. Found 4 repository interfaces.
+2021-03-06 20:38:43,660 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8696291b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 20:38:43,890 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-06 20:38:43,899 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-03-06 20:38:43,900 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-03-06 20:38:44,008 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-03-06 20:38:44,008 INFO o.s.w.c.ContextLoader [main] Root WebApplicationContext: initialization completed in 1817 ms
+2021-03-06 20:38:44,164 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2021-03-06 20:38:44,266 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-03-06 20:38:44,310 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-03-06 20:38:44,365 INFO o.h.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-03-06 20:38:44,371 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
+2021-03-06 20:38:44,506 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-03-06 20:38:44,611 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-06 20:38:45,282 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:38:45,929 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5773f83d, org.springframework.security.web.context.SecurityContextPersistenceFilter@c6c58ce, org.springframework.security.web.header.HeaderWriterFilter@4271b748, org.springframework.web.filter.CorsFilter@7fcfe065, org.springframework.security.web.authentication.logout.LogoutFilter@647ce968, com.example.demo.security.JWTAuthenticationFilter@7d2baa56, com.example.demo.security.JWTAuthenticationVerficationFilter@6b4a2887, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@178ebac3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f9dbe11, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23b087c3, org.springframework.security.web.session.SessionManagementFilter@4e9695cf, org.springframework.security.web.access.ExceptionTranslationFilter@2d36add1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c31419f]
+2021-03-06 20:38:46,040 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:38:46,171 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8081"]
+2021-03-06 20:38:46,205 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 4.919 seconds (JVM running for 6.743)
+2021-03-06 20:39:06,692 INFO o.a.c.c.C.[.[.[/] [http-nio-8081-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-06 20:39:06,693 INFO o.s.w.s.DispatcherServlet [http-nio-8081-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-03-06 20:39:06,719 INFO o.s.w.s.DispatcherServlet [http-nio-8081-exec-2] Completed initialization in 25 ms
+2021-03-06 20:39:07,336 INFO c.e.d.c.UserController [http-nio-8081-exec-2] username is set to dog
+2021-03-06 20:39:16,107 INFO c.e.d.c.UserController [http-nio-8081-exec-3] username is set to dog
+2021-03-06 20:39:16,110 WARN c.e.d.c.UserController [http-nio-8081-exec-3] Please check password for username dog
+2021-03-06 20:39:47,028 INFO o.h.h.i.QueryTranslatorFactoryInitiator [http-nio-8081-exec-4] HHH000397: Using ASTQueryTranslatorFactory
+2021-03-06 20:39:47,675 INFO c.e.d.c.CartController [http-nio-8081-exec-4] Add to cart username is f
+2021-03-06 20:39:47,675 WARN c.e.d.c.CartController [http-nio-8081-exec-4] f does not exist
+2021-03-06 20:39:50,892 INFO c.e.d.c.CartController [http-nio-8081-exec-6] Add to cart username is dog
+2021-03-06 20:40:01,067 INFO c.e.d.c.OrderController [http-nio-8081-exec-7] dogs does not exist!
+2021-03-06 20:55:42,690 INFO o.s.s.c.ThreadPoolTaskExecutor [Thread-3] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:55:42,770 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:55:42,827 INFO c.z.h.HikariDataSource [Thread-3] HikariPool-1 - Shutdown initiated...
+2021-03-06 20:55:42,845 INFO c.z.h.HikariDataSource [Thread-3] HikariPool-1 - Shutdown completed.
+2021-03-06 20:55:50,350 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on users-mbp.lan with PID 22925 (/Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps/starter_code/target/classes started by Margarita in /Users/Margarita/Desktop/java/forked/nd035-c4-Security-and-DevOps)
+2021-03-06 20:55:50,358 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-03-06 20:55:51,146 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-03-06 20:55:51,216 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 61ms. Found 4 repository interfaces.
+2021-03-06 20:55:51,765 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fba0e363] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-06 20:55:52,043 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8081"]
+2021-03-06 20:55:52,053 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-03-06 20:55:52,054 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-03-06 20:55:52,167 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-03-06 20:55:52,168 INFO o.s.w.c.ContextLoader [main] Root WebApplicationContext: initialization completed in 1766 ms
+2021-03-06 20:55:52,477 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2021-03-06 20:55:52,576 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-03-06 20:55:52,618 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-03-06 20:55:52,676 INFO o.h.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-03-06 20:55:52,684 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
+2021-03-06 20:55:52,818 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-03-06 20:55:52,925 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-06 20:55:53,604 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-06 20:55:54,383 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c3a64b6, org.springframework.security.web.context.SecurityContextPersistenceFilter@17e8caf2, org.springframework.security.web.header.HeaderWriterFilter@3a2a56f6, org.springframework.web.filter.CorsFilter@761b9314, org.springframework.security.web.authentication.logout.LogoutFilter@5cf1bbd3, com.example.demo.security.JWTAuthenticationFilter@20e9c165, com.example.demo.security.JWTAuthenticationVerficationFilter@eabecf5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7488c183, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@542beecb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@417b3642, org.springframework.security.web.session.SessionManagementFilter@160e45c8, org.springframework.security.web.access.ExceptionTranslationFilter@3369e2ce, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d2baa56]
+2021-03-06 20:55:54,490 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-06 20:55:54,620 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8081"]
+2021-03-06 20:55:54,653 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 4.752 seconds (JVM running for 5.982)
+2021-03-06 20:56:17,319 INFO o.a.c.c.C.[.[.[/] [http-nio-8081-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-06 20:56:17,322 INFO o.s.w.s.DispatcherServlet [http-nio-8081-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-03-06 20:56:17,338 INFO o.s.w.s.DispatcherServlet [http-nio-8081-exec-2] Completed initialization in 16 ms
+2021-03-06 20:56:17,666 INFO c.e.d.c.UserController [http-nio-8081-exec-2] username is set to dog
+2021-03-06 20:56:17,780 WARN c.e.d.c.UserController [http-nio-8081-exec-2] Please check password for username dog
+2021-03-06 20:56:22,954 INFO c.e.d.c.UserController [http-nio-8081-exec-3] username is set to dog
+2021-03-06 20:56:23,191 INFO c.e.d.c.UserController [http-nio-8081-exec-3] dog user successfully created
+2021-03-06 21:00:05,597 INFO o.h.h.i.QueryTranslatorFactoryInitiator [http-nio-8081-exec-7] HHH000397: Using ASTQueryTranslatorFactory
+2021-03-06 21:00:06,032 INFO c.e.d.c.OrderController [http-nio-8081-exec-7] order for dogs does not have an order!
+2021-03-06 21:00:10,041 INFO c.e.d.c.OrderController [http-nio-8081-exec-8] order for dog submitted
+2021-03-06 21:00:15,836 INFO c.e.d.c.CartController [http-nio-8081-exec-9] Add to cart username is dog
+2021-03-06 21:00:19,395 INFO c.e.d.c.OrderController [http-nio-8081-exec-10] order for dog submitted

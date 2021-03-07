@@ -35,12 +35,13 @@ public class OrderController {
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
-			log.info(username, " does not exist!");
+			log.info("order for " + username + " does not have an order!");
 
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
 		orderRepository.save(order);
+		log.info("order for " + username + " submitted");
 		return ResponseEntity.ok(order);
 	}
 	
@@ -48,12 +49,12 @@ public class OrderController {
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
-			log.info(username, " does not exist!");
+			log.info(username + " does not exist!");
 
 			return ResponseEntity.notFound().build();
 		}
 
-		log.info(username, " found for getting user order");
+		log.info(username + " found for getting user order");
 		return ResponseEntity.ok(orderRepository.findByUser(user));
 	}
 }

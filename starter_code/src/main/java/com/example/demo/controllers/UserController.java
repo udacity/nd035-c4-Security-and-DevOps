@@ -51,7 +51,7 @@ public class UserController {
 		User user = new User();
 		String username = createUserRequest.getUsername();
 		user.setUsername(username);
-		log.info("username is set to ", username);
+		log.info("username is set to " + username);
 
 		Cart cart = new Cart();
 		cartRepository.save(cart);
@@ -61,7 +61,7 @@ public class UserController {
 
 		if (rawPassword.length() > 7 ||
 				!rawPassword.equals(createUserRequest.getConfirmPassword())) {
-			log.warn("Please check password for username ", username);
+			log.warn("Please check password for username " + username);
 
 			return ResponseEntity.badRequest().build();
 		}
@@ -69,6 +69,7 @@ public class UserController {
 		user.setPassword(bCryptPasswordEncoder.encode(rawPassword));
 
 		userRepository.save(user);
+		log.info(username + " user successfully created");
 		return ResponseEntity.ok(user);
 	}
 
