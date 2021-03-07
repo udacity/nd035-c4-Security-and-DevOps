@@ -1,0 +1,32 @@
+2021-03-06 22:09:46,397 INFO c.e.d.c.CartController [main] Add to cart username is naruto
+2021-03-06 22:09:46,477 INFO c.e.d.c.CartController [main] Remove item to cart username is naruto
+2021-03-06 22:09:46,488 INFO c.e.d.c.ItemController [main] Lookup for item by name - salmon
+2021-03-06 22:09:46,488 INFO c.e.d.c.ItemController [main] Lookup for item by name - salmonella
+2021-03-06 22:09:46,603 INFO c.e.d.c.OrderController [main] order for notNaruto does not have an order!
+2021-03-06 22:09:46,604 INFO c.e.d.c.OrderController [main] order for naruto submitted
+2021-03-06 22:09:46,605 INFO c.e.d.c.OrderController [main] naruto found for getting user order
+2021-03-06 22:09:46,606 INFO c.e.d.c.OrderController [main] notNaruo does not exist!
+2021-03-06 22:09:46,656 INFO c.e.d.c.UserController [main] username is set to johnDoe
+2021-03-06 22:09:46,658 INFO c.e.d.c.UserController [main] johnDoe user successfully created
+2021-03-06 22:09:46,660 INFO c.e.d.c.UserController [main] username is set to johnDoe
+2021-03-06 22:09:46,661 INFO c.e.d.c.UserController [main] johnDoe user successfully created
+2021-03-06 22:09:46,663 INFO c.e.d.c.UserController [main] username is set to johnDoe
+2021-03-06 22:09:46,664 WARN c.e.d.c.UserController [main] Please check password for username johnDoe
+2021-03-06 22:09:46,664 INFO c.e.d.c.UserController [main] username is set to johnDoe
+2021-03-06 22:09:46,668 INFO c.e.d.c.UserController [main] johnDoe user successfully created
+2021-03-06 22:18:27,522 INFO c.e.d.c.CartController [main] Add to cart username is naruto
+2021-03-06 22:18:27,575 INFO c.e.d.c.CartController [main] Remove item to cart username is naruto
+2021-03-06 22:18:27,581 INFO c.e.d.c.ItemController [main] Lookup for item by name - salmon
+2021-03-06 22:18:27,582 INFO c.e.d.c.ItemController [main] Lookup for item by name - salmonella
+2021-03-06 22:18:27,653 INFO c.e.d.c.OrderController [main] order for notNaruto does not have an order!
+2021-03-06 22:18:27,654 INFO c.e.d.c.OrderController [main] order for naruto submitted
+2021-03-06 22:18:27,655 INFO c.e.d.c.OrderController [main] naruto found for getting user order
+2021-03-06 22:18:27,656 INFO c.e.d.c.OrderController [main] notNaruo does not exist!
+2021-03-06 22:18:27,699 INFO c.e.d.c.UserController [main] username is set to johnDoe
+2021-03-06 22:18:27,700 INFO c.e.d.c.UserController [main] johnDoe user successfully created
+2021-03-06 22:18:27,702 INFO c.e.d.c.UserController [main] username is set to johnDoe
+2021-03-06 22:18:27,702 INFO c.e.d.c.UserController [main] johnDoe user successfully created
+2021-03-06 22:18:27,703 INFO c.e.d.c.UserController [main] username is set to johnDoe
+2021-03-06 22:18:27,704 WARN c.e.d.c.UserController [main] Please check password for username johnDoe
+2021-03-06 22:18:27,704 INFO c.e.d.c.UserController [main] username is set to johnDoe
+2021-03-06 22:18:27,705 INFO c.e.d.c.UserController [main] johnDoe user successfully created
