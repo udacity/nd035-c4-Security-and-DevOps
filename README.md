@@ -1,3 +1,14 @@
+# Metrics, Dashboards and Alerts
+
+The code sets up at least one alert (of your choice) for the system. For example:
+Create dashboard for success rate per minute of any one CreateUser and order, and take a screenshot.
+
+Screenshots are provided showing some query results and the alert setup.
+
+![dashboard](splunk-dashboard.png)
+
+![events](splunk-events.png)
+
 # eCommerce Application
 
 In this project, you'll have an opportunity to demonstrate the security and DevOps skills that you learned in this lesson by completing an eCommerce application. You'll start with a template for the complete application, and your goal will be to take this template and add proper authentication and authorization controls so users can only access their data, and that data can only be accessed in a secure way. 
