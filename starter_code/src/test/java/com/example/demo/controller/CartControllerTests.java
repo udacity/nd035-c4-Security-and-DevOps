@@ -45,8 +45,9 @@ public class CartControllerTests {
         val cartResponseEntity = cartController.addToCart(modifyCartRequest);
 
         // Assert
-        val responseCart = cartResponseEntity.getBody();
+        assertEquals(HttpStatus.OK, cartResponseEntity.getStatusCode());
 
+        val responseCart = cartResponseEntity.getBody();
         assertNotNull(responseCart);
         assertEquals(modifyCartRequest.getQuantity(), responseCart.getItems().size());
         assertTrue(responseCart.getItems().contains(foundItem));
@@ -72,8 +73,8 @@ public class CartControllerTests {
         val cartResponseEntity = cartController.addToCart(modifyCartRequest);
 
         // Assert
-        assertNull(cartResponseEntity.getBody());
         assertEquals(HttpStatus.NOT_FOUND, cartResponseEntity.getStatusCode());
+        assertNull(cartResponseEntity.getBody());
 
         verify(userRepositoryMock).findByUsername(modifyCartRequest.getUsername());
     }
@@ -97,8 +98,8 @@ public class CartControllerTests {
         val cartResponseEntity = cartController.addToCart(modifyCartRequest);
 
         // Assert
-        assertNull(cartResponseEntity.getBody());
         assertEquals(HttpStatus.NOT_FOUND, cartResponseEntity.getStatusCode());
+        assertNull(cartResponseEntity.getBody());
 
         verify(userRepositoryMock).findByUsername(modifyCartRequest.getUsername());
         verify(itemRepositoryMock).findById(modifyCartRequest.getItemId());
@@ -133,8 +134,9 @@ public class CartControllerTests {
         val cartResponseEntity = cartController.removeFromCart(modifyCartRequest);
 
         // Assert
-        val responseCart = cartResponseEntity.getBody();
+        assertEquals(HttpStatus.OK, cartResponseEntity.getStatusCode());
 
+        val responseCart = cartResponseEntity.getBody();
         assertNotNull(responseCart);
         assertEquals(0, responseCart.getItems().size());
 
@@ -157,8 +159,8 @@ public class CartControllerTests {
         val cartResponseEntity = cartController.removeFromCart(modifyCartRequest);
 
         // Assert
-        assertNull(cartResponseEntity.getBody());
         assertEquals(HttpStatus.NOT_FOUND, cartResponseEntity.getStatusCode());
+        assertNull(cartResponseEntity.getBody());
 
         verify(userRepositoryMock).findByUsername(modifyCartRequest.getUsername());
     }
@@ -182,8 +184,8 @@ public class CartControllerTests {
         val cartResponseEntity = cartController.removeFromCart(modifyCartRequest);
 
         // Assert
-        assertNull(cartResponseEntity.getBody());
         assertEquals(HttpStatus.NOT_FOUND, cartResponseEntity.getStatusCode());
+        assertNull(cartResponseEntity.getBody());
 
         verify(userRepositoryMock).findByUsername(modifyCartRequest.getUsername());
         verify(itemRepositoryMock).findById(modifyCartRequest.getItemId());
