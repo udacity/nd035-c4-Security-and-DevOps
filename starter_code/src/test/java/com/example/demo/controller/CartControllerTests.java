@@ -191,7 +191,7 @@ public class CartControllerTests {
         verify(itemRepositoryMock).findById(modifyCartRequest.getItemId());
     }
 
-    public ModifyCartRequest getModifyCartRequest() {
+    private ModifyCartRequest getModifyCartRequest() {
         val modifyCartRequest = new ModifyCartRequest();
         modifyCartRequest.setUsername("testUser");
         modifyCartRequest.setItemId(1L);
