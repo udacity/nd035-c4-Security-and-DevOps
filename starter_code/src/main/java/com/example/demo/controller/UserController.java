@@ -6,17 +6,17 @@ import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 import lombok.val;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
 
-    private final static Logger log = Logger.getLogger(UserController.class.getName());
+    private final static Logger log = LoggerFactory.getLogger(UserController.class);
 
     public UserController(UserRepository userRepository, CartRepository cartRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.userRepository = userRepository;
@@ -45,7 +45,7 @@ public class UserController {
 
         if (createUserRequest.getPassword().length() < 7 ||
                 !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
-            log.warning(String.format("Error with user password. Can not create user %s", createUserRequest.getUsername()));
+            log.error(String.format("Error with user password. Can not create user %s", createUserRequest.getUsername()));
             return ResponseEntity.badRequest().build();
         }
 
@@ -56,6 +56,8 @@ public class UserController {
         user.setCart(cart);
         user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
         userRepository.save(user);
+
+        log.info(String.format("User %s was successfully created", createUserRequest.getUsername()));
         return ResponseEntity.ok(user);
     }
 

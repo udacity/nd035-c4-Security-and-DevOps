@@ -1,0 +1,520 @@
+31-03-2021 19:43:45 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:43:45 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:43:46 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:43:46 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:43:46 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:43:46 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:43:46 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:43:46 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:43:46 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:43:46 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:43:46 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:43:46 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:43:46 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:43:46 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:43:46 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:43:46 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:43:46 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:43:46 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:43:46 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:43:46 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:43:46 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:43:46 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:43:46 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:43:46 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:43:46 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:43:46 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:44:11 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:11 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:44:11 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:11 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:44:11 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:11 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:44:11 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:11 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:44:11 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:11 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:44:11 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:11 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:44:11 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:11 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:44:11 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:11 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:44:11 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:11 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:44:11 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:11 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:44:11 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:11 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:11 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:11 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:11 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:12 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:44:19 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:19 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:44:19 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:19 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:44:19 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:19 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:44:19 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:19 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:44:19 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:19 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:44:19 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:19 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:44:19 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:19 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:44:19 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:19 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:44:19 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:19 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:44:19 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:19 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:44:19 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:19 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:19 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:19 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:19 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:19 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:44:25 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:25 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:44:25 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:25 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:44:25 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:25 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:44:25 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:25 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:44:25 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:25 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:44:25 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:25 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:44:26 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:26 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:44:26 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:26 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:44:26 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:26 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:44:26 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:26 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:44:26 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:26 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:26 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:26 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:26 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:26 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:44:31 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:31 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:44:32 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:32 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:44:32 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:32 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:44:32 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:32 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:44:32 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:32 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:44:32 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:32 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:44:32 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:32 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:44:32 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:32 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:44:32 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:32 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:44:32 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:32 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:44:32 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:32 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:32 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:32 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:32 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:32 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:44:38 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:38 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:44:38 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:38 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:44:38 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:38 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:44:38 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:38 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:44:38 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:38 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:44:38 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:38 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:44:38 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:38 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:44:38 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:38 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:44:38 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:38 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:44:38 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:38 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:44:38 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:38 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:38 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:38 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:38 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:38 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:44:44 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:44 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:44:44 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:44 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:44:44 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:44 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:44:44 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:44 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:44:44 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:44 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:44:44 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:44 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:44:44 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:44 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:44:44 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:44 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:44:44 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:44 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:44:44 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:44 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:44:44 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:44 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:44 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:44 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:44 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:44 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:44:50 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:50 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:44:50 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:50 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:44:50 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:50 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:44:50 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:50 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:44:50 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:50 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:44:50 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:50 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:44:50 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:50 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:44:50 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:50 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:44:50 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:50 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:44:50 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:50 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:44:50 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:50 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:50 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:50 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:50 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:51 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:44:57 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:57 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:44:57 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:57 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:44:57 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:57 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:44:57 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:57 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:44:57 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:57 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:44:57 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:44:57 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:44:57 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:57 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:44:57 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:57 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:44:57 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:44:57 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:44:57 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:44:57 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:44:57 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:57 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:57 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:57 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:44:57 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:44:57 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:45:09 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:09 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:45:09 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:09 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:45:09 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:09 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:45:09 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:09 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:45:09 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:09 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:45:09 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:09 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:45:09 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:09 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:45:09 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:09 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:45:09 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:09 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:45:09 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:09 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:45:09 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:09 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:09 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:09 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:09 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:09 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:45:16 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:16 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:45:16 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:16 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:45:16 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:16 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:45:16 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:16 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:45:16 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:16 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:45:16 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:16 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:45:16 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:16 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:45:16 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:16 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:45:16 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:16 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:45:16 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:16 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:45:16 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:16 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:16 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:16 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:16 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:16 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:45:21 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:21 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:45:21 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:21 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:45:21 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:21 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:45:21 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:21 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:45:21 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:21 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:45:21 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:21 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:45:21 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:21 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:45:22 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:22 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:45:22 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:22 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:45:22 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:22 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:45:22 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:22 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:22 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:22 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:22 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:22 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:45:40 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:40 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:45:40 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:40 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:45:40 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:40 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:45:40 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:40 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:45:40 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:40 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:45:40 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:40 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:45:41 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:41 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:45:41 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:41 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:45:41 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:41 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:45:41 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:41 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:45:41 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:41 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:41 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:41 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:41 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:41 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:45:50 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:50 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:45:50 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:50 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:45:50 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:50 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:45:50 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:50 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:45:50 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:50 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:45:50 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:50 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:45:50 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:50 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:45:50 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:50 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:45:50 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:50 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:45:50 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:50 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:45:50 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:50 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:50 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:50 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:50 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:50 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:45:57 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:57 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:45:57 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:57 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:45:57 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:57 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:45:57 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:57 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:45:57 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:57 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:45:57 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:45:57 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:45:57 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:57 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:45:57 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:57 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:45:57 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:45:57 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:45:57 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:45:57 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:45:57 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:57 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:57 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:57 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:45:57 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:45:58 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:46:04 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:04 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:46:04 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:04 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:46:04 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:04 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:46:04 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:04 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:46:04 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:04 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:46:04 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:04 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:46:05 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:46:05 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:46:05 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:46:05 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:46:05 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:46:05 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:46:05 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:46:05 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:46:05 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:05 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:46:05 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:05 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:46:05 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:05 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:46:11 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:11 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:46:11 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:11 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:46:11 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:11 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:46:11 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:11 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:46:11 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:11 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:46:11 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:11 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:46:11 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:46:11 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:46:11 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:46:11 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:46:11 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:46:11 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:46:11 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:46:11 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:46:11 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:11 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:46:11 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:11 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:46:11 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:11 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:46:19 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:19 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:46:19 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:19 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:46:19 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:19 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:46:19 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:19 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:46:19 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:19 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:46:19 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:19 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:46:19 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:46:19 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:46:19 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:46:19 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:46:19 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:46:19 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:46:19 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:46:19 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:46:19 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:19 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:46:19 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:19 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:46:19 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:19 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:46:28 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:28 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:46:28 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:28 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:46:28 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:28 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:46:28 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:28 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:46:28 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:28 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:46:28 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:28 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:46:28 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:46:28 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:46:28 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:46:28 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:46:28 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:46:28 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:46:28 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:46:28 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:46:28 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:28 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:46:28 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:28 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:46:28 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:28 INFO  UserController:60 - User testUser was successfully created
+31-03-2021 19:46:36 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:36 ERROR OrderController:75 - Error: Item with id 1 was not found.
+31-03-2021 19:46:36 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:36 ERROR OrderController:45 - Error: User testUser was not found.
+31-03-2021 19:46:36 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:36 INFO  OrderController:83 - item with id 1 was successfully removed 2-times to the cart for user testUser
+31-03-2021 19:46:36 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:36 ERROR OrderController:50 - Error: Item with id 1 was not found.
+31-03-2021 19:46:36 INFO  OrderController:65 - Removing item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:36 ERROR OrderController:70 - Error: User testUser was not found.
+31-03-2021 19:46:36 INFO  OrderController:40 - Adding item with id 1 2-times to the cart for user testUser
+31-03-2021 19:46:36 INFO  OrderController:58 - item with id 1 was successfully added 2-times to the cart for user testUser
+31-03-2021 19:46:36 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:46:36 ERROR OrderController:50 - Error with fetching orders for user testUser. User was not found.
+31-03-2021 19:46:36 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:46:36 INFO  OrderController:40 - Order for user testUser was successfully submitted
+31-03-2021 19:46:36 INFO  OrderController:46 - Fetching orders for user testUser
+31-03-2021 19:46:36 INFO  OrderController:54 - Successfully fetched orders for user testUser
+31-03-2021 19:46:36 INFO  OrderController:30 - Submitting order for user testUser
+31-03-2021 19:46:36 ERROR OrderController:34 - Error with order for user testUser. User was not found.
+31-03-2021 19:46:36 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:36 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:46:36 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:36 ERROR UserController:48 - Error with user password. Can not create user testUser
+31-03-2021 19:46:36 INFO  UserController:44 - Creating user testUser
+31-03-2021 19:46:36 INFO  UserController:60 - User testUser was successfully created
