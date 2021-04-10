@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'mvn --version'
+        sh 'echo "finally Hello World?"'
       }
     }
 
