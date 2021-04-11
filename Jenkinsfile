@@ -15,7 +15,7 @@ pipeline {
         sh 'mvn -f starter_code/pom.xml -B  -X -DskipTests clean package'
       }
     }
-    stage('test) {
+    stage('test') {
           steps {
             sh 'mvn test'
           }
