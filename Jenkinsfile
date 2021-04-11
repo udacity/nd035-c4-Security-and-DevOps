@@ -9,6 +9,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
+        checkout scm
         sh 'ls -a'
         sh 'mvn -v'
         sh 'cd starter_code'
