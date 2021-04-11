@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'echo "finally Hello World?"'
+        sh 'mvn -v'
+        sh 'mvn compile'
       }
     }
 
