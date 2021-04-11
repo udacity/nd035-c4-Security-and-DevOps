@@ -17,7 +17,7 @@ pipeline {
     }
     stage('test') {
           steps {
-            sh 'mvn test'
+            sh 'mvn -f starter_code/pom.xml test'
           }
           post {
                 always {
