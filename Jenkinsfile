@@ -12,7 +12,7 @@ pipeline {
         sh 'ls -a'
         sh 'mvn -v'
         sh 'cd starter_code'
-        sh 'mvn compile'
+        sh 'mvn -X compile'
       }
     }
 
