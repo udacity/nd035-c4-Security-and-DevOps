@@ -20,10 +20,14 @@ pipeline {
           steps {
             sh 'mvn -f starter_code/pom.xml test'
           }
-          post {
-                always {
-                    junit '**/target/*.xml'
-                }
+   }
+    stage ('deploy') {
+      steps {
+        deploy adapters: [tomcat9(url: 'http://localhost:8888', credentialsId: 'tomcat')]
+                          war: '**/*.war',
+                         contextPath: 'myApp'
+      }
+    }
           }
           }
   }
