@@ -11,6 +11,7 @@ pipeline {
       steps {
         sh 'ls -a'
         sh 'mvn -v'
+        sh 'cd starter_code'
         sh 'mvn compile'
       }
     }
