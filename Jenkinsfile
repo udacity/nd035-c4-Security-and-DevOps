@@ -12,7 +12,7 @@ pipeline {
         sh 'ls -a'
         sh 'mvn -v'
         sh 'cd starter_code'
-        sh 'mvn -B  -X -DskipTests clean package'
+        sh 'mvn -f starter_code/pom.xml -B  -X -DskipTests clean package'
       }
     }
 
