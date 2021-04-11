@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'maven-ci:latest'
+      image 'maven:3-alpine'
     }
 
   }
