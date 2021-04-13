@@ -25,7 +25,7 @@ pipeline {
       steps {
         deploy adapters: [tomcat9(url: 'http://3.122.192.28:8080', credentialsId: 'tomcat')],
                           war: '**/*.war',
-                         contextPath: 'eCommerce'
+                         contextPath: 'auth-course'
       }
     }
   }
