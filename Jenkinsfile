@@ -4,6 +4,9 @@ pipeline {
       image 'maven:3.8-openjdk-15'
       args '-u root -v /root/.m2:/root/.m2'
     }
+    environment {
+      POM_PATH = 'starter_code/pom.xml'
+    }
   }
   stages {
     stage('build') {
@@ -11,13 +14,12 @@ pipeline {
         checkout scm
         sh 'ls -a'
         sh 'mvn -v'
-        sh 'cd starter_code'
-        sh 'mvn -f starter_code/pom.xml -B  -X -DskipTests clean compile package'
+        sh 'mvn -f $POM_PATH -B  -X -DskipTests clean compile package'
       }
     }
     stage('test') {
           steps {
-            sh 'mvn -f starter_code/pom.xml test'
+            sh 'mvn -f $POM_PATH test'
           }
    }
     stage ('deploy') {
