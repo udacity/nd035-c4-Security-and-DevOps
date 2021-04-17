@@ -5,9 +5,9 @@ pipeline {
       args '-u root -v /root/.m2:/root/.m2'
     }
   }
-   environment {
-     POM_PATH = 'starter_code/pom.xml'
-   }
+  environment {
+    POM_PATH = 'starter_code/pom.xml'
+  }
   stages {
     stage('build') {
       steps {
