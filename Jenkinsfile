@@ -14,7 +14,7 @@ pipeline {
         checkout scm
         sh 'ls -a'
         sh 'mvn -v'
-        sh 'mvn -f $POM_PATH -B  -X -DskipTests clean compile package'
+        sh 'mvn -f $POM_PATH -B -DskipTests clean package'
       }
     }
     stage('test') {
