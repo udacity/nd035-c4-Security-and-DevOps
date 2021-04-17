@@ -27,9 +27,9 @@ pipeline {
         TOMCAT_CONTEXT_PATH = 'auth-course'
       }
       steps {
-        deploy adapters: [tomcat9(url: $TOMCAT_URL , credentialsId: $TOMCAT_CREDENTIALS_ID)],
+        deploy adapters: [tomcat9(url: "$TOMCAT_URL", credentialsId: "$TOMCAT_CREDENTIALS_ID")],
                           war: '**/*.war',
-                         contextPath: $TOMCAT_CONTEXT_PATH
+                         contextPath: "$TOMCAT_CONTEXT_PATH"
       }
     }
   }
