@@ -22,19 +22,19 @@ public class Item {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JsonProperty
 	private Long id;
-	
+
 	@Column(nullable = false)
 	@JsonProperty
 	private String name;
-	
+
 	@Column(nullable = false)
 	@JsonProperty
 	private BigDecimal price;
-	
+
 	@Column(nullable = false)
 	@JsonProperty
 	private String description;
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -91,7 +91,7 @@ public class Item {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	
-	
+
+
+
 }
