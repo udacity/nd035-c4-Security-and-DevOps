@@ -20,15 +20,14 @@ import com.example.demo.model.persistence.repositories.UserRepository;
 @RestController
 @RequestMapping("/api/order")
 public class OrderController {
-	
-	
+
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Autowired
 	private OrderRepository orderRepository;
-	
-	
+
+
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
@@ -39,7 +38,7 @@ public class OrderController {
 		orderRepository.save(order);
 		return ResponseEntity.ok(order);
 	}
-	
+
 	@GetMapping("/history/{username}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
