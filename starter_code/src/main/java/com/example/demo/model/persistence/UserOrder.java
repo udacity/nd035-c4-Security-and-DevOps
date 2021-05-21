@@ -27,17 +27,17 @@ public class UserOrder {
 	@JsonProperty
 	@Column
 	private Long id;
-	
+
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JsonProperty
 	@Column
-    private List<Item> items;
-	
+	private List<Item> items;
+
 	@ManyToOne
 	@JoinColumn(name="user_id", nullable = false, referencedColumnName = "id")
 	@JsonProperty
-    private User user;
-	
+	private User user;
+
 	@JsonProperty
 	@Column
 	private BigDecimal total;
@@ -65,7 +65,7 @@ public class UserOrder {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
+
 	public BigDecimal getTotal() {
 		return total;
 	}
@@ -81,5 +81,5 @@ public class UserOrder {
 		order.setUser(cart.getUser());
 		return order;
 	}
-	
+
 }
