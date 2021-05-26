@@ -34,7 +34,5 @@ public class ItemController {
 		List<Item> items = itemRepository.findByName(name);
 		return items == null || items.isEmpty() ? ResponseEntity.notFound().build()
 				: ResponseEntity.ok(items);
-			
 	}
-	
 }
