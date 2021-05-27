@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN" monitorInterval="30">
+    <properties>
+        <property name="LOG_PATTERN">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</property>
+        <property name="APP_LOG_ROOT">c:\\temp\\logs</property>
+    </properties>
+    <appenders>
+        <console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+        </console>
+
+        <RollingFile name="appLog"
+                     fileName="${APP_LOG_ROOT}/udacity-ecommerce-app.log"
+                     filePattern="${APP_LOG_ROOT}/udacity-ecommerce-app-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="500KB" />
+            </Policies>
+            <DefaultRolloverStrategy max="1" />
+        </RollingFile>
+
+    </appenders>
+    <loggers>
+
+    <root level="info">
+        <appender-ref ref="appLog" />
+        <appender-ref ref="Console" />
+    </root>
+
+    <logger name="com.example.demo.controllers" level="trace" additivity="false">
+        <appender-ref ref="appLog" />
+        <appender-ref ref="Console" />
+    </logger>
+
+    </loggers>
+</configuration>
