@@ -1,0 +1,267 @@
+2021-05-27T21:15:53.833+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 5100 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T21:15:53.849+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T21:16:02.856+0200 INFO Started UdacityEcommerceApplication in 9.684 seconds (JVM running for 12.036)
+2021-05-27T21:16:05.703+0200 INFO Create User succeed to include a new User with name: emerson
+2021-05-27T21:16:18.112+0200 INFO Create User succeed to include a new User with name: emerson2
+2021-05-27T21:16:26.202+0200 INFO Create User succeed to include a new User with name: emerson22
+2021-05-27T21:21:48.485+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 6584 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T21:21:48.498+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T21:21:57.146+0200 INFO Started UdacityEcommerceApplication in 9.206 seconds (JVM running for 11.222)
+2021-05-27T21:22:07.948+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 11628 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T21:22:07.958+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T21:22:21.285+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 7972 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T21:22:21.298+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T21:22:29.980+0200 INFO Started UdacityEcommerceApplication in 9.26 seconds (JVM running for 11.28)
+2021-05-27T21:24:44.200+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 18776 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T21:24:44.211+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T21:24:53.722+0200 INFO Started UdacityEcommerceApplication in 10.149 seconds (JVM running for 12.258)
+2021-05-27T21:24:54.686+0200 INFO Create User succeed to include a new User with name: emerson22
+2021-05-27T21:25:55.528+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 11760 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T21:25:55.544+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T21:26:05.597+0200 INFO Started UdacityEcommerceApplication in 10.656 seconds (JVM running for 12.762)
+2021-05-27T21:28:45.142+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 19152 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T21:28:45.155+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T21:28:46.411+0200 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-27T21:28:46.538+0200 INFO Finished Spring Data repository scanning in 108ms. Found 4 repository interfaces.
+2021-05-27T21:28:47.638+0200 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7b95a267] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-27T21:28:48.389+0200 INFO Tomcat initialized with port(s): 8080 (http)
+2021-05-27T21:28:48.443+0200 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-27T21:28:48.465+0200 INFO Starting service [Tomcat]
+2021-05-27T21:28:48.466+0200 INFO Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-05-27T21:28:48.785+0200 INFO Initializing Spring embedded WebApplicationContext
+2021-05-27T21:28:48.785+0200 INFO Root WebApplicationContext: initialization completed in 3519 ms
+2021-05-27T21:28:49.170+0200 INFO HikariPool-1 - Starting...
+2021-05-27T21:28:49.506+0200 INFO HikariPool-1 - Start completed.
+2021-05-27T21:28:49.616+0200 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-27T21:28:49.743+0200 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2021-05-27T21:28:49.746+0200 INFO HHH000206: hibernate.properties not found
+2021-05-27T21:28:50.017+0200 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-05-27T21:28:50.319+0200 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-27T21:28:51.810+0200 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-27T21:28:53.389+0200 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-27T21:28:53.571+0200 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d605657, org.springframework.security.web.context.SecurityContextPersistenceFilter@75507e68, org.springframework.security.web.header.HeaderWriterFilter@5c0d3715, org.springframework.web.filter.CorsFilter@73b10975, org.springframework.security.web.authentication.logout.LogoutFilter@1bcf2c64, com.example.demo.security.JWTAuthenticationFilter@6318ff9, com.example.demo.security.JWTAuthenticationVerficationFilter@69b80603, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50b2ba2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@774189d0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5655278d, org.springframework.security.web.session.SessionManagementFilter@31de8099, org.springframework.security.web.access.ExceptionTranslationFilter@2119b989, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67e628b]
+2021-05-27T21:28:53.883+0200 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-27T21:28:54.327+0200 INFO Starting ProtocolHandler ["http-nio-8080"]
+2021-05-27T21:28:54.427+0200 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-27T21:28:54.432+0200 INFO Started UdacityEcommerceApplication in 9.899 seconds (JVM running for 12.164)
+2021-05-27T21:28:54.771+0200 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-27T21:28:54.771+0200 INFO Initializing Servlet 'dispatcherServlet'
+2021-05-27T21:28:54.788+0200 INFO Completed initialization in 16 ms
+2021-05-27T21:28:55.278+0200 INFO Create User succeed to include a new User with name: emerson22
+2021-05-27T21:28:57.395+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:28:57.395+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:29:42.245+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 16588 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T21:29:42.260+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T21:29:43.535+0200 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-27T21:29:43.710+0200 INFO Finished Spring Data repository scanning in 152ms. Found 4 repository interfaces.
+2021-05-27T21:29:44.861+0200 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$982ff12b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-27T21:29:45.590+0200 INFO Tomcat initialized with port(s): 8080 (http)
+2021-05-27T21:29:45.631+0200 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-27T21:29:45.657+0200 INFO Starting service [Tomcat]
+2021-05-27T21:29:45.658+0200 INFO Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-05-27T21:29:46.018+0200 INFO Initializing Spring embedded WebApplicationContext
+2021-05-27T21:29:46.019+0200 INFO Root WebApplicationContext: initialization completed in 3655 ms
+2021-05-27T21:29:46.427+0200 INFO HikariPool-1 - Starting...
+2021-05-27T21:29:46.865+0200 INFO HikariPool-1 - Start completed.
+2021-05-27T21:29:47.005+0200 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-27T21:29:47.148+0200 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2021-05-27T21:29:47.154+0200 INFO HHH000206: hibernate.properties not found
+2021-05-27T21:29:47.461+0200 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-05-27T21:29:47.757+0200 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-27T21:29:49.297+0200 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-27T21:29:50.640+0200 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-27T21:29:50.797+0200 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@eb1e868, org.springframework.security.web.context.SecurityContextPersistenceFilter@7304ca87, org.springframework.security.web.header.HeaderWriterFilter@12478b4e, org.springframework.web.filter.CorsFilter@71a7cf7c, org.springframework.security.web.authentication.logout.LogoutFilter@524dd373, com.example.demo.security.JWTAuthenticationFilter@7f49df25, com.example.demo.security.JWTAuthenticationVerficationFilter@5b29d699, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13ae87a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f584d0c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a5a973c, org.springframework.security.web.session.SessionManagementFilter@18918d70, org.springframework.security.web.access.ExceptionTranslationFilter@152d2a58, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@39451d92]
+2021-05-27T21:29:51.089+0200 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-27T21:29:51.555+0200 INFO Starting ProtocolHandler ["http-nio-8080"]
+2021-05-27T21:29:51.654+0200 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-27T21:29:51.659+0200 INFO Started UdacityEcommerceApplication in 10.127 seconds (JVM running for 12.48)
+2021-05-27T21:29:52.535+0200 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-27T21:29:52.536+0200 INFO Initializing Servlet 'dispatcherServlet'
+2021-05-27T21:29:52.550+0200 INFO Completed initialization in 14 ms
+2021-05-27T21:29:53.024+0200 INFO Create User succeed to include a new User with name: emerson22
+2021-05-27T21:29:56.875+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:29:56.875+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:29:57.738+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:29:57.739+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:29:58.276+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:29:58.277+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:29:58.731+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:29:58.731+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:04.929+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:04.929+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:05.429+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:05.429+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:05.920+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:05.920+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:06.416+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:06.416+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:06.989+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:06.989+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:07.593+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:07.593+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:08.069+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:08.069+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:08.558+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:08.558+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:09.082+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:09.082+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:09.635+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:09.635+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T21:30:10.237+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-27T21:30:10.237+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-05-27T22:11:22.689+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 19396 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T22:11:22.701+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T22:11:23.900+0200 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-27T22:11:24.041+0200 INFO Finished Spring Data repository scanning in 122ms. Found 4 repository interfaces.
+2021-05-27T22:11:25.145+0200 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8813029b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-27T22:11:25.873+0200 INFO Tomcat initialized with port(s): 8080 (http)
+2021-05-27T22:11:25.900+0200 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-27T22:11:25.925+0200 INFO Starting service [Tomcat]
+2021-05-27T22:11:25.927+0200 INFO Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-05-27T22:11:26.288+0200 INFO Initializing Spring embedded WebApplicationContext
+2021-05-27T22:11:26.289+0200 INFO Root WebApplicationContext: initialization completed in 3502 ms
+2021-05-27T22:11:26.700+0200 INFO HikariPool-1 - Starting...
+2021-05-27T22:11:27.100+0200 INFO HikariPool-1 - Start completed.
+2021-05-27T22:11:27.233+0200 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-27T22:11:27.432+0200 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2021-05-27T22:11:27.436+0200 INFO HHH000206: hibernate.properties not found
+2021-05-27T22:11:27.785+0200 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-05-27T22:11:28.110+0200 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-27T22:11:29.703+0200 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-27T22:11:31.020+0200 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-27T22:11:31.183+0200 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@790f4933, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b86f4cb, org.springframework.security.web.header.HeaderWriterFilter@11896124, org.springframework.web.filter.CorsFilter@6a95c2f6, org.springframework.security.web.authentication.logout.LogoutFilter@1a73f3d1, com.example.demo.security.JWTAuthenticationFilter@15d2ea6b, com.example.demo.security.JWTAuthenticationVerficationFilter@3fc14dc0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4056cdb2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b5a89d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c04ddda, org.springframework.security.web.session.SessionManagementFilter@633cad4d, org.springframework.security.web.access.ExceptionTranslationFilter@752ffce3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49ee3b8d]
+2021-05-27T22:11:31.450+0200 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-27T22:14:44.331+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 18380 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T22:14:44.347+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T22:14:45.583+0200 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-27T22:14:45.713+0200 INFO Finished Spring Data repository scanning in 115ms. Found 4 repository interfaces.
+2021-05-27T22:14:46.717+0200 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5b04c7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-27T22:14:47.430+0200 INFO Tomcat initialized with port(s): 8080 (http)
+2021-05-27T22:14:47.460+0200 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-27T22:14:47.485+0200 INFO Starting service [Tomcat]
+2021-05-27T22:14:47.487+0200 INFO Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-05-27T22:14:47.824+0200 INFO Initializing Spring embedded WebApplicationContext
+2021-05-27T22:14:47.825+0200 INFO Root WebApplicationContext: initialization completed in 3369 ms
+2021-05-27T22:14:48.235+0200 INFO HikariPool-1 - Starting...
+2021-05-27T22:14:48.627+0200 INFO HikariPool-1 - Start completed.
+2021-05-27T22:14:48.758+0200 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-27T22:14:48.893+0200 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2021-05-27T22:14:48.896+0200 INFO HHH000206: hibernate.properties not found
+2021-05-27T23:18:11.190+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 9996 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-05-27T23:18:11.207+0200 INFO No active profile set, falling back to default profiles: default
+2021-05-27T23:18:12.561+0200 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-05-27T23:18:12.711+0200 INFO Finished Spring Data repository scanning in 135ms. Found 4 repository interfaces.
+2021-05-27T23:18:13.817+0200 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7dea300a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-27T23:18:14.627+0200 INFO Tomcat initialized with port(s): 8080 (http)
+2021-05-27T23:18:14.662+0200 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-27T23:18:14.694+0200 INFO Starting service [Tomcat]
+2021-05-27T23:18:14.695+0200 INFO Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-05-27T23:18:15.111+0200 INFO Initializing Spring embedded WebApplicationContext
+2021-05-27T23:18:15.111+0200 INFO Root WebApplicationContext: initialization completed in 3798 ms
+2021-05-27T23:18:15.523+0200 INFO HikariPool-1 - Starting...
+2021-05-27T23:18:15.915+0200 INFO HikariPool-1 - Start completed.
+2021-05-27T23:18:16.053+0200 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-05-27T23:18:16.233+0200 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2021-05-27T23:18:16.238+0200 INFO HHH000206: hibernate.properties not found
+2021-05-27T23:18:16.561+0200 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-05-27T23:18:16.846+0200 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-27T23:18:18.404+0200 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-27T23:18:19.752+0200 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-27T23:18:19.933+0200 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@578c99ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@1018f702, org.springframework.security.web.header.HeaderWriterFilter@1e09c0b, org.springframework.web.filter.CorsFilter@6ca30886, org.springframework.security.web.authentication.logout.LogoutFilter@396c1228, com.example.demo.security.JWTAuthenticationFilter@7bf16972, com.example.demo.security.JWTAuthenticationVerficationFilter@eee26bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a84b6de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75507e68, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d1c8f35, org.springframework.security.web.session.SessionManagementFilter@48f2d51d, org.springframework.security.web.access.ExceptionTranslationFilter@257d3968, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@585672dd]
+2021-05-27T23:18:20.271+0200 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-27T23:18:20.683+0200 INFO Starting ProtocolHandler ["http-nio-8080"]
+2021-05-27T23:18:20.779+0200 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-27T23:18:20.784+0200 INFO Started UdacityEcommerceApplication in 10.365 seconds (JVM running for 12.663)
+2021-05-27T23:39:39.774+0200 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-27T23:39:39.792+0200 INFO Initializing Servlet 'dispatcherServlet'
+2021-05-27T23:39:40.001+0200 INFO Completed initialization in 208 ms
+2021-05-27T23:39:41.382+0200 INFO Create User succeed to include a new User with name: emerson22
+2021-05-28T00:00:24.431+0200 ERROR Create User failed to include a new User with name: emerson22, password not matching the requirements
+2021-05-28T00:01:34.272+0200 ERROR Create User failed to include a new User with name: emerson23, password not matching the requirements
+2021-05-28T00:01:43.676+0200 INFO Create User succeed to include a new User with name: emerson23
+2021-05-28T00:02:01.529+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-05-28T00:02:01.530+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 2"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-06-01T19:05:56.900+0200 INFO Starting UdacityEcommerceApplication on DESKTOP-OQ17IBD with PID 14568 (D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code\target\classes started by fonta in D:\Emerson\Udacity_Java_Web_Developer\5_Security_DevOps\Ecommerce_Project\nd035-c4-Security-and-DevOps\starter_code)
+2021-06-01T19:05:56.910+0200 INFO No active profile set, falling back to default profiles: default
+2021-06-01T19:05:57.766+0200 INFO Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-06-01T19:05:57.960+0200 INFO Finished Spring Data repository scanning in 169ms. Found 4 repository interfaces.
+2021-06-01T19:05:59.887+0200 INFO Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b8dec193] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-01T19:06:01.002+0200 INFO Tomcat initialized with port(s): 8080 (http)
+2021-06-01T19:06:01.018+0200 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2021-06-01T19:06:01.030+0200 INFO Starting service [Tomcat]
+2021-06-01T19:06:01.031+0200 INFO Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-06-01T19:06:01.226+0200 INFO Initializing Spring embedded WebApplicationContext
+2021-06-01T19:06:01.229+0200 INFO Root WebApplicationContext: initialization completed in 4251 ms
+2021-06-01T19:06:01.540+0200 INFO HikariPool-1 - Starting...
+2021-06-01T19:06:01.768+0200 INFO HikariPool-1 - Start completed.
+2021-06-01T19:06:01.845+0200 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-06-01T19:06:01.958+0200 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2021-06-01T19:06:01.961+0200 INFO HHH000206: hibernate.properties not found
+2021-06-01T19:06:02.196+0200 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-06-01T19:06:02.371+0200 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-01T19:06:04.029+0200 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-01T19:06:05.559+0200 WARN spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-01T19:06:05.662+0200 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@498f5728, org.springframework.security.web.context.SecurityContextPersistenceFilter@a84b6de, org.springframework.security.web.header.HeaderWriterFilter@48f2d51d, org.springframework.web.filter.CorsFilter@39451d92, org.springframework.security.web.authentication.logout.LogoutFilter@7f584d0c, com.example.demo.security.JWTAuthenticationFilter@46610fc9, com.example.demo.security.JWTAuthenticationVerficationFilter@1fdd5517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2119b989, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50b2ba2c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2cd877d3, org.springframework.security.web.session.SessionManagementFilter@1018f702, org.springframework.security.web.access.ExceptionTranslationFilter@1e09c0b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38834000]
+2021-06-01T19:06:05.906+0200 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-01T19:06:06.120+0200 INFO Starting ProtocolHandler ["http-nio-8080"]
+2021-06-01T19:06:06.181+0200 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-01T19:06:06.183+0200 INFO Started UdacityEcommerceApplication in 9.638 seconds (JVM running for 11.816)
+2021-06-01T19:07:51.656+0200 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-01T19:07:51.656+0200 INFO Initializing Servlet 'dispatcherServlet'
+2021-06-01T19:07:51.665+0200 INFO Completed initialization in 9 ms
+2021-06-01T19:07:51.924+0200 INFO Create User succeed to include a new User with name: emerson23
+2021-06-01T19:07:57.448+0200 INFO HHH000397: Using ASTQueryTranslatorFactory
+2021-06-01T19:08:12.856+0200 INFO Create User succeed to include a new User with name: emerson
+2021-06-01T19:14:45.540+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-06-01T19:14:45.540+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 2"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-06-01T19:20:44.017+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-06-01T19:20:44.018+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 2"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-06-01T19:20:44.677+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-06-01T19:20:44.678+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 2"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-06-01T19:20:45.318+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-06-01T19:20:45.318+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 2"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-06-01T19:20:45.764+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-06-01T19:20:45.765+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 2"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-06-01T19:20:47.137+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-06-01T19:20:47.137+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 2"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-06-01T19:20:47.663+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-06-01T19:20:47.663+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 2"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-06-01T19:20:50.243+0200 WARN SQL Error: 23505, SQLState: 23505
+2021-06-01T19:20:50.243+0200 ERROR Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 2"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
