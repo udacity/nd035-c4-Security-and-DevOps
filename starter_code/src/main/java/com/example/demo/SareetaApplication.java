@@ -21,3 +21,6 @@ public class SareetaApplication {
 	}
 
 }
+
+//Logging manual:
+//http://www.slf4j.org/manual.html
