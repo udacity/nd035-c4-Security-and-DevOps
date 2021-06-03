@@ -54,4 +54,18 @@ public class UserControllerTest {
         assertEquals("test", u.getUsername());
         assertEquals("thisIsHashed", u.getPassword());
     }
+
+    @Test
+    public void create_user_with_short_password_unhappy_path() throws Exception{
+        //In UserController a ResponseEntity.badRequest().build(); will be returned if the
+        //password is less that 7 characters long, so check for status 400
+        CreateUserRequest r = new CreateUserRequest();
+        r.setUsername("test");
+        r.setPassword("short");
+        r.setConfirmPassword("short");
+
+        final ResponseEntity<User> response = userController.createUser(r);
+        assertNotNull(response);
+        assertEquals(400, response.getStatusCodeValue());
+    }
 }
