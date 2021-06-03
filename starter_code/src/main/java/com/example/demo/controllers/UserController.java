@@ -21,7 +21,7 @@ public class UserController {
 
 	// Used for logging.
 	//public static final Logger log = (Logger) LogManager.getLogger(UserController.class);
-	public static final Logger log2 = LoggerFactory.getLogger(UserController.class);
+	public static final Logger log = LoggerFactory.getLogger(UserController.class);
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -48,7 +48,7 @@ public class UserController {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 		//log.info("Log1: User name set with ", createUserRequest.getUsername());
-		log2.info("Log2: User name set with ", createUserRequest.getUsername());
+		log.info("Log info: User name set with ", createUserRequest.getUsername());
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
@@ -56,6 +56,7 @@ public class UserController {
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
 			//System.out.println("Error - Either length is less than 7 or pass and conf pass do not match. Unable to create ",
 			//		createUserRequest.getUsername());
+			log.warn("Log warn: User set up failed with a too short password for user ", createUserRequest.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
