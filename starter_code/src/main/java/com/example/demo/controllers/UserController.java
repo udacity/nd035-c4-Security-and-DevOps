@@ -47,8 +47,8 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
-		//log.info("Log1: User name set with ", createUserRequest.getUsername());
-		log.info("Log info: User name set with ", createUserRequest.getUsername());
+		//log info
+		log.info("Log info: User name set with = ", createUserRequest.getUsername());
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
@@ -59,7 +59,9 @@ public class UserController {
 			log.warn("Log warn: User set up failed with a too short password for user ", createUserRequest.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
+		log.debug("Debug info: password prior to bCrypt encoding = ", createUserRequest.getPassword());
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
+
 		userRepository.save(user);
 		return ResponseEntity.ok(user);
 	}

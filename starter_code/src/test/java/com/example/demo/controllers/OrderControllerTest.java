@@ -71,7 +71,6 @@ public class OrderControllerTest {
         UserOrder userOrder = userOrderResponseEntity.getBody();
         assertNotNull(userOrder);
         assertEquals(1, userOrder.getItems().size());
-        //assertEquals("Paul", userOrder.getUser().getUsername());
     }
 
     @Test
@@ -81,8 +80,6 @@ public class OrderControllerTest {
         assertEquals(200, userOrderResponseEntity.getStatusCodeValue());
         List<UserOrder> userOrder = userOrderResponseEntity.getBody();
         assertNotNull(userOrder);
-        //UserOrder uo = userOrder.get(0);
-        //assertEquals(1, uo.getItems().size());
     }
 
     @Test

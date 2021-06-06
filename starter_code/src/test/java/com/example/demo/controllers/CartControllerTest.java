@@ -69,7 +69,7 @@ public class CartControllerTest {
     }
     @Test
     public void removeItemFromCart() {
-        // Set up test by adding two items to cart.
+        // Set test up via adding 2 items to cart.
         ModifyCartRequest modifyCartRequest = new ModifyCartRequest();
         modifyCartRequest.setItemId(1L);
         modifyCartRequest.setQuantity(2);
