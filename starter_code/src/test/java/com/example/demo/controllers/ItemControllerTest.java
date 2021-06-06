@@ -62,4 +62,34 @@ public class ItemControllerTest {
         assertNotNull(items);
         assertEquals(1, items.size());
     }
+
+    @Test
+    public void testGetItemsById() {
+        ResponseEntity<Item> response = itemController.getItemById(1L);
+        assertNotNull(response);
+        assertEquals(200, response.getStatusCodeValue());
+        Item item = response.getBody();
+        assertNotNull(item);
+        assertEquals("A widget description", item.getDescription());
+    }
+
+    @Test
+    public void testGetItemsByIdNotFound() {
+        ResponseEntity<Item> response = itemController.getItemById(9L);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void testGetItemsByNamem() {
+        ResponseEntity<List<Item>> response = itemController.getItemsByName("A Widget");
+        assertNotNull(response);
+        assertEquals(200, response.getStatusCodeValue());
+        List<Item> item = response.getBody();
+        assertNotNull(item);
+        assertEquals("A Widget", item.get(0).getName());
+    }
 }
+
+
+

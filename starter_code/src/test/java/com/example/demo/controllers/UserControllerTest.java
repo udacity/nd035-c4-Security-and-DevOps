@@ -35,43 +35,46 @@ public class UserControllerTest {
         User user = new User();
         Cart cart = new Cart();
         user.setId(0);
-        user.setUsername("demo");
-//    user.setPassword("testPassword");
+        user.setUsername("Paul");
+        user.setPassword("testPassword");
         user.setCart(cart);
-        when(userRepository.findByUsername("demo")).thenReturn(user);
+        when(userRepository.findByUsername("Paul")).thenReturn(user);
         when(userRepository.findById(0L)).thenReturn(java.util.Optional.of(user));
-        when(userRepository.findByUsername("someone")).thenReturn(null);
-        }
-    //@Test
-    //public void createUser(){
-    //    // TODO: add and check passwords
-    //    CreateUserRequest createUserRequest = new CreateUserRequest();
-    //    createUserRequest.setUsername("Paul");
-    //    createUserRequest.setPassword("testPW");
-    //    createUserRequest.setConfirmPassword("testPW");
-    //    ResponseEntity<User> responseEntity = userController.createUser(createUserRequest);
-    //    assertNotNull(responseEntity);
-    //    assertEquals(200, responseEntity.getStatusCodeValue());
-    //    User user = responseEntity.getBody();
-    //    assertNotNull(user);
-    //    assertEquals(0, user.getId());
-    //    assertEquals("demo", user.getUsername());
-    //    }
+        when(userRepository.findByUsername("getsomeone")).thenReturn(null);
+    }
+
+    @Test
+    public void createUser(){
+        CreateUserRequest createUserRequest = new CreateUserRequest();
+        createUserRequest.setUsername("Paul");
+        createUserRequest.setPassword("testPassword");
+        createUserRequest.setConfirmPassword("testPassword");
+        ResponseEntity<User> responseEntity = userController.createUser(createUserRequest);
+        assertNotNull(responseEntity);
+        assertEquals(200, responseEntity.getStatusCodeValue());
+        User user = responseEntity.getBody();
+        assertNotNull(user);
+        assertEquals(0, user.getId());
+        assertEquals("Paul", user.getUsername());
+    }
+
     @Test
     public void findUserByUsername(){
-        ResponseEntity<User> userResponseEntity = userController.findByUserName("demo");
+        ResponseEntity<User> userResponseEntity = userController.findByUserName("Paul");
         assertNotNull(userResponseEntity);
         assertEquals(200, userResponseEntity.getStatusCodeValue());
         User user = userResponseEntity.getBody();
         assertNotNull(user);
-        assertEquals("demo", user.getUsername());
-        }
+        assertEquals("Paul", user.getUsername());
+    }
+
     @Test
     public void findUserByUserNameNotFound(){
-        ResponseEntity<User> userResponseEntity = userController.findByUserName("medo");
+        ResponseEntity<User> userResponseEntity = userController.findByUserName("noddy");
         assertNotNull(userResponseEntity);
         assertEquals(404, userResponseEntity.getStatusCodeValue());
-        }
+    }
+
     @Test
     public void findUserById(){
         ResponseEntity<User> userResponseEntity = userController.findById(0L);
@@ -79,70 +82,17 @@ public class UserControllerTest {
         assertEquals(200, userResponseEntity.getStatusCodeValue());
         User user = userResponseEntity.getBody();
         assertNotNull(user);
-        assertEquals("demo", user.getUsername());
-        }
+        assertEquals("Paul", user.getUsername());
+    }
+
     @Test
     public void findUserByIdNotFound(){
-        // TODO this isnt working so lekker
-        ResponseEntity<User> userResponseEntity = userController.findById(999L);
+        ResponseEntity<User> userResponseEntity = userController.findById(88L);
         System.out.println(userResponseEntity);
         assertNotNull(userResponseEntity);
         assertEquals(404, userResponseEntity.getStatusCodeValue());
-        }
-}
-
-/*
-public class UserControllerTest {
-
-    private UserController userController;
-
-    private UserRepository userRepo = mock(UserRepository.class);
-
-    private CartRepository cartRepo = mock(CartRepository.class);
-
-    private BCryptPasswordEncoder encoder = mock(BCryptPasswordEncoder.class);
-
-    @Before
-    public void SetUp() {
-        userController = new UserController();
-        TestUtils.injectObjects(userController, "userRepository", userRepo);
-        TestUtils.injectObjects(userController, "cartRepository", cartRepo);
-        TestUtils.injectObjects(userController, "bCryptPasswordEncoder", encoder);
-    }
-
-    @Test
-    public void create_user_happy_path() throws Exception{
-        //This is an example of "Stubbing".
-        when(encoder.encode("testPassword")).thenReturn("thisIsHashed");
-        //End stubbing example.
-        CreateUserRequest r = new CreateUserRequest();
-        r.setUsername("test");
-        r.setPassword("testPassword");
-        r.setConfirmPassword("testPassword");
-
-        final ResponseEntity<User> response = userController.createUser(r);
-        assertNotNull(response);
-        assertEquals(200, response.getStatusCodeValue());
-        User u = response.getBody();
-        assertNotNull(u);
-        assertEquals(0, u.getId() );
-        assertEquals("test", u.getUsername());
-        assertEquals("thisIsHashed", u.getPassword());
-    }
-
-    @Test
-    public void create_user_with_short_password_unhappy_path() throws Exception{
-        //In UserController a ResponseEntity.badRequest().build(); will be returned if the
-        //password is less that 7 characters long, so check for status 400
-        CreateUserRequest r = new CreateUserRequest();
-        r.setUsername("test");
-        r.setPassword("short");
-        r.setConfirmPassword("short");
-
-        final ResponseEntity<User> response = userController.createUser(r);
-        assertNotNull(response);
-        assertEquals(400, response.getStatusCodeValue());
     }
 }
-*/
+
+
 
