@@ -48,7 +48,7 @@ public class UserController {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 		//log info
-		log.info("Log info: User name set with = ", createUserRequest.getUsername());
+		log.info("Log info: UserController class - start set up for user = ", createUserRequest.getUsername());
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
@@ -56,10 +56,12 @@ public class UserController {
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
 			//System.out.println("Error - Either length is less than 7 or pass and conf pass do not match. Unable to create ",
 			//		createUserRequest.getUsername());
-			log.warn("Log warn: User set up failed with a too short password for user ", createUserRequest.getUsername());
+			log.debug("Debug info: UserController class - password creation issue for = ", createUserRequest.getPassword());
+			log.debug("Debug info: UserController class - password creation issue for user = ", createUserRequest.getUsername());
+
 			return ResponseEntity.badRequest().build();
 		}
-		log.debug("Debug info: password prior to bCrypt encoding = ", createUserRequest.getPassword());
+		log.info("Log info: UserController class - successful set up for User name = ", createUserRequest.getUsername());
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 
 		userRepository.save(user);
