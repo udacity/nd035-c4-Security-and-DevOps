@@ -29,7 +29,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
         if (user == null) {
-            LOGGER.debug("Debug info: UserDetailsServiceImpl class - user name not found  = " + username);
+            LOGGER.debug("DEBUG: USER NAME NOT FOUND FOR = " + username);
             throw new UsernameNotFoundException(username);
         }
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), Collections.emptyList());

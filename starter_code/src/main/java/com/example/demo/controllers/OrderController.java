@@ -39,15 +39,14 @@ public class OrderController {
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
-		LOGGER.info("Log info: OrderController class - start Order set up for user = " + username);
+
 		if(user == null) {
-			LOGGER.debug("Debug info: OrderController class - user null when setting up Order for user = " + username);
+			LOGGER.debug("DEBUG: ORDER SET UP FAILED FOR USER = " + username);
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
 		orderRepository.save(order);
-		LOGGER.info("Log info:  OrderController class - Order set up success for user = " + user.getUsername());
-		LOGGER.info("Log info:  OrderController class - Order set up success for user for order ID = " + order.getId());
+		LOGGER.info("INFO: ORDER SUCCESSFULLY SET UP FOR USER = " + user.getUsername() + " WHERE ORDER ID = " + order.getId());
 		return ResponseEntity.ok(order);
 	}
 	
@@ -55,7 +54,7 @@ public class OrderController {
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
-			LOGGER.debug("Debug info: OrderController class - user null when retrieving Order history for user = " + username);
+			LOGGER.debug("DEBUG: HISTORY SEARCH FAILED FOR USER = " + username);
 			return ResponseEntity.notFound().build();
 		}
 		return ResponseEntity.ok(orderRepository.findByUser(user));
