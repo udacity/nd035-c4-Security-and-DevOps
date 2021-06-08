@@ -56,6 +56,36 @@
 			<!-- <scope>test</scope> comment out scope so can be used in non test class -->
 		</dependency>
 
+		<!-- Add Log4j2 Dependency -->
+		<dependency>
+
+			<groupId>org.springframework.boot</groupId>
+
+			<artifactId>spring-boot-starter</artifactId>
+
+			<exclusions>
+
+				<exclusion>
+
+					<groupId>org.springframework.boot</groupId>
+
+					<artifactId>spring-boot-starter-logging</artifactId>
+
+				</exclusion>
+
+			</exclusions>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.springframework.boot</groupId>
+
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+
+		</dependency>
+		<!-- End Log4j2 -->
+
 
 		<dependency>
 			<groupId>com.h2database</groupId>

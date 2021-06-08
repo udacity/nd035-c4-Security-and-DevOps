@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+//import org.slf4j.LoggerFactory;
 import com.example.demo.model.persistence.Cart;
 import com.example.demo.model.persistence.User;
 import com.example.demo.model.persistence.repositories.CartRepository;
@@ -11,17 +12,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-//Import for logging.
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//Used this resource to configure console and file logging for log4j2 - https://sematext.com/blog/log4j2-tutorial/
+import org.apache.logging.log4j.Logger;
 
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
-
-	// Used for logging.
-	//public static final Logger log = (Logger) LogManager.getLogger(UserController.class);
-	public static final Logger log = LoggerFactory.getLogger(UserController.class);
+	//public static final Logger log = LoggerFactory.getLogger(UserController.class);
+	public static final Logger LOGGER = LogManager.getLogger(UserController.class);
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -47,8 +45,9 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
-		//log info
-		log.info("Log info: UserController class - start set up for user = ", createUserRequest.getUsername());
+
+		LOGGER.info("Log info: UserController class - start set up for user = " + createUserRequest.getUsername());
+
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
@@ -56,12 +55,13 @@ public class UserController {
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
 			//System.out.println("Error - Either length is less than 7 or pass and conf pass do not match. Unable to create ",
 			//		createUserRequest.getUsername());
-			log.debug("Debug info: UserController class - password creation issue for = ", createUserRequest.getPassword());
-			log.debug("Debug info: UserController class - password creation issue for user = ", createUserRequest.getUsername());
+			LOGGER.debug("Debug info: UserController class - password creation issue for = " + createUserRequest.getPassword());
+			LOGGER.debug("Debug info: UserController class - password creation issue for user = " + createUserRequest.getUsername());
 
 			return ResponseEntity.badRequest().build();
 		}
-		log.info("Log info: UserController class - successful set up for User name = ", createUserRequest.getUsername());
+
+		LOGGER.info("Log info: UserController class - successful set up for User name = " + createUserRequest.getUsername());
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 
 		userRepository.save(user);

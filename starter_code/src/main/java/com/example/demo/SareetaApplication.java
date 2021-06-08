@@ -24,3 +24,15 @@ public class SareetaApplication {
 
 //Logging manual:
 //http://www.slf4j.org/manual.html
+
+/*
+https://knowledge.udacity.com/questions/292173    <---- getting logs into Splunk
+https://knowledge.udacity.com/questions/594725
+https://knowledge.udacity.com/questions/500568
+https://knowledge.udacity.com/questions/363757
+https://knowledge.udacity.com/questions/403780
+https://knowledge.udacity.com/questions/344055
+https://knowledge.udacity.com/questions/525320  <--- Good example of Splunk log language etc
+https://knowledge.udacity.com/questions/418388  <--- Good example of Splunk log language etc
+https://www.baeldung.com/log4j-no-appenders-found
+ */
