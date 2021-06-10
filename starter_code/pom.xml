@@ -12,6 +12,7 @@
 	<artifactId>auth-course</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>auth-course</name>
+	<packaging>war</packaging>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
