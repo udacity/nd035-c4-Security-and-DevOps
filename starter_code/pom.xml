@@ -12,6 +12,7 @@
 	<artifactId>auth-course</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>auth-course</name>
+	<packaging>war</packaging>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -32,12 +33,60 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->
 		<dependency>
 			<groupId>com.auth0</groupId>
 			<artifactId>java-jwt</artifactId>
-			<version>3.10.3</version>
+			<version>3.11.0</version>
+		<!-- <version>3.10.3</version> -->
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<!-- https://mvnrepository.com/artifact/junit/junit/4.13.2 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.30</version>
+			<!-- <scope>test</scope> comment out scope so can be used in non test class -->
+		</dependency>
+
+		<!-- Add Log4j2 Dependency -->
+		<dependency>
+
+			<groupId>org.springframework.boot</groupId>
+
+			<artifactId>spring-boot-starter</artifactId>
+
+			<exclusions>
+
+				<exclusion>
+
+					<groupId>org.springframework.boot</groupId>
+
+					<artifactId>spring-boot-starter-logging</artifactId>
+
+				</exclusion>
+
+			</exclusions>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.springframework.boot</groupId>
+
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+
+		</dependency>
+		<!-- End Log4j2 -->
+
 
 		<dependency>
 			<groupId>com.h2database</groupId>

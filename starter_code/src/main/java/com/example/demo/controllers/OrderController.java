@@ -2,6 +2,9 @@ package com.example.demo.controllers;
 
 import java.util.List;
 
+//import org.slf4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +19,8 @@ import com.example.demo.model.persistence.UserOrder;
 import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.OrderRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
+//Used this resource to configure console and file logging for log4j2 - https://sematext.com/blog/log4j2-tutorial/
+import org.apache.logging.log4j.Logger;
 
 @RestController
 @RequestMapping("/api/order")
@@ -27,16 +32,21 @@ public class OrderController {
 	
 	@Autowired
 	private OrderRepository orderRepository;
+
+	public static final Logger LOGGER = LogManager.getLogger(OrderController.class);
 	
 	
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
+
 		if(user == null) {
+			LOGGER.debug("DEBUG: ORDER SET UP FAILED FOR USER = " + username);
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
 		orderRepository.save(order);
+		LOGGER.info("INFO: ORDER SUCCESSFULLY SET UP FOR USER = " + user.getUsername() + " WHERE ORDER ID = " + order.getId());
 		return ResponseEntity.ok(order);
 	}
 	
@@ -44,6 +54,7 @@ public class OrderController {
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
+			LOGGER.debug("DEBUG: HISTORY SEARCH FAILED FOR USER = " + username);
 			return ResponseEntity.notFound().build();
 		}
 		return ResponseEntity.ok(orderRepository.findByUser(user));

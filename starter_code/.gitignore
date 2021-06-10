@@ -1,0 +1,2 @@
+#IntelliJ files to ignore when adding/commit and pushing to Git
+**/.idea
