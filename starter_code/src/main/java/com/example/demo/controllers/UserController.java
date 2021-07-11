@@ -2,6 +2,8 @@ package com.example.demo.controllers;
 
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,8 +34,11 @@ public class UserController {
 	@Autowired
 	BCryptPasswordEncoder bCryptPasswordEncoder;
 
+	private static final Logger log= LoggerFactory.getLogger(UserController.class);
+
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
+		log.info("USER_FOUND");
 		return ResponseEntity.of(userRepository.findById(id));
 	}
 	
@@ -53,11 +58,13 @@ public class UserController {
 		user.setCart(cart);
 		if(createUserRequest.getPassword().length()<7|| !createUserRequest.getConfirmPassword().equals(createUserRequest.getPassword()))
 		{
+			log.error("ERROR:PASSWORD REQUIREMENTS NOT MET");
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 
 		userRepository.save(user);
+		log.info("SUCCESS: USER CREATED SUCCESSFULLY");
 		return ResponseEntity.ok(user);
 	}
 	

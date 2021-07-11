@@ -13,6 +13,7 @@ import static org.mockito.Mockito.when;
 
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.Matchers;
 import org.mockito.Mock;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -51,4 +52,48 @@ public class UserControllerTest {
         assertEquals("test",u.getBody().getUsername());
         assertEquals(200,u.getStatusCodeValue());
     }
+
+    @Test
+    public void checkPasswordSpecification(){
+        when(encoder.encode("abc")).thenReturn("abc");
+        CreateUserRequest req = new CreateUserRequest();
+        req.setUsername("test");
+        req.setPassword("abc");
+        req.setConfirmPassword("abc");
+        ResponseEntity<User> u =userController.createUser(req);
+        assertEquals(400,u.getStatusCodeValue());
+
+    }
+
+    @Test
+    public void test_find_by_userName(){
+        CreateUserRequest req = new CreateUserRequest();
+        req.setUsername("test");
+        req.setPassword("abc");
+        req.setConfirmPassword("abc");
+        User u= new User();
+        u.setUsername("test");
+        u.setId(1);
+        when(userRepo.findByUsername(Matchers.anyString())).thenReturn(u);
+        ResponseEntity<User> userRepsonse= userController.findByUserName("test");
+        assertEquals("test",userRepsonse.getBody().getUsername());
+
+    }
+
+    @Test
+    public void test_find_by_userId(){
+        CreateUserRequest req = new CreateUserRequest();
+        req.setUsername("test");
+        req.setPassword("abc");
+        req.setConfirmPassword("abc");
+        User u= new User();
+        u.setUsername("test");
+        u.setId(Long.valueOf(1));
+        when(userRepo.findById(Matchers.anyLong())).thenReturn(java.util.Optional.of(u));
+        ResponseEntity<User> userRepsonse= userController.findById(Long.valueOf(1));
+        assertEquals(1l,userRepsonse.getBody().getId());
+
+    }
+
+
 }
