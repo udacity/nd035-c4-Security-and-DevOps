@@ -40,12 +40,12 @@ public class CartController {
 	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
-			logger.error("CartController | addTocart | Request not processed | username not found " + request);
+			logger.error("CartController | addTocart | Request not processed | username not found " + request.getUsername());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
-			logger.error("CartController | addTocart | Request not processed | item not found " + request);
+			logger.error("CartController | addTocart | Request not processed | item not found " + request.getUsername());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
@@ -53,7 +53,7 @@ public class CartController {
 			.forEach(i -> cart.addItem(item.get()));
 		cartRepository.save(cart);
 
-		logger.info("CartController | addTocart | Request added to cart " + request);
+		logger.info("CartController | addTocart | Request added to cart " + request.getUsername());
 
 		return ResponseEntity.ok(cart);
 	}
@@ -62,12 +62,12 @@ public class CartController {
 	public ResponseEntity<Cart> removeFromcart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
-			logger.error("CartController | removeFromcart | Request not processed | username not found " + request);
+			logger.error("CartController | removeFromcart | Request not processed | username not found " + request.getUsername());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
-			logger.error("CartController | removeFromcart | Request not processed | item not found " + request);
+			logger.error("CartController | removeFromcart | Request not processed | item not found " + request.getUsername());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
@@ -75,7 +75,7 @@ public class CartController {
 			.forEach(i -> cart.removeItem(item.get()));
 		cartRepository.save(cart);
 
-		logger.info("CartController | removeFromcart | Request processed " + request);
+		logger.info("CartController | removeFromcart | Request processed " + request.getUsername());
 
 		return ResponseEntity.ok(cart);
 	}

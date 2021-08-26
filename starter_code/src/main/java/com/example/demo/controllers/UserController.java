@@ -47,7 +47,7 @@ public class UserController {
 		if(user == null){
 			logger.error("UserController | findByUserName | User with username not found " + username);
 		}else{
-			logger.info("UserController | findByUserName | User with username found" + username);
+			logger.info("UserController | findByUserName | User with username found " + username);
 		}
 
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
@@ -62,13 +62,13 @@ public class UserController {
 		user.setCart(cart);
 		if(createUserRequest.getPassword().length() < 7  ||
 			!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
-			logger.error("UserController | createUser | Error with the password on the user Request" + createUserRequest);
+			logger.error("UserController | createUser | Error with the password on the user Request " + createUserRequest.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
 
-		logger.info("UserController | createUser | user created sucessfully " + user);
+		logger.info("UserController | createUser | user created sucessfully " + user.getUsername());
 		return ResponseEntity.ok(user);
 	}
 	
