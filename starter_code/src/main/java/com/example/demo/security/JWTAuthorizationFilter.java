@@ -16,11 +16,11 @@ import java.util.ArrayList;
 
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 
-public class JWTAuthenticationVerificationFilter extends BasicAuthenticationFilter {
+public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 
 
-    public JWTAuthenticationVerificationFilter(AuthenticationManager authenticationManager) {
-        super(authenticationManager);
+    public JWTAuthorizationFilter(AuthenticationManager authManager) {
+        super(authManager);
     }
 
     @Override

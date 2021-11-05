@@ -39,8 +39,17 @@ public class User {
 	@Column(nullable = false)
 	private String password;
 
-	private String salt;
-	
+
+	public User(){
+	}
+
+	public User(long id, String username, Cart cart, String password){
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.cart = cart;
+	}
+
 	public Cart getCart() {
 		return cart;
 	}
@@ -74,12 +83,5 @@ public class User {
 		this.password = password;
 	}
 
-	public String getSalt() {
-		return salt;
-	}
-
-	public void setSalt(String salt) {
-		this.salt = salt;
-	}
 }
 

@@ -34,6 +34,16 @@ public class Item {
 	@Column(nullable = false)
 	@JsonProperty
 	private String description;
+
+	public Item(){
+	}
+
+	public Item(Long id, String name, BigDecimal price, String description){
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.description = description;
+	}
 	
 	@Override
 	public int hashCode() {
