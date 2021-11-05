@@ -250,3 +250,7 @@ insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505
 2021-11-05 10:17:22.258  INFO 227479 --- [http-nio-8080-exec-7] c.e.demo.controllers.OrderController     : ORDER_REQUEST_SUCCESS! order request successful.
 2021-11-05 10:17:56.872 ERROR 227479 --- [http-nio-8080-exec-8] c.e.demo.controllers.OrderController     : ORDER_REQUEST_FAILURE! username: chinanuchined does not exist.
 2021-11-05 10:17:56.872 ERROR 227479 --- [http-nio-8080-exec-8] c.e.demo.controllers.OrderController     : ORDER_REQUEST_FAILURE! Order request failed.
+2021-11-05 11:33:26.523  INFO 227479 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-05 11:33:26.526  INFO 227479 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-05 11:33:26.528  INFO 227479 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-05 11:33:26.531  INFO 227479 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
