@@ -59,6 +59,7 @@ public class OrderControllerTest {
         Assert.assertEquals(200, response.getStatusCodeValue());
 
         user = new User();
+        //user
         ResponseEntity<UserOrder> newResponse = orderController.submit(user.getUsername());
         Assert.assertEquals(404, newResponse.getStatusCodeValue());
     }
