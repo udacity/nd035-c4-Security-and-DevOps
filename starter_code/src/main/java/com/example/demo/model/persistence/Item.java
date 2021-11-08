@@ -11,16 +11,20 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.example.demo.controllers.OrderController;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Entity
 @Table(name = "item")
 @Getter
 @Setter
 public class Item {
+	private static final Logger log = LoggerFactory.getLogger(Item.class);
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -61,6 +65,8 @@ public class Item {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
+
+		log.debug(String.format("Item.equals() : objects' ids are equal. Id1=%d, id2=%d", id, other.id));
 		return true;
 	}
 
