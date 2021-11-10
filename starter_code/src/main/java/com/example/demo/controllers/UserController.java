@@ -56,12 +56,6 @@ public class UserController {
 		cartRepository.save(cart);
 		user.setCart(cart);
 
-		SecureRandom random = new SecureRandom();
-		byte[] salt = new byte[16];
-		random.nextBytes(salt);
-		String encodedSalt = Base64.getEncoder().encodeToString(salt);
-//		user.setSalt(encodedSalt);
-
 		if(createUserRequest.getPassword().length()<7 ||
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
 			log.error(String.format("Provided password is less than 7 or pass and conf pass do not match. Unable to create user : %s", createUserRequest.getUsername()));
