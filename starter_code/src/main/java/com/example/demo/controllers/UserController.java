@@ -61,7 +61,14 @@ public class UserController {
 			log.error(String.format("Provided password is less than 7 or pass and conf pass do not match. Unable to create user : %s", createUserRequest.getUsername()));
 			return ResponseEntity.badRequest().build();
 		}
-		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
+
+		SecureRandom secureRandom = new SecureRandom();
+		byte[] randomBytes = new byte[16];
+		secureRandom.nextBytes(randomBytes);
+		String salt = Base64.getEncoder().encodeToString(randomBytes);
+		user.setSalt(salt);
+
+		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()+user.getSalt()));
 
 		userRepository.save(user);
 		log.info(String.format("User '%s' has been created", user.getUsername()));

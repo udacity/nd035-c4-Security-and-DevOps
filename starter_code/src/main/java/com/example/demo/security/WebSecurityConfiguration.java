@@ -1,5 +1,7 @@
 package com.example.demo.security;
 
+import com.example.demo.model.persistence.User;
+import com.example.demo.model.persistence.repositories.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,11 +17,14 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private UserDetailsServiceImpl userDetailsService;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private UserRepository userRepository;
 
     public WebSecurityConfiguration(UserDetailsServiceImpl userDetailsService,
-                                    BCryptPasswordEncoder bCryptPasswordEncoder) {
+                                    BCryptPasswordEncoder bCryptPasswordEncoder,
+                                    UserRepository userRepository) {
         this.userDetailsService = userDetailsService;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -28,7 +33,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, SecurityConstants.SIGN_UP_URL).permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .addFilter(new JWTAuthenticationFilter(authenticationManager()))
+                .addFilter(new JWTAuthenticationFilter(authenticationManager(), userRepository))
                 .addFilter(new JWTAuthenticationVerficationFilter(authenticationManager()))
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }

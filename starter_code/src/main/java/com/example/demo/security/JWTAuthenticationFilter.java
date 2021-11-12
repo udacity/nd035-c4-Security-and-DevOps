@@ -1,23 +1,25 @@
 package com.example.demo.security;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.auth0.jwt.JWT;
+import com.example.demo.model.persistence.User;
+import com.example.demo.model.persistence.repositories.UserRepository;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.auth0.jwt.JWT;
-import com.example.demo.model.persistence.User;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import javax.servlet.FilterChain;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
 
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 
@@ -25,8 +27,13 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
     private AuthenticationManager authenticationManager;
 
-    public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
+    private UserRepository userRepository;
+
+    private static final Logger log = LoggerFactory.getLogger(JWTAuthenticationFilter.class);
+
+    public JWTAuthenticationFilter(AuthenticationManager authenticationManager, UserRepository userRepository) {
         this.authenticationManager = authenticationManager;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -35,11 +42,14 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         try {
             User credentials = new ObjectMapper()
                     .readValue(req.getInputStream(), User.class);
+            log.info(String.format("Authentication attempt for a user with username '%s'", credentials.getUsername()));
+
+            User user = userRepository.findByUsername(credentials.getUsername());
 
             return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
                             credentials.getUsername(),
-                            credentials.getPassword(),
+                            credentials.getPassword()+user.getSalt(),
                             new ArrayList<>()));
         } catch (IOException e) {
             throw new RuntimeException(e);
