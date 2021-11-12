@@ -14,6 +14,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static org.mockito.ArgumentMatchers.*;
 
 public class UserControllerTest {
     private UserController userController;
@@ -32,7 +33,7 @@ public class UserControllerTest {
 
     @Test
     public void create_user_happy_path() {
-        when(encoder.encode("testPassword")).thenReturn("thisIsHashed");
+        when(encoder.encode(any(String.class))).thenReturn("thisIsHashed");
         CreateUserRequest request = new CreateUserRequest();
         request.setUsername("testUser");
         request.setPassword("testPassword");
@@ -51,7 +52,7 @@ public class UserControllerTest {
 
     @Test
     public void create_and_find_user() {
-        when(encoder.encode("testPassword")).thenReturn("thisIsHashed");
+        when(encoder.encode(any(String.class))).thenReturn("thisIsHashed");
 
         CreateUserRequest request = new CreateUserRequest();
         request.setUsername("testUser");
