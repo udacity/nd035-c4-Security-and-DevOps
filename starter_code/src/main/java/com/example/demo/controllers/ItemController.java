@@ -17,6 +17,11 @@ import com.example.demo.model.persistence.repositories.ItemRepository;
 public class ItemController {
 
 	@Autowired
+	public ItemController(ItemRepository itemRepository) {
+		this.itemRepository = itemRepository;
+	}
+
+	@Autowired
 	private ItemRepository itemRepository;
 	
 	@GetMapping
