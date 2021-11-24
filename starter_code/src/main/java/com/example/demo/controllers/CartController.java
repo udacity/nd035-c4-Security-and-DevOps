@@ -31,6 +31,17 @@ public class CartController {
 	
 	@Autowired
 	private ItemRepository itemRepository;
+
+	@Autowired
+	public CartController(
+			UserRepository userRepository,
+			CartRepository cartRepository,
+			ItemRepository itemRepository
+	) {
+		this.userRepository = userRepository;
+		this.cartRepository = cartRepository;
+		this.itemRepository = itemRepository;
+	}
 	
 	@PostMapping("/addToCart")
 	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
