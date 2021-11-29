@@ -58,6 +58,34 @@ public class UserControllerTest {
         assertEquals("thisIsHashed", u.getPassword());
     }
 
+    @Test
+    public void findUserById() throws Exception{
+        User mockUser = createMockUser();
+
+        when(userRepo.findById(mockUser.getId())).thenReturn((java.util.Optional.of(mockUser)));
+
+        final ResponseEntity<User> responseEntity = userController.findById(mockUser.getId());
+        User user = responseEntity.getBody();
+
+        assertNotNull(responseEntity);
+        assertEquals(200, responseEntity.getStatusCodeValue());
+
+        assertNotNull(user);
+        assertEquals(mockUser.getId(), user.getId());
+        assertEquals(mockUser.getUsername(),user.getUsername());
+
+    }
+
+
+    //Helper methods
+
+    public User createMockUser (){
+        User mockUser = mock(User.class);
+        mockUser.setId(1L);
+        mockUser.setUsername("mockUserJeremy");
+        return mockUser;
+    }
+
 
 
 
