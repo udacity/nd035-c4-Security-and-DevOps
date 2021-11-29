@@ -76,6 +76,23 @@ public class UserControllerTest {
 
     }
 
+    @Test
+    public void findUserByUserName () throws Exception{
+        User mockUser = createMockUser();
+
+        when(userRepo.findByUsername(mockUser.getUsername())).thenReturn(mockUser);
+
+        final ResponseEntity<User> responseEntity = userController.findByUserName(mockUser.getUsername());
+        User user = responseEntity.getBody();
+
+        assertNotNull(responseEntity);
+        assertEquals(200, responseEntity.getStatusCodeValue());
+
+        assertNotNull(user);
+        assertEquals(mockUser.getId(), user.getId());
+        assertEquals(mockUser.getUsername(), user.getUsername());
+    }
+
 
     //Helper methods
 
