@@ -58,6 +58,35 @@ public class OrderControllerTest {
 
     }
 
+    @Test
+    public void getOrdersForUserTest () throws Exception{
+        User mockUser = createMockUser();
+        List <UserOrder> mockOrderList = new ArrayList<>();
+
+        mockOrderList.add(createUserOrder(mockUser));
+        mockOrderList.add(createUserOrder(mockUser));
+        mockOrderList.add(createUserOrder(mockUser));
+
+        when(userRepo.findByUsername(mockUser.getUsername())).thenReturn(mockUser);
+        when(orderRepo.findByUser(mockUser)).thenReturn(mockOrderList);
+
+        final ResponseEntity<List<UserOrder>> responseEntity = orderController.getOrdersForUser(mockUser.getUsername());
+
+        assertNotNull(responseEntity);
+        assertEquals(200, responseEntity.getStatusCodeValue());
+
+        List<UserOrder> userOrders = responseEntity.getBody();
+
+        assertNotNull(userOrders);
+
+        assertEquals(mockOrderList.size(), userOrders.size());
+
+        for (int i=0; i < mockOrderList.size(); i++){
+            assertEquals(mockOrderList.get(i).getTotal(), userOrders.get(i).getTotal());
+            assertEquals(mockOrderList.get(i).getItems(), userOrders.get(i).getItems());
+        }
+    }
+
 
     //Helper methods
 
