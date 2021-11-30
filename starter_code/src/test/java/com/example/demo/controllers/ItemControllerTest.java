@@ -74,6 +74,26 @@ public class ItemControllerTest {
 
     }
 
+    @Test
+    public void getItemByNameTest(){
+        List<Item> mockItemList = createMockItemList();
+
+        when(itemRepo.findByName("Square Widget")).thenReturn(mockItemList);
+
+        final ResponseEntity<List<Item>> responseEntity = itemController.getItemsByName("Square Widget");
+
+        assertNotNull(responseEntity);
+        assertEquals(200, responseEntity.getStatusCodeValue());
+
+        List<Item> returnedItemList = responseEntity.getBody();
+
+        assertNotNull(returnedItemList);
+        assertEquals(mockItemList.get(1).getName(),returnedItemList.get(1).getName());
+        assertEquals(mockItemList.get(1).getPrice(), returnedItemList.get(1).getPrice());
+        assertEquals(mockItemList.get(1).getDescription(), returnedItemList.get(1).getDescription());
+
+    }
+
     //Helper methods
     private Item createMockItem(Long id, String itemName, BigDecimal itemPrice, String itemDescription){
 
