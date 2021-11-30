@@ -53,6 +53,27 @@ public class ItemControllerTest {
         }
     }
 
+    @Test
+    public void getItemByIdTest(){
+        Item mockItem = createMockItem(1L,"Round Widget", new BigDecimal("2.30"),
+                "A widget that is round" );
+
+        when(itemRepo.findById(mockItem.getId())).thenReturn(java.util.Optional.of(mockItem));
+
+        final ResponseEntity<Item> responseEntity = itemController.getItemById(mockItem.getId());
+
+        assertNotNull(responseEntity);
+        assertEquals(200, responseEntity.getStatusCodeValue());
+
+        Item returnedItem = responseEntity.getBody();
+
+        assertNotNull(returnedItem);
+        assertEquals(mockItem.getName(),returnedItem.getName());
+        assertEquals(mockItem.getPrice(), returnedItem.getPrice());
+        assertEquals(mockItem.getDescription(), returnedItem.getDescription());
+
+    }
+
     //Helper methods
     private Item createMockItem(Long id, String itemName, BigDecimal itemPrice, String itemDescription){
 
