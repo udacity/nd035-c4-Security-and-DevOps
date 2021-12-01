@@ -41,6 +41,7 @@ public class CartControllerTest {
         TestUtils.injectObject(cartController, "itemRepository", itemRepo);
     }
 
+    //Happy path
     @Test
     public void addToCartTest() throws Exception{
         User mockUser = createMockUser();
@@ -70,6 +71,21 @@ public class CartControllerTest {
         assertEquals(mockUser.getCart().getUser(), returnedCart.getUser());
         assertEquals(mockUser.getCart().getTotal(), returnedCart.getTotal());
 
+    }
+
+    //Test user exists before looking up item in ItemRepository
+    @Test
+    public void addToCartNullUserTest() throws Exception{
+        User mockNullUser = new User();
+        Item mockNullItem = createMockItem(1L, "Round Widget", new BigDecimal("2.30"),
+                "A widget that is round");
+
+        ModifyCartRequest request = createModifyCartRequest(mockNullUser, mockNullItem);
+
+        final ResponseEntity<Cart> response = cartController.addTocart(request);
+
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
     }
 
     @Test
