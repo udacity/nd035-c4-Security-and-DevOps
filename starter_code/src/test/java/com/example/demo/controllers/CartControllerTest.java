@@ -77,10 +77,26 @@ public class CartControllerTest {
     @Test
     public void addToCartNullUserTest() throws Exception{
         User mockNullUser = new User();
-        Item mockNullItem = createMockItem(1L, "Round Widget", new BigDecimal("2.30"),
+        Item mockItem = createMockItem(1L, "Round Widget", new BigDecimal("2.30"),
                 "A widget that is round");
 
-        ModifyCartRequest request = createModifyCartRequest(mockNullUser, mockNullItem);
+        ModifyCartRequest request = createModifyCartRequest(mockNullUser, mockItem);
+
+        final ResponseEntity<Cart> response = cartController.addTocart(request);
+
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void addToCartItemNotFoundTest() throws Exception{
+        User mockUser = createMockUser();
+        Item mockItem = createMockItem(1L, "Round Widget", new BigDecimal("2.30"),
+                "A widget that is round");
+
+        ModifyCartRequest request = createModifyCartRequestForItemNotFound(mockUser, 4L);
+
+        when(userRepo.findByUsername(mockUser.getUsername())).thenReturn(mockUser);
 
         final ResponseEntity<Cart> response = cartController.addTocart(request);
 
@@ -163,6 +179,15 @@ public class CartControllerTest {
         ModifyCartRequest modifyCartRequest = new ModifyCartRequest();
         modifyCartRequest.setUsername(user.getUsername());
         modifyCartRequest.setItemId(item.getId());
+        modifyCartRequest.setQuantity(1);
+
+        return modifyCartRequest;
+    }
+
+    private ModifyCartRequest createModifyCartRequestForItemNotFound(User user, Long itemId){
+        ModifyCartRequest modifyCartRequest = new ModifyCartRequest();
+        modifyCartRequest.setUsername(user.getUsername());
+        modifyCartRequest.setItemId(itemId);
         modifyCartRequest.setQuantity(1);
 
         return modifyCartRequest;
