@@ -7,6 +7,7 @@ import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -15,15 +16,16 @@ import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+@SpringBootTest
 public class UserControllerTest {
 
     private UserController userController;
 
-    private UserRepository userRepo = mock(UserRepository.class);
+    private final UserRepository userRepo = mock(UserRepository.class);
 
-    private CartRepository cartRepo = mock(CartRepository.class);
+    private final CartRepository cartRepo = mock(CartRepository.class);
 
-    private BCryptPasswordEncoder encoder = mock(BCryptPasswordEncoder.class);
+    private final BCryptPasswordEncoder encoder = mock(BCryptPasswordEncoder.class);
 
     @Before
     public void setUp(){
@@ -34,7 +36,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void createUser() throws Exception{
+    public void createUserTest() throws Exception{
 
         when(encoder.encode("testPassword")).thenReturn("thisIsHashed");
 
@@ -59,7 +61,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void findUserById() throws Exception{
+    public void findUserByIdTest() throws Exception{
         User mockUser = createMockUser();
 
         when(userRepo.findById(mockUser.getId())).thenReturn((java.util.Optional.of(mockUser)));
@@ -76,8 +78,24 @@ public class UserControllerTest {
 
     }
 
+    //Test password length check in createUser method
     @Test
-    public void findUserByUserName () throws Exception{
+    public void userPasswordLengthTest() throws Exception{
+        CreateUserRequest r = new CreateUserRequest();
+
+
+        r.setUsername("Jeremy");
+        r.setPassword("test");
+        r.setConfirmPassword("test");
+
+        final ResponseEntity<User> response = userController.createUser(r);
+
+        assertNotNull(response);
+        assertEquals(400, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void findUserByUserNameTest () throws Exception{
         User mockUser = createMockUser();
 
         when(userRepo.findByUsername(mockUser.getUsername())).thenReturn(mockUser);
@@ -93,17 +111,13 @@ public class UserControllerTest {
         assertEquals(mockUser.getUsername(), user.getUsername());
     }
 
-
     //Helper methods
 
-    public User createMockUser (){
+    private User createMockUser (){
         User mockUser = mock(User.class);
         mockUser.setId(1L);
         mockUser.setUsername("mockUserJeremy");
         return mockUser;
     }
-
-
-
 
 }
