@@ -73,7 +73,7 @@ public class CartControllerTest {
 
     }
 
-    //Test user exists before looking up item in ItemRepository
+    //Test user exists in addToCart method
     @Test
     public void addToCartNullUserTest() throws Exception{
         User mockNullUser = new User();
@@ -88,6 +88,7 @@ public class CartControllerTest {
         assertEquals(404, response.getStatusCodeValue());
     }
 
+    //test item exists in addToCart method
     @Test
     public void addToCartItemNotFoundTest() throws Exception{
         User mockUser = createMockUser();
@@ -133,6 +134,21 @@ public class CartControllerTest {
         assertEquals(mockUser.getCart().getUser(), returnedCart.getUser());
         assertEquals(mockUser.getCart().getTotal(), returnedCart.getTotal());
 
+    }
+
+    //Test user exists before removeFromCart
+    @Test
+    public void removeFromCartNullUserTest() throws Exception{
+        User mockNullUser = new User();
+        Item mockItem = createMockItem(1L, "Round Widget", new BigDecimal("2.30"),
+                "A widget that is round");
+
+        ModifyCartRequest request = createModifyCartRequest(mockNullUser, mockItem);
+
+        final ResponseEntity<Cart> response = cartController.removeFromcart(request);
+
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
     }
 
     //Helper methods
