@@ -47,7 +47,7 @@ public class CartControllerTest {
         Item mockItem = createMockItem(1L, "Round Widget", new BigDecimal("2.30"),
                 "A widget that is round");
 
-        ModifyCartRequest request = createModifyRequest(mockUser, mockItem);
+        ModifyCartRequest request = createModifyCartRequest(mockUser, mockItem);
 
         when(userRepo.findByUsername(mockUser.getUsername())).thenReturn(mockUser);
         when(itemRepo.findById(mockItem.getId())).thenReturn(java.util.Optional.of(mockItem));
@@ -62,6 +62,37 @@ public class CartControllerTest {
 
         List<Item> expectedCartItems = mockUser.getCart().getItems();
         expectedCartItems.add(mockItem);
+
+        for (int i = 1; i<expectedCartItems.size(); i++){
+            assertEquals(expectedCartItems.get(i), returnedCart.getItems().get(i));
+        }
+
+        assertEquals(mockUser.getCart().getUser(), returnedCart.getUser());
+        assertEquals(mockUser.getCart().getTotal(), returnedCart.getTotal());
+
+    }
+
+    @Test
+    public void removeFromCartTest() throws Exception{
+        User mockUser = createMockUser();
+        Item mockItem = createMockItem(1L, "Round Widget", new BigDecimal("2.30"),
+                "A widget that is round");
+
+        ModifyCartRequest request = createModifyCartRequest(mockUser, mockItem);
+
+        when(userRepo.findByUsername(mockUser.getUsername())).thenReturn(mockUser);
+        when(itemRepo.findById(mockItem.getId())).thenReturn(java.util.Optional.of(mockItem));
+
+        final ResponseEntity<Cart> response = cartController.removeFromcart(request);
+
+        assertNotNull(response);
+        assertEquals(200, response.getStatusCodeValue());
+
+        Cart returnedCart = response.getBody();
+        assertNotNull(returnedCart);
+
+        List<Item> expectedCartItems = mockUser.getCart().getItems();
+        expectedCartItems.remove(mockItem);
 
         for (int i = 1; i<expectedCartItems.size(); i++){
             assertEquals(expectedCartItems.get(i), returnedCart.getItems().get(i));
@@ -112,7 +143,7 @@ public class CartControllerTest {
         return mockCart;
     }
 
-    private ModifyCartRequest createModifyRequest(User user, Item item){
+    private ModifyCartRequest createModifyCartRequest(User user, Item item){
         ModifyCartRequest modifyCartRequest = new ModifyCartRequest();
         modifyCartRequest.setUsername(user.getUsername());
         modifyCartRequest.setItemId(item.getId());
