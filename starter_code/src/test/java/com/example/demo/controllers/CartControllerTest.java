@@ -162,7 +162,7 @@ public class CartControllerTest {
 
         when(userRepo.findByUsername(mockUser.getUsername())).thenReturn(mockUser);
 
-        final ResponseEntity<Cart> response = cartController.addTocart(request);
+        final ResponseEntity<Cart> response = cartController.removeFromcart(request);
 
         assertNotNull(response);
         assertEquals(404, response.getStatusCodeValue());
