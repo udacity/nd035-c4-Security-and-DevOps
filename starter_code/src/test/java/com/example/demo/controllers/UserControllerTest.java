@@ -94,6 +94,22 @@ public class UserControllerTest {
         assertEquals(400, response.getStatusCodeValue());
     }
 
+    //Test password length check in createUser method
+    @Test
+    public void checkConfirmPasswordTest() throws Exception{
+        CreateUserRequest r = new CreateUserRequest();
+
+
+        r.setUsername("Jeremy");
+        r.setPassword("testPassword");
+        r.setConfirmPassword("testPasasword");
+
+        final ResponseEntity<User> response = userController.createUser(r);
+
+        assertNotNull(response);
+        assertEquals(400, response.getStatusCodeValue());
+    }
+
     @Test
     public void findUserByUserNameTest () throws Exception{
         User mockUser = createMockUser();
