@@ -58,6 +58,17 @@ public class OrderControllerTest {
 
     }
 
+    //Test user exists in submit order method
+    @Test
+    public void submitOrderNullUserTest() throws Exception{
+        User mockNullUser = new User();
+
+        final ResponseEntity<UserOrder> response = orderController.submit(mockNullUser.getUsername());
+
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
     @Test
     public void getOrdersForUserTest () throws Exception{
         User mockUser = createMockUser();
@@ -86,7 +97,6 @@ public class OrderControllerTest {
             assertEquals(mockOrderList.get(i).getItems(), userOrders.get(i).getItems());
         }
     }
-
 
     //Helper methods
 
