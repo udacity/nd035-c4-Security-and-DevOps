@@ -151,6 +151,24 @@ public class CartControllerTest {
         assertEquals(404, response.getStatusCodeValue());
     }
 
+    //test item exists in removeFromCart method
+    @Test
+    public void removeFromItemNotFoundTest() throws Exception{
+        User mockUser = createMockUser();
+        Item mockItem = createMockItem(1L, "Round Widget", new BigDecimal("2.30"),
+                "A widget that is round");
+
+        ModifyCartRequest request = createModifyCartRequestForItemNotFound(mockUser, 4L);
+
+        when(userRepo.findByUsername(mockUser.getUsername())).thenReturn(mockUser);
+
+        final ResponseEntity<Cart> response = cartController.addTocart(request);
+
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+
     //Helper methods
 
     private User createMockUser (){
