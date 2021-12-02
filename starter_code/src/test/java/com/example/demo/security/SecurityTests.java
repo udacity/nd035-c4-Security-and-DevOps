@@ -39,15 +39,14 @@ public class SecurityTests {
     }
 
     @Test
-    public void unauthenticatedUsersTest() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/cart")).andExpect(status().isForbidden());
+    public void testGetOrderHistoryWithoutToken() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders
+                .get("/api/order/history/jeremy"))
+                .andExpect(status().isForbidden());
     }
 
     @Test
     public void testGetOrderHistoryWithToken() throws Exception{
-
-        //Create user
-
 
         // try to access order history with token
 
