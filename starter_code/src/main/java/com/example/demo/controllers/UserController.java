@@ -46,8 +46,11 @@ public class UserController {
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
-		if (createUserRequest.getPassword().length()<7 ||
-				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
+		if (createUserRequest.getPassword().length()<7 ){
+			log.error("User: password less than 7 characters");
+			return ResponseEntity.badRequest().build();
+		} else if(!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
+			log.error("User: passwords not the same");
 			return ResponseEntity.badRequest().build();
 		}
 
