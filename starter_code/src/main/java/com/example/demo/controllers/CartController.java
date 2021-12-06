@@ -45,6 +45,8 @@ public class CartController {
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
+			String logMessage = "Cart: add to cart: item not found";
+			log.error(logMessage);
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 
@@ -69,6 +71,8 @@ public class CartController {
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
+			String logMessage = "Cart: remove from cart: item not found";
+			log.error(logMessage);
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 
