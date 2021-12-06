@@ -39,15 +39,19 @@ public class CartController {
 	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
+			String logMessage = "Cart: add to cart: user not found";
+			log.error(logMessage);
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
+			String logMessage = "Cart: add to cart: item not found";
+			log.error(logMessage);
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 
 		String logMessage = "Cart: item added to cart: " + request.getItemId() +
-				"User: Username: " + request.getUsername();
+				"; User: Username: " + request.getUsername();
 		log.info(logMessage);
 
 		Cart cart = user.getCart();
@@ -61,10 +65,14 @@ public class CartController {
 	public ResponseEntity<Cart> removeFromcart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
+			String logMessage = "Cart: remove from cart: user not found";
+			log.error(logMessage);
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
+			String logMessage = "Cart: remove from cart: item not found";
+			log.error(logMessage);
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 
