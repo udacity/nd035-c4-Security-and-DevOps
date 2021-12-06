@@ -33,6 +33,8 @@ public class ItemController {
 	public ResponseEntity<Item> getItemById(@PathVariable Long id) {
 		Item retrievedItem = itemRepository.findById(id).orElse(null);
 		if(retrievedItem == null) {
+			String logMessage = "Item: get by Id: item not found";
+			log.error(logMessage);
 			return ResponseEntity.notFound().build();
 		}
 		String logMessage = "Item: item retrieved: item id: " + retrievedItem.getId();
@@ -45,11 +47,16 @@ public class ItemController {
 
 		List<Item> items = itemRepository.findByName(name);
 
+		if (items == null || items.isEmpty()) {
+			String logMessage = "Item: get by name: items not found";
+			log.error(logMessage);
+			return ResponseEntity.notFound().build();
+		}
+
 		String logMessage = "Item: item retrieved: item name: " + name;
 		log.info(logMessage);
-		return items == null || items.isEmpty() ? ResponseEntity.notFound().build()
-				: ResponseEntity.ok(items);
-			
+		return ResponseEntity.ok(items);
+
 	}
 	
 }
