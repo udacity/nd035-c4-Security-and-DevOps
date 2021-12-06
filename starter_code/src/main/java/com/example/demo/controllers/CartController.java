@@ -51,7 +51,7 @@ public class CartController {
 		}
 
 		String logMessage = "Cart: item added to cart: " + request.getItemId() +
-				"User: Username: " + request.getUsername();
+				"; User: Username: " + request.getUsername();
 		log.info(logMessage);
 
 		Cart cart = user.getCart();
