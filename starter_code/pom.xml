@@ -59,7 +59,7 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.25</version>
-			<scope>test</scope>
+<!--			<scope>test</scope>-->
 		</dependency>
 
 		<dependency>
@@ -97,6 +97,14 @@
 			<plugin>
  		               	<groupId>org.apache.maven.plugins</groupId>
                 		<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
