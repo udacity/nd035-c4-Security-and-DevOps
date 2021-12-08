@@ -37,7 +37,7 @@ public class OrderController {
 		orderRepository.save(order);
 
 		String logMessage = "Order: order submitted: order value: " + order.getTotal() +
-				"User: Username: " + username;
+				" User: Username: " + username;
 		log.info(logMessage);
 
 		return ResponseEntity.ok(order);
