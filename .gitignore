@@ -1,7 +1,13 @@
 #.idea/
 
 
-/target/
+# ignore target controller classes
+starter_code/auth-course.iml
+starter_code/target/classes/application.properties
+starter_code/target/classes/com/example/demo/controllers/CartController.class
+starter_code/target/classes/com/example/demo/controllers/ItemController.class
+starter_code/target/classes/com/example/demo/controllers/OrderController.class
+starter_code/target/classes/com/example/demo/controllers/UserController.class
 
 auth-course.iml
 
