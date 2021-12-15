@@ -63,8 +63,8 @@ public class SecurityTests {
 
         // try to access order history with token
 
-        String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqZXJlbXlQIiwiZXhwIjoxNjM5MjQwNDI0fQ." +
-                "8lRhu2x3vamsq8ww0_Wt7s_4TLxYzsLT70fPFxUOQlE8F0RkBDaAWpzrBiXBOfUpokN5dKXTqWZk1Hbe2ig22Q";
+        String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqZXJlbXkiLCJleHAiOjE2NDA0MTYzMTl9." +
+                "pYl4HM8Ty3JWJF1N7TPzj2BqB9p19LYydisW6uA5G8ZwCGG9s5j-zrasxFC6XSq_4sayudIYR5j2NaJwjOlznA";
 
         mockMvc.perform(MockMvcRequestBuilders.get("/api/order/history/jeremy")
                 .header("Authorization", token))
