@@ -1,0 +1,79 @@
+Started by upstream project "eCommerce_build" build number 12
+originally caused by:
+ Started by user Jeremy
+Running as SYSTEM
+Building in workspace C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy
+The recommended git tool is: NONE
+using credential b1e81109-cfb0-4a41-aaa0-4d06c2871df7
+ > git.exe rev-parse --resolve-git-dir C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/jempitman/nd035-c4-Security-and-DevOps.git # timeout=10
+Fetching upstream changes from https://github.com/jempitman/nd035-c4-Security-and-DevOps.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.30.2.windows.1'
+using GIT_ASKPASS to set credentials 
+ > git.exe fetch --tags --force --progress -- https://github.com/jempitman/nd035-c4-Security-and-DevOps.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/jenkins^{commit}" # timeout=10
+Checking out Revision 2ee27e3687083aa261a9cd5c112c69ac83493903 (refs/remotes/origin/jenkins)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 2ee27e3687083aa261a9cd5c112c69ac83493903 # timeout=10
+Commit message: "Test: update Bearer token"
+ > git.exe rev-list --no-walk 2ee27e3687083aa261a9cd5c112c69ac83493903 # timeout=10
+[eCommerce_deploy] $ cmd.exe /C "mvn -f starter_code/pom.xml clean install -DskipTests=true && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ auth-course ---
+[INFO] Deleting C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\target\test-classes
+[INFO] /C:/Users/Jeremy/.jenkins/workspace/eCommerce_deploy/starter_code/src/test/java/com/example/demo/TestUtils.java: C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\src\test\java\com\example\demo\TestUtils.java uses or overrides a deprecated API.
+[INFO] /C:/Users/Jeremy/.jenkins/workspace/eCommerce_deploy/starter_code/src/test/java/com/example/demo/TestUtils.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ auth-course ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ auth-course ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [auth-course] in [C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\target\auth-course-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [529 msecs]
+[INFO] Building war: C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\target\auth-course-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.5.RELEASE:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ auth-course ---
+[INFO] Installing C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\target\auth-course-0.0.1-SNAPSHOT.war to C:\Users\Jeremy\.m2\repository\com\example\auth-course\0.0.1-SNAPSHOT\auth-course-0.0.1-SNAPSHOT.war
+[INFO] Installing C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\pom.xml to C:\Users\Jeremy\.m2\repository\com\example\auth-course\0.0.1-SNAPSHOT\auth-course-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.350 s
+[INFO] Finished at: 2021-12-15T08:45:01+01:00
+[INFO] ------------------------------------------------------------------------
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\target\auth-course-0.0.1-SNAPSHOT.war to container Tomcat 9.x Remote with context nd035-c4-Security-and-DevOps
+  Redeploying [C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\target\auth-course-0.0.1-SNAPSHOT.war]
+  Undeploying [C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\target\auth-course-0.0.1-SNAPSHOT.war]
+  Deploying [C:\Users\Jeremy\.jenkins\workspace\eCommerce_deploy\starter_code\target\auth-course-0.0.1-SNAPSHOT.war]
+Triggering a new build of eCommerce_test
+Finished: SUCCESS

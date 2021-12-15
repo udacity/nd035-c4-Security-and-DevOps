@@ -1,0 +1,165 @@
+Started by upstream project "eCommerce_deploy" build number 10
+originally caused by:
+ Started by upstream project "eCommerce_build" build number 12
+ originally caused by:
+  Started by user Jeremy
+Running as SYSTEM
+Building in workspace C:\Users\Jeremy\.jenkins\workspace\eCommerce_test
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/jempitman/nd035-c4-Security-and-DevOps.git
+ > git.exe init C:\Users\Jeremy\.jenkins\workspace\eCommerce_test # timeout=10
+Fetching upstream changes from https://github.com/jempitman/nd035-c4-Security-and-DevOps.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.30.2.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/jempitman/nd035-c4-Security-and-DevOps.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/jempitman/nd035-c4-Security-and-DevOps.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git.exe rev-parse "refs/remotes/origin/jenkins^{commit}" # timeout=10
+Checking out Revision 2ee27e3687083aa261a9cd5c112c69ac83493903 (refs/remotes/origin/jenkins)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 2ee27e3687083aa261a9cd5c112c69ac83493903 # timeout=10
+Commit message: "Test: update Bearer token"
+ > git.exe rev-list --no-walk 2ee27e3687083aa261a9cd5c112c69ac83493903 # timeout=10
+[eCommerce_test] $ cmd.exe /C "mvn -f starter_code/pom.xml package && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to C:\Users\Jeremy\.jenkins\workspace\eCommerce_test\starter_code\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to C:\Users\Jeremy\.jenkins\workspace\eCommerce_test\starter_code\target\test-classes
+[INFO] /C:/Users/Jeremy/.jenkins/workspace/eCommerce_test/starter_code/src/test/java/com/example/demo/TestUtils.java: C:\Users\Jeremy\.jenkins\workspace\eCommerce_test\starter_code\src\test\java\com\example\demo\TestUtils.java uses or overrides a deprecated API.
+[INFO] /C:/Users/Jeremy/.jenkins/workspace/eCommerce_test/starter_code/src/test/java/com/example/demo/TestUtils.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ auth-course ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.controllers.CartControllerTest
+2021-12-15T08:45:25.842+0100 ERROR Cart: add to cart: item not found
+2021-12-15T08:45:25.864+0100 ERROR Cart: remove from cart: user not found
+2021-12-15T08:45:25.865+0100 ERROR Cart: remove from cart: item not found
+2021-12-15T08:45:25.865+0100 ERROR Cart: add to cart: user not found
+2021-12-15T08:45:25.872+0100 INFO Cart: item added to cart: 1; User: Username: mockUserJeremy
+2021-12-15T08:45:25.875+0100 INFO Cart: item removed from cart: 1User: Username: mockUserJeremy
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.084 s - in com.example.demo.controllers.CartControllerTest
+[INFO] Running com.example.demo.controllers.ItemControllerTest
+2021-12-15T08:45:25.879+0100 INFO Item: all items retrieved: 
+2021-12-15T08:45:25.880+0100 INFO Item: item retrieved: item name: Square Widget
+2021-12-15T08:45:25.881+0100 INFO Item: item retrieved: item id: 1
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.example.demo.controllers.ItemControllerTest
+[INFO] Running com.example.demo.controllers.OrderControllerTest
+2021-12-15T08:45:25.916+0100 ERROR Order: get orders for User: user not found
+2021-12-15T08:45:25.918+0100 INFO Order: order history requested: User: username: mockUserJeremy
+2021-12-15T08:45:25.923+0100 INFO Order: order submitted: order value: 5.45 User: Username: mockUserJeremy
+2021-12-15T08:45:25.924+0100 ERROR Order: submit order: user not found
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.example.demo.controllers.OrderControllerTest
+[INFO] Running com.example.demo.controllers.UserControllerTest
+2021-12-15T08:45:25.951+0100 INFO User: New User Created: Jeremy
+2021-12-15T08:45:25.951+0100 ERROR User: password less than 7 characters
+2021-12-15T08:45:25.978+0100 INFO User: New User Created: Jeremy
+2021-12-15T08:45:25.979+0100 ERROR User: passwords not the same
+2021-12-15T08:45:25.980+0100 INFO User: New User Created: Jeremy
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in com.example.demo.controllers.UserControllerTest
+[INFO] Running com.example.demo.SareetaApplicationTests
+2021-12-15T08:45:26.040+0100 INFO Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.SareetaApplicationTests], using SpringBootContextLoader
+2021-12-15T08:45:26.043+0100 INFO Could not detect default resource locations for test class [com.example.demo.SareetaApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-15T08:45:26.044+0100 INFO Could not detect default configuration classes for test class [com.example.demo.SareetaApplicationTests]: SareetaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-15T08:45:26.129+0100 INFO Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.SareetaApplicationTests
+2021-12-15T08:45:26.195+0100 INFO Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener]
+2021-12-15T08:45:26.214+0100 INFO Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@37637a24, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@31e76a8d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@770beef5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6dd1f638, org.springframework.test.context.support.DirtiesContextTestExecutionListener@414f13fc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b76aa5a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@63a28987, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@120d3fd, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@38c9e0d6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4693a9ef, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@310aee0b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@36327cec, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@410ae5ac, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1a8df0b3]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+2021-12-15T08:45:26.458+0100 INFO Starting SareetaApplicationTests on DESKTOP-AF7PUCC with PID 15768 (started by Jeremy in C:\Users\Jeremy\.jenkins\workspace\eCommerce_test\starter_code)
+2021-12-15T08:45:26.458+0100 DEBUG Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-12-15T08:45:26.459+0100 INFO No active profile set, falling back to default profiles: default
+2021-12-15T08:45:27.693+0100 INFO HikariPool-1 - Starting...
+2021-12-15T08:45:27.847+0100 INFO HikariPool-1 - Start completed.
+2021-12-15T08:45:27.914+0100 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-12-15T08:45:27.982+0100 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2021-12-15T08:45:27.984+0100 INFO HHH000206: hibernate.properties not found
+2021-12-15T08:45:28.035+0100 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-12-15T08:45:28.431+0100 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-12-15T08:45:30.839+0100 INFO Started SareetaApplicationTests in 4.596 seconds (JVM running for 6.387)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.885 s - in com.example.demo.SareetaApplicationTests
+[INFO] Running com.example.demo.security.SecurityTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+2021-12-15T08:45:30.928+0100 INFO Starting SecurityTests on DESKTOP-AF7PUCC with PID 15768 (started by Jeremy in C:\Users\Jeremy\.jenkins\workspace\eCommerce_test\starter_code)
+2021-12-15T08:45:30.928+0100 DEBUG Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-12-15T08:45:30.929+0100 INFO No active profile set, falling back to default profiles: default
+2021-12-15T08:45:31.321+0100 INFO HikariPool-2 - Starting...
+2021-12-15T08:45:31.323+0100 INFO HikariPool-2 - Start completed.
+2021-12-15T08:45:31.339+0100 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-12-15T08:45:31.350+0100 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-12-15T08:45:32.223+0100 INFO Started SecurityTests in 1.327 seconds (JVM running for 7.771)
+2021-12-15T08:45:32.332+0100 INFO User: New User Created: jeremy
+2021-12-15T08:45:32.575+0100 INFO HHH000397: Using ASTQueryTranslatorFactory
+2021-12-15T08:45:32.701+0100 INFO Order: order history requested: User: username: jeremy
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.842 s - in com.example.demo.security.SecurityTests
+2021-12-15T08:45:32.730+0100 INFO HikariPool-1 - Shutdown initiated...
+2021-12-15T08:45:32.730+0100 INFO HikariPool-2 - Shutdown initiated...
+2021-12-15T08:45:32.735+0100 INFO HikariPool-2 - Shutdown completed.
+2021-12-15T08:45:32.735+0100 INFO HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ auth-course ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [auth-course] in [C:\Users\Jeremy\.jenkins\workspace\eCommerce_test\starter_code\target\auth-course-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [500 msecs]
+[INFO] Building war: C:\Users\Jeremy\.jenkins\workspace\eCommerce_test\starter_code\target\auth-course-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.5.RELEASE:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.976 s
+[INFO] Finished at: 2021-12-15T08:45:35+01:00
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
