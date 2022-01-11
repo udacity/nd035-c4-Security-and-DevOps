@@ -8,6 +8,8 @@ public class CreateUserRequest {
 	private String username;
 	@JsonProperty
 	private String password;
+
+
 	@JsonProperty
 	private String confirmPassword;
 
@@ -30,6 +32,10 @@ public class CreateUserRequest {
 
 	public String getConfirmPassword() {
 		return confirmPassword;
+	}
+
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
 	}
 
 }
