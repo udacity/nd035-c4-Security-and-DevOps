@@ -1,0 +1,29 @@
+apache-activemq-5.15.9/
+apache-activemq-5.15.9/
+n order to deploy from docker image
+
+### STS ###
+
+.apt_generated
+
+.classpath
+
+.factorypath
+
+.project
+
+.settings
+
+.springBeans
+
+.sts4-cache
+
+### IntelliJ IDEA ###
+
+.idea
+
+*.iws
+
+*.iml
+
+*.ipr
