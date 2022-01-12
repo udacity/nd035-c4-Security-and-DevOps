@@ -16,7 +16,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class UserControllerTest {
-
     private UserController userController;
     private UserRepository userRepository = mock(UserRepository.class);
     private CartRepository cartRepository = mock(CartRepository.class);
@@ -88,3 +87,4 @@ public class UserControllerTest {
         return newUserRequest;
     }
 }
+

@@ -65,6 +65,30 @@ public class OrderControllerTest {
     }
 
     @Test
+    public void testSubmitNullUser() {
+        String username = "test";
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword("password");
+        user.setId(0L);
+        Item item = com.example.demo.controllers.GetItemsUtils.getItem0();
+        Cart cart = new Cart();
+        cart.setId(0L);
+        List<Item> itemList = new ArrayList<>();
+        itemList.add(item);
+        cart.setItems(itemList);
+        cart.setTotal(new BigDecimal("2.99"));
+        cart.setUser(user);
+        user.setCart(cart);
+        when(userRepository.findByUsername(username)).thenReturn(null);
+
+        ResponseEntity<UserOrder> response =  orderController.submit(username);
+
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
     public void user_order_history(){
 
         Item item = createItem(1L, "Fidget Spinner", BigDecimal.valueOf(5), "Metal Toy");
@@ -87,6 +111,32 @@ public class OrderControllerTest {
         List<UserOrder> orders = response.getBody();
         assertNotNull(orders);
 
+    }
+
+    @Test
+    public void testGetOrdersForUserNullUser() {
+        String username = "test";
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword("password");
+        user.setId(0L);
+        Item item = com.example.demo.controllers.GetItemsUtils.getItem0();
+        Cart cart = new Cart();
+        cart.setId(0L);
+        List<Item> itemList = new ArrayList<>();
+        itemList.add(item);
+        cart.setItems(itemList);
+        cart.setTotal(new BigDecimal("2.99"));
+        cart.setUser(user);
+        user.setCart(cart);
+        when(userRepository.findByUsername(username)).thenReturn(null);
+
+        orderController.submit(username);
+
+        ResponseEntity<List<UserOrder>> responseEntity = orderController.getOrdersForUser(username);
+
+        assertNotNull(responseEntity);
+        assertEquals(404, responseEntity.getStatusCodeValue());
     }
 
     /**
