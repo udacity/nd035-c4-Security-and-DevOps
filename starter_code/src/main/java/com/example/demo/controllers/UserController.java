@@ -36,9 +36,9 @@ public class UserController {
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		if (user == null) {
-			logger.error("Did not find user with username, {}.", username);
+			logger.error("GET_USER_FAILURE: Did not find user with username, {}.", username);
 		} else {
-			logger.info("Found user with username, {}.", username);
+			logger.info("GET_USER_SUCCESS: Found user with username, {}.", username);
 		}
 
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
@@ -48,11 +48,12 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
-		logger.info("Username with "+ user.getUsername() + " has been created");
+		logger.info("CREATE_USER_SUCCESS: Username with "+ user.getUsername() + " has been created");
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
 		if (createUserRequest.getPassword().length() <3 || !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
+			logger.error("CREATE_USER_FAILURE: Error with user password");
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));

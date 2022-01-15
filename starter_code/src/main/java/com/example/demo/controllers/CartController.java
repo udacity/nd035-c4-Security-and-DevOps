@@ -48,7 +48,7 @@ public class CartController {
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.addItem(item.get()));
-		logger.info("cart id " +cart.getId()+ "added to  user "+ user.getUsername());
+		logger.info("CREATE_CART_SUCCESS: Cart id: " +cart.getId()+ " added to  user "+ user.getUsername());
 		cartRepository.save(cart);
 		return ResponseEntity.ok(cart);
 	}
@@ -66,7 +66,7 @@ public class CartController {
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.removeItem(item.get()));
-		logger.info("cart id " +cart.getId()+ "removed from user "+ user.getUsername());
+		logger.info("CREATE_CART_SUCCESS: Cart id: " +cart.getId()+ " removed to  user "+ user.getUsername());
 		cartRepository.save(cart);
 		return ResponseEntity.ok(cart);
 	}
