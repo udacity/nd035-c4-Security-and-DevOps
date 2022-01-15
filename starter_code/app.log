@@ -1,0 +1,111 @@
+2022-01-15 14:16:57.520  INFO 14901 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on Rizwans-MacBook-Pro.local with PID 14901 (/Users/rizwanrenesa/Documents/nd035-c4-Security-and-DevOps/starter_code/target/classes started by rizwanrenesa in /Users/rizwanrenesa/Documents/nd035-c4-Security-and-DevOps/starter_code)
+2022-01-15 14:16:57.526  INFO 14901 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-15 14:16:58.982  INFO 14901 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-15 14:16:59.121  INFO 14901 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113ms. Found 4 repository interfaces.
+2022-01-15 14:16:59.912  INFO 14901 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2bc3ef9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-15 14:17:00.335  INFO 14901 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-15 14:17:00.378  INFO 14901 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-15 14:17:00.379  INFO 14901 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-15 14:17:00.565  INFO 14901 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-15 14:17:00.565  INFO 14901 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2943 ms
+2022-01-15 14:17:00.804  INFO 14901 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-15 14:17:01.029  INFO 14901 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-15 14:17:01.118  INFO 14901 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-15 14:17:01.223  INFO 14901 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-15 14:17:01.225  INFO 14901 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-15 14:17:01.454  INFO 14901 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-15 14:17:01.668  INFO 14901 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-15 14:17:02.674  INFO 14901 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-15 14:17:03.438  WARN 14901 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-15 14:17:03.519  INFO 14901 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47f39279, org.springframework.security.web.context.SecurityContextPersistenceFilter@f4d391c, org.springframework.security.web.header.HeaderWriterFilter@2e030cc1, org.springframework.web.filter.CorsFilter@63ed5dae, org.springframework.security.web.authentication.logout.LogoutFilter@d02c00, com.example.demo.security.JWTAuthenticationFilter@578198d9, com.example.demo.security.JWTAuthenticationVerficationFilter@4deca78, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fa2143d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c9d833, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f65e0c0, org.springframework.security.web.session.SessionManagementFilter@14bf9fd0, org.springframework.security.web.access.ExceptionTranslationFilter@6549ce71, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f6d36eb]
+2022-01-15 14:17:03.669  INFO 14901 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-15 14:17:03.879  INFO 14901 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-15 14:17:03.882  INFO 14901 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 7.303 seconds (JVM running for 8.291)
+2022-01-15 14:17:20.428  INFO 14901 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-15 14:17:20.429  INFO 14901 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-15 14:17:20.448  INFO 14901 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2022-01-15 14:17:20.585  INFO 14901 --- [http-nio-8080-exec-1] c.e.demo.controllers.UserController      : Username with Rizwan has been created
+2022-01-15 14:17:37.759  INFO 14901 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-01-15 14:17:37.980  INFO 14901 --- [http-nio-8080-exec-3] c.e.demo.controllers.UserController      : Found user with username, Rizwan.
+2022-01-15 14:17:44.368  INFO 14901 --- [http-nio-8080-exec-5] c.e.demo.controllers.OrderController     : order with null has been created
+2022-01-15 14:17:47.792  INFO 14901 --- [http-nio-8080-exec-6] c.e.demo.controllers.OrderController     : Found order history for user with username, Rizwan.
+2022-01-15 14:18:35.637  INFO 14901 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-15 14:18:35.640  INFO 14901 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-15 14:18:35.642  INFO 14901 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-15 14:18:35.649  INFO 14901 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-15 14:20:04.668  INFO 15008 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on Rizwans-MacBook-Pro.local with PID 15008 (/Users/rizwanrenesa/Documents/nd035-c4-Security-and-DevOps/starter_code/target/classes started by rizwanrenesa in /Users/rizwanrenesa/Documents/nd035-c4-Security-and-DevOps/starter_code)
+2022-01-15 14:20:04.675  INFO 15008 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-15 14:20:07.321  INFO 15008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-15 14:20:07.545  INFO 15008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 208ms. Found 4 repository interfaces.
+2022-01-15 14:20:10.451  INFO 15008 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aa9237d8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-15 14:20:11.921  INFO 15008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-15 14:20:12.113  INFO 15008 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-15 14:20:12.114  INFO 15008 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-15 14:20:12.654  INFO 15008 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-15 14:20:12.655  INFO 15008 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7823 ms
+2022-01-15 14:20:13.683  INFO 15008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-15 14:20:14.306  INFO 15008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-15 14:20:14.701  INFO 15008 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-15 14:20:14.872  INFO 15008 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-15 14:20:14.878  INFO 15008 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-15 14:20:15.521  INFO 15008 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-15 14:20:16.149  INFO 15008 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-15 14:20:19.508  INFO 15008 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-15 14:20:22.078  WARN 15008 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-15 14:20:22.347  INFO 15008 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d70dbeb, org.springframework.security.web.context.SecurityContextPersistenceFilter@64887fbc, org.springframework.security.web.header.HeaderWriterFilter@391e5ffa, org.springframework.web.filter.CorsFilter@7f8f5d37, org.springframework.security.web.authentication.logout.LogoutFilter@320ba79f, com.example.demo.security.JWTAuthenticationFilter@f9cd1e6, com.example.demo.security.JWTAuthenticationVerficationFilter@3ff53704, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f6d7e7c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c20e9d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34d11c92, org.springframework.security.web.session.SessionManagementFilter@470b5213, org.springframework.security.web.access.ExceptionTranslationFilter@3f2ef402, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35f6f105]
+2022-01-15 14:20:22.815  INFO 15008 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-15 14:20:23.368  INFO 15008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-15 14:20:23.371  INFO 15008 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 20.795 seconds (JVM running for 22.841)
+2022-01-15 14:23:53.123  INFO 15008 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-15 14:23:53.130  INFO 15008 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-15 14:23:53.173  INFO 15008 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 42 ms
+2022-01-15 14:23:53.408  INFO 15008 --- [http-nio-8080-exec-2] c.e.demo.controllers.UserController      : Username with Rizwan has been created
+2022-01-15 14:24:13.393  INFO 15008 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-01-15 14:26:42.882  WARN 15008 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s376ms), soft-evicting connections from pool.
+2022-01-15 15:11:43.100  WARN 15008 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s851ms), soft-evicting connections from pool.
+2022-01-15 17:51:00.109  INFO 15008 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-15 17:51:00.128  INFO 15008 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-15 17:51:00.199  INFO 15008 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-15 17:51:00.218  INFO 15008 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-15 17:51:11.109  INFO 67827 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on Rizwans-MacBook-Pro.local with PID 67827 (/Users/rizwanrenesa/Documents/nd035-c4-Security-and-DevOps/starter_code/target/classes started by rizwanrenesa in /Users/rizwanrenesa/Documents/nd035-c4-Security-and-DevOps/starter_code)
+2022-01-15 17:51:11.112  INFO 67827 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-15 17:51:12.288  INFO 67827 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-15 17:51:12.395  INFO 67827 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 4 repository interfaces.
+2022-01-15 17:51:13.040  INFO 67827 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ec530c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-15 17:51:13.443  INFO 67827 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-15 17:51:13.480  INFO 67827 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-15 17:51:13.480  INFO 67827 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-15 17:51:13.627  INFO 67827 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-15 17:51:13.628  INFO 67827 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2422 ms
+2022-01-15 17:51:13.916  INFO 67827 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-15 17:51:14.144  INFO 67827 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-15 17:51:14.221  INFO 67827 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-15 17:51:14.320  INFO 67827 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-15 17:51:14.322  INFO 67827 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-15 17:51:14.552  INFO 67827 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-15 17:51:14.715  INFO 67827 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-15 17:51:15.624  INFO 67827 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-15 17:51:16.413  WARN 67827 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-15 17:51:16.504  INFO 67827 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4deca78, org.springframework.security.web.context.SecurityContextPersistenceFilter@f4d391c, org.springframework.security.web.header.HeaderWriterFilter@2e030cc1, org.springframework.web.filter.CorsFilter@5f65e0c0, org.springframework.security.web.authentication.logout.LogoutFilter@d02c00, com.example.demo.security.JWTAuthenticationFilter@566cc6af, com.example.demo.security.JWTAuthenticationVerficationFilter@d70dbeb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fa2143d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c9d833, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f8f5d37, org.springframework.security.web.session.SessionManagementFilter@14bf9fd0, org.springframework.security.web.access.ExceptionTranslationFilter@6549ce71, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3921e96f]
+2022-01-15 17:51:16.661  INFO 67827 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-15 17:51:16.887  INFO 67827 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-15 17:51:16.892  INFO 67827 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 6.863 seconds (JVM running for 7.652)
+2022-01-15 17:51:27.621  INFO 67827 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-15 17:51:27.624  INFO 67827 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-15 17:51:27.647  INFO 67827 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2022-01-15 17:51:27.822  INFO 67827 --- [http-nio-8080-exec-1] c.e.demo.controllers.UserController      : Username with Rizwan has been created
+2022-01-15 17:51:33.388  INFO 67827 --- [http-nio-8080-exec-4] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-01-15 17:51:33.610  INFO 67827 --- [http-nio-8080-exec-4] c.e.d.security.UserDetailsServiceImpl    : Rizwansuccessfully logged in
+2022-01-15 17:51:42.178  INFO 67827 --- [http-nio-8080-exec-3] c.e.demo.controllers.UserController      : Found user with username, Rizwan.
+2022-01-15 17:51:48.426  INFO 67827 --- [http-nio-8080-exec-5] c.e.demo.controllers.CartController      : cart id 1added to  user Rizwan
+2022-01-15 17:51:54.638  INFO 67827 --- [http-nio-8080-exec-6] c.e.demo.controllers.OrderController     : order with null has been created
+2022-01-15 17:52:00.387  INFO 67827 --- [http-nio-8080-exec-7] c.e.demo.controllers.OrderController     : Found order history for user with username, Rizwan.
+2022-01-15 17:52:19.393  INFO 67827 --- [http-nio-8080-exec-1] c.e.demo.controllers.CartController      : cart id 1removed from user Rizwan
+2022-01-15 17:52:48.145  INFO 67827 --- [http-nio-8080-exec-4] c.e.demo.controllers.OrderController     : Found order history for user with username, Rizwan.
+2022-01-15 18:44:44.394  WARN 67827 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s829ms), soft-evicting connections from pool.
