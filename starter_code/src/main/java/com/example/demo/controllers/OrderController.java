@@ -2,6 +2,8 @@ package com.example.demo.controllers;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +29,8 @@ public class OrderController {
 	
 	@Autowired
 	private OrderRepository orderRepository;
+
+	public static final Logger logger = LoggerFactory.getLogger(OrderController.class);
 	
 	
 	@PostMapping("/submit/{username}")
@@ -37,6 +41,7 @@ public class OrderController {
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
 		orderRepository.save(order);
+		logger.info("Ordered submit by user, {}.", username);
 		return ResponseEntity.ok(order);
 	}
 	
@@ -46,6 +51,7 @@ public class OrderController {
 		if(user == null) {
 			return ResponseEntity.notFound().build();
 		}
+		logger.info("Ordered history for user, {}.", username);
 		return ResponseEntity.ok(orderRepository.findByUser(user));
 	}
 }
