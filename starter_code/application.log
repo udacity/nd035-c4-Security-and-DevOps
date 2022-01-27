@@ -1,0 +1,126 @@
+2022-01-27 09:52:10.586  INFO 66399 --- [main] c.example.demo.SareetaApplicationTests   : Starting SareetaApplicationTests on akshaydh01-mac with PID 66399 (started by akshaydh in /Users/akshaydh/Documents/Udacity/nd035-c4-Security-and-DevOps/starter_code)
+2022-01-27 09:52:10.588  INFO 66399 --- [main] c.example.demo.SareetaApplicationTests   : No active profile set, falling back to default profiles: default
+2022-01-27 09:52:11.100  INFO 66399 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-27 09:52:11.205  INFO 66399 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92ms. Found 4 repository interfaces.
+2022-01-27 09:52:11.823  INFO 66399 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3cfbc758] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-27 09:52:12.041  INFO 66399 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-27 09:52:12.301  INFO 66399 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-27 09:52:12.385  INFO 66399 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-27 09:52:12.473  INFO 66399 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-27 09:52:12.474  INFO 66399 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-27 09:52:12.618  INFO 66399 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-27 09:52:12.773  INFO 66399 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-27 09:52:13.546  INFO 66399 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5bb8e6fc'
+2022-01-27 09:52:13.550  INFO 66399 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 09:52:14.524  WARN 66399 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-27 09:52:14.678  INFO 66399 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77ab5214, org.springframework.security.web.context.SecurityContextPersistenceFilter@79f1e22e, org.springframework.security.web.header.HeaderWriterFilter@52a67293, org.springframework.web.filter.CorsFilter@6d420cdd, org.springframework.security.web.authentication.logout.LogoutFilter@2a7ebe07, com.example.demo.security.JWTAuthenticationFilter@bd273b2, com.example.demo.security.JWTAuthenticationVerficationFilter@78128dd0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e154848, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d17914a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55044b34, org.springframework.security.web.session.SessionManagementFilter@38f502fc, org.springframework.security.web.access.ExceptionTranslationFilter@4243341e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@eded048]
+2022-01-27 09:52:15.201  INFO 66399 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-27 09:52:15.550  INFO 66399 --- [main] c.example.demo.SareetaApplicationTests   : Started SareetaApplicationTests in 5.18 seconds (JVM running for 6.009)
+2022-01-27 09:52:15.778  INFO 66399 --- [main] c.e.demo.controllers.UserController      : user found successfully with id: 1
+2022-01-27 09:52:15.804 ERROR 66399 --- [main] c.e.demo.controllers.UserController      : user not found with username : Username
+2022-01-27 09:52:15.809  INFO 66399 --- [main] c.e.demo.controllers.UserController      : user found successfully with id: 1
+2022-01-27 09:52:15.818  INFO 66399 --- [main] c.e.demo.controllers.UserController      : user saved successfully with username: Username
+2022-01-27 09:52:15.880  INFO 66399 --- [main] c.e.demo.controllers.ItemController      : Item with ItemId : {} 1is successfully Retrieved
+2022-01-27 09:52:15.895  INFO 66399 --- [main] c.e.demo.controllers.CartController      : item is successfully added with id : 1 to the cart for the user Usernameduring addToCart in CartController
+2022-01-27 09:52:15.914  INFO 66399 --- [main] c.e.demo.controllers.CartController      : item is successfully added with id : 1 to the cart for the user Usernameduring removeFromCart in CartController
+2022-01-27 09:52:15.916 ERROR 66399 --- [main] c.e.demo.controllers.CartController      : No item found by id during addToCart in CartController: 1
+2022-01-27 09:52:15.918 ERROR 66399 --- [main] c.e.demo.controllers.CartController      : No item found by id during removeFromCart in CartController: 1
+2022-01-27 09:52:15.981  INFO 66399 --- [main] c.e.demo.controllers.OrderController     : order submitted successfully with username: Username
+2022-01-27 09:52:15.982 ERROR 66399 --- [main] c.e.demo.controllers.OrderController     : User not found with username: Username
+2022-01-27 09:52:15.983 ERROR 66399 --- [main] c.e.demo.controllers.OrderController     : username not found: Username
+2022-01-27 09:52:15.987 ERROR 66399 --- [main] c.e.demo.controllers.OrderController     : User not found with username: Username
+2022-01-27 09:52:15.990  INFO 66399 --- [main] c.e.demo.controllers.OrderController     : order submitted successfully with username: Username
+2022-01-27 09:52:15.992  INFO 66399 --- [main] c.e.demo.controllers.OrderController     : order history retrieved successfully with username: Username
+2022-01-27 09:52:16.022  INFO 66399 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-27 09:52:16.032  INFO 66399 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 09:52:16.033  INFO 66399 --- [Thread-3] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-01-27 09:52:16.042  INFO 66399 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-27 09:52:16.046  INFO 66399 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-27 10:06:45.335  INFO 67094 --- [main] c.example.demo.SareetaApplicationTests   : Starting SareetaApplicationTests on akshaydh01-mac with PID 67094 (started by akshaydh in /Users/akshaydh/Documents/Udacity/nd035-c4-Security-and-DevOps/starter_code)
+2022-01-27 10:06:45.338  INFO 67094 --- [main] c.example.demo.SareetaApplicationTests   : No active profile set, falling back to default profiles: default
+2022-01-27 10:06:45.795  INFO 67094 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-27 10:06:45.868  INFO 67094 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 4 repository interfaces.
+2022-01-27 10:06:46.338  INFO 67094 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3cfbc758] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-27 10:06:46.521  INFO 67094 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-27 10:06:46.705  INFO 67094 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-27 10:06:46.771  INFO 67094 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-27 10:06:46.834  INFO 67094 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-27 10:06:46.836  INFO 67094 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-27 10:06:46.947  INFO 67094 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-27 10:06:47.057  INFO 67094 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-27 10:06:47.610  INFO 67094 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5bb8e6fc'
+2022-01-27 10:06:47.613  INFO 67094 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 10:06:48.234  WARN 67094 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-27 10:06:48.363  INFO 67094 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a4083f6, org.springframework.security.web.context.SecurityContextPersistenceFilter@67afe909, org.springframework.security.web.header.HeaderWriterFilter@752973de, org.springframework.web.filter.CorsFilter@23f5008a, org.springframework.security.web.authentication.logout.LogoutFilter@1cc41b77, com.example.demo.security.JWTAuthenticationFilter@44abdb1f, com.example.demo.security.JWTAuthenticationVerficationFilter@62108cd3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6903ed0e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77c23d90, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cd1ec54, org.springframework.security.web.session.SessionManagementFilter@793cef95, org.springframework.security.web.access.ExceptionTranslationFilter@300bb303, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3866c96e]
+2022-01-27 10:06:48.826  INFO 67094 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-27 10:06:49.104  INFO 67094 --- [main] c.example.demo.SareetaApplicationTests   : Started SareetaApplicationTests in 3.995 seconds (JVM running for 4.652)
+2022-01-27 10:06:49.304  INFO 67094 --- [main] c.e.demo.controllers.UserController      : user found successfully with id: 1
+2022-01-27 10:06:49.317 ERROR 67094 --- [main] c.e.demo.controllers.UserController      : user not found with username : Username
+2022-01-27 10:06:49.319  INFO 67094 --- [main] c.e.demo.controllers.UserController      : user found successfully with id: 1
+2022-01-27 10:06:49.324  INFO 67094 --- [main] c.e.demo.controllers.UserController      : user saved successfully with username: Username
+2022-01-27 10:06:49.364  INFO 67094 --- [main] c.e.demo.controllers.ItemController      : Item with ItemId : 1 is successfully Retrieved
+2022-01-27 10:06:49.366 ERROR 67094 --- [main] c.e.demo.controllers.CartController      : No User with Username found during addToCart in CartController: 
+2022-01-27 10:06:49.367 ERROR 67094 --- [main] c.e.demo.controllers.CartController      : No User with Username found during removeFromCart in CartController: 
+2022-01-27 10:06:49.371  INFO 67094 --- [main] c.e.demo.controllers.CartController      : item is successfully added with id : 1 to the cart for the user Username during addToCart in CartController
+2022-01-27 10:06:49.385  INFO 67094 --- [main] c.e.demo.controllers.CartController      : item is successfully added with id : 1 to the cart for the user Username during removeFromCart in CartController
+2022-01-27 10:06:49.387 ERROR 67094 --- [main] c.e.demo.controllers.CartController      : No item found by id during addToCart in CartController: 1
+2022-01-27 10:06:49.388 ERROR 67094 --- [main] c.e.demo.controllers.CartController      : No item found by id during removeFromCart in CartController: 1
+2022-01-27 10:06:49.432  INFO 67094 --- [main] c.e.demo.controllers.OrderController     : order submitted successfully with username: Username
+2022-01-27 10:06:49.435 ERROR 67094 --- [main] c.e.demo.controllers.OrderController     : User not found with username: Username
+2022-01-27 10:06:49.435 ERROR 67094 --- [main] c.e.demo.controllers.OrderController     : username not found: Username
+2022-01-27 10:06:49.436 ERROR 67094 --- [main] c.e.demo.controllers.OrderController     : User not found with username: Username
+2022-01-27 10:06:49.438  INFO 67094 --- [main] c.e.demo.controllers.OrderController     : order submitted successfully with username: Username
+2022-01-27 10:06:49.439  INFO 67094 --- [main] c.e.demo.controllers.OrderController     : order history retrieved successfully with username: Username
+2022-01-27 10:06:49.455  INFO 67094 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-27 10:06:49.458  INFO 67094 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 10:06:49.458  INFO 67094 --- [Thread-3] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-01-27 10:06:49.465  INFO 67094 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-27 10:06:49.472  INFO 67094 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-27 10:17:44.654  INFO 67512 --- [main] c.example.demo.SareetaApplicationTests   : Starting SareetaApplicationTests on akshaydh01-mac with PID 67512 (started by akshaydh in /Users/akshaydh/Documents/Udacity/nd035-c4-Security-and-DevOps/starter_code)
+2022-01-27 10:17:44.656  INFO 67512 --- [main] c.example.demo.SareetaApplicationTests   : No active profile set, falling back to default profiles: default
+2022-01-27 10:17:45.062  INFO 67512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-27 10:17:45.135  INFO 67512 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 4 repository interfaces.
+2022-01-27 10:17:45.670  INFO 67512 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fe626695] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-27 10:17:45.847  INFO 67512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-27 10:17:46.039  INFO 67512 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-27 10:17:46.106  INFO 67512 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-27 10:17:46.169  INFO 67512 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-27 10:17:46.170  INFO 67512 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-27 10:17:46.284  INFO 67512 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-27 10:17:46.394  INFO 67512 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-27 10:17:46.928  INFO 67512 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@72c9ebfa'
+2022-01-27 10:17:46.930  INFO 67512 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 10:17:47.567  WARN 67512 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-27 10:17:47.686  INFO 67512 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44abdb1f, org.springframework.security.web.context.SecurityContextPersistenceFilter@6903ed0e, org.springframework.security.web.header.HeaderWriterFilter@793cef95, org.springframework.web.filter.CorsFilter@62108cd3, org.springframework.security.web.authentication.logout.LogoutFilter@6e93b0e7, com.example.demo.security.JWTAuthenticationFilter@7cd1ec54, com.example.demo.security.JWTAuthenticationVerficationFilter@77ab5214, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16ea0f22, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49631cfb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d420cdd, org.springframework.security.web.session.SessionManagementFilter@67c21bf, org.springframework.security.web.access.ExceptionTranslationFilter@d1c5cf2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c76fce4]
+2022-01-27 10:17:48.140  INFO 67512 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-27 10:17:48.385  INFO 67512 --- [main] c.example.demo.SareetaApplicationTests   : Started SareetaApplicationTests in 3.939 seconds (JVM running for 4.641)
+2022-01-27 10:17:48.597  INFO 67512 --- [main] c.e.demo.controllers.UserController      : user found successfully with id: 1
+2022-01-27 10:17:48.611 ERROR 67512 --- [main] c.e.demo.controllers.UserController      : user not found with username : Username
+2022-01-27 10:17:48.613  INFO 67512 --- [main] c.e.demo.controllers.UserController      : user found successfully with id: 1
+2022-01-27 10:17:48.618  INFO 67512 --- [main] c.e.demo.controllers.UserController      : user saved successfully with username: Username
+2022-01-27 10:17:48.619  INFO 67512 --- [main] c.e.demo.controllers.UserController      : user found successfully with username: Username
+2022-01-27 10:17:48.655  INFO 67512 --- [main] c.e.demo.controllers.ItemController      : Item found Successfully with ItemName: Created Item
+2022-01-27 10:17:48.656  INFO 67512 --- [main] c.e.demo.controllers.ItemController      : Item with ItemId : 1 is successfully Retrieved
+2022-01-27 10:17:48.660 ERROR 67512 --- [main] c.e.demo.controllers.CartController      : No User with Username found during addToCart in CartController: 
+2022-01-27 10:17:48.662 ERROR 67512 --- [main] c.e.demo.controllers.CartController      : No User with Username found during removeFromCart in CartController: 
+2022-01-27 10:17:48.666  INFO 67512 --- [main] c.e.demo.controllers.CartController      : item is successfully added with id : 1 to the cart for the user Username during addToCart in CartController
+2022-01-27 10:17:48.675  INFO 67512 --- [main] c.e.demo.controllers.CartController      : item is successfully added with id : 1 to the cart for the user Username during removeFromCart in CartController
+2022-01-27 10:17:48.676 ERROR 67512 --- [main] c.e.demo.controllers.CartController      : No item found by id during addToCart in CartController: 1
+2022-01-27 10:17:48.677 ERROR 67512 --- [main] c.e.demo.controllers.CartController      : No item found by id during removeFromCart in CartController: 1
+2022-01-27 10:17:48.711  INFO 67512 --- [main] c.e.demo.controllers.OrderController     : order submitted successfully with username: Username
+2022-01-27 10:17:48.712 ERROR 67512 --- [main] c.e.demo.controllers.OrderController     : User not found with username: Username
+2022-01-27 10:17:48.713 ERROR 67512 --- [main] c.e.demo.controllers.OrderController     : username not found: Username
+2022-01-27 10:17:48.713 ERROR 67512 --- [main] c.e.demo.controllers.OrderController     : User not found with username: Username
+2022-01-27 10:17:48.714  INFO 67512 --- [main] c.e.demo.controllers.OrderController     : order submitted successfully with username: Username
+2022-01-27 10:17:48.715  INFO 67512 --- [main] c.e.demo.controllers.OrderController     : order history retrieved successfully with username: Username
+2022-01-27 10:17:48.730  INFO 67512 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-27 10:17:48.732  INFO 67512 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 10:17:48.733  INFO 67512 --- [Thread-3] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-01-27 10:17:48.739  INFO 67512 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-27 10:17:48.742  INFO 67512 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,0 +1,45 @@
+2022-01-27 10:18:03.232  INFO 67578 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on akshaydh01-mac with PID 67578 (/Users/akshaydh/Documents/Udacity/nd035-c4-Security-and-DevOps/starter_code/target/classes started by akshaydh in /Users/akshaydh/Documents/Udacity/nd035-c4-Security-and-DevOps)
+2022-01-27 10:18:03.236  INFO 67578 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2022-01-27 10:18:03.876  INFO 67578 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-01-27 10:18:03.938  INFO 67578 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 4 repository interfaces.
+2022-01-27 10:18:04.353  INFO 67578 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a7174d6b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-27 10:18:04.601  INFO 67578 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-01-27 10:18:04.621  INFO 67578 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-27 10:18:04.621  INFO 67578 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2022-01-27 10:18:04.723  INFO 67578 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-27 10:18:04.723  INFO 67578 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1433 ms
+2022-01-27 10:18:04.857  INFO 67578 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-27 10:18:04.959  INFO 67578 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-27 10:18:05.035  INFO 67578 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-01-27 10:18:05.078  INFO 67578 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-01-27 10:18:05.080  INFO 67578 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-01-27 10:18:05.177  INFO 67578 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-01-27 10:18:05.266  INFO 67578 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-27 10:18:05.807  INFO 67578 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@35f760a4'
+2022-01-27 10:18:05.810  INFO 67578 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-27 10:18:06.249  WARN 67578 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-27 10:18:06.313  INFO 67578 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d3eb1ea, org.springframework.security.web.context.SecurityContextPersistenceFilter@1253b822, org.springframework.security.web.header.HeaderWriterFilter@7074da1d, org.springframework.web.filter.CorsFilter@78508e6b, org.springframework.security.web.authentication.logout.LogoutFilter@3c4c7e51, com.example.demo.security.JWTAuthenticationFilter@1bde9a22, com.example.demo.security.JWTAuthenticationVerficationFilter@2cc97e47, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cc2e3e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9499643, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74a03bd5, org.springframework.security.web.session.SessionManagementFilter@3e55eeb9, org.springframework.security.web.access.ExceptionTranslationFilter@3c6b300a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c9e6d95]
+2022-01-27 10:18:06.405  INFO 67578 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-27 10:18:06.540  INFO 67578 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-01-27 10:18:06.543  INFO 67578 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 3.599 seconds (JVM running for 4.31)
+2022-01-27 10:18:44.685  INFO 67578 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-27 10:18:44.686  INFO 67578 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-27 10:18:44.692  INFO 67578 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-01-27 10:31:35.908  WARN 67578 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m30s653ms).
+2022-01-27 10:32:39.391  WARN 67578 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s609ms).
+2022-01-27 10:34:12.964  WARN 67578 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s568ms).
+2022-01-27 10:34:39.850  INFO 67578 --- [http-nio-8082-exec-4] c.e.demo.controllers.UserController      : user saved successfully with username: akshay
+2022-01-27 10:35:22.943  INFO 67578 --- [http-nio-8082-exec-6] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-01-27 10:35:50.880  WARN 67578 --- [http-nio-8082-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2022-01-27 10:36:04.192  INFO 67578 --- [http-nio-8082-exec-8] c.e.demo.controllers.UserController      : user found successfully with username: akshay
+2022-01-27 10:36:18.484  INFO 67578 --- [http-nio-8082-exec-9] c.e.demo.controllers.UserController      : user found successfully with id: 1
+2022-01-27 10:36:28.695  INFO 67578 --- [http-nio-8082-exec-10] c.e.demo.controllers.ItemController      : Item with ItemId : 1 is successfully Retrieved
+2022-01-27 10:37:04.874  INFO 67578 --- [http-nio-8082-exec-2] c.e.demo.controllers.ItemController      : Item found Successfully with ItemName: Round Widget
+2022-01-27 10:37:32.969  INFO 67578 --- [http-nio-8082-exec-3] c.e.demo.controllers.CartController      : item is successfully added with id : 1 to the cart for the user akshay during addToCart in CartController
+2022-01-27 10:38:07.935  INFO 67578 --- [http-nio-8082-exec-4] c.e.demo.controllers.OrderController     : order submitted successfully with username: akshay
+2022-01-27 10:38:26.892  INFO 67578 --- [http-nio-8082-exec-5] c.e.demo.controllers.OrderController     : order history retrieved successfully with username: akshay
+2022-01-27 10:38:32.594 ERROR 67578 --- [http-nio-8082-exec-6] c.e.demo.controllers.OrderController     : username not found: aksha
+2022-01-27 10:38:39.694 ERROR 67578 --- [http-nio-8082-exec-7] c.e.demo.controllers.OrderController     : User not found with username: aksh
+2022-01-27 10:39:27.143  INFO 67578 --- [http-nio-8082-exec-1] c.e.demo.controllers.CartController      : item is successfully added with id : 1 to the cart for the user akshay during addToCart in CartController
