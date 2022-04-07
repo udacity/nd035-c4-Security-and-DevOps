@@ -2,8 +2,9 @@ package com.example.demo.controllers;
 
 import java.util.Optional;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,6 +33,8 @@ public class UserController {
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+	public static final Logger log = LogManager.getLogger(UserController.class);
+
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
 		return ResponseEntity.of(userRepository.findById(id));
@@ -54,10 +57,12 @@ public class UserController {
 		if (createUserRequest.getPassword().length() < 7 || !createUserRequest.getPassword().equals(
 				createUserRequest.getConfirmPassword()
 		)) {
+			log.error("Create user failure for user: " + user.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
+		log.info("Create user success for user: " + user.getUsername());
 		return ResponseEntity.ok(user);
 	}
 	
