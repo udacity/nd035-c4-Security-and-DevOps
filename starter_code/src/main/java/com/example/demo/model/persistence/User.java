@@ -22,9 +22,24 @@ public class User {
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	@Column(nullable = false)
 	private String password;
+	
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+	@Column(nullable = false)
+	private String salt;
+	
+	
+	public String getSalt() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
+
 	public String getPassword(){
 		return password;
 	}
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
