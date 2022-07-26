@@ -13,7 +13,13 @@
 					"name": "Add To Cart",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"username\": \"user1\",\r\n    \"itemId\": 1,\r\n    \"quantity\": 2\r\n}",
@@ -42,7 +48,13 @@
 					"name": "Remove For Cart",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"username\": \"user1\",\r\n    \"itemId\": 1,\r\n    \"quantity\": 1\r\n}",
@@ -76,7 +88,13 @@
 					"name": "Get All Items",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/item",
 							"host": [
@@ -95,7 +113,13 @@
 					"name": "Get Item By ID",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/item/1",
 							"host": [
@@ -115,7 +139,13 @@
 					"name": "Get Items By Name",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/item/name/Round Widget",
 							"host": [
@@ -141,7 +171,13 @@
 					"name": "Save Order By username",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/order/submit/user1",
 							"host": [
@@ -162,7 +198,13 @@
 					"name": "Get Order By User",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/order/history/user1",
 							"host": [
@@ -188,7 +230,13 @@
 					"name": "Get User By ID",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/user/id/1",
 							"host": [
@@ -209,7 +257,13 @@
 					"name": "Get User By Username",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8080/api/user/user1",
 							"host": [
@@ -232,7 +286,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"user1\"\r\n}",
+							"raw": "{\r\n    \"username\": \"user1\",\r\n    \"password\": \"1234567\",\r\n    \"confirmPassword\": \"1234567\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -249,6 +303,33 @@
 								"api",
 								"user",
 								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user1\",\r\n    \"password\": \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
 							]
 						}
 					},
