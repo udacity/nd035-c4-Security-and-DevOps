@@ -94,7 +94,8 @@
 							{
 								"key": "Authorization",
 								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {
@@ -119,7 +120,8 @@
 							{
 								"key": "Authorization",
 								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {
@@ -145,7 +147,8 @@
 							{
 								"key": "Authorization",
 								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsImV4cCI6MTY1OTcxNzA2M30.7HvtZtzmyuuPWYQpI6Mvh69Mvm8kQyKM82wHb-4yBcnmMLllUB6Fy6-7GFo8-OKXlT_W_HjZFDQSqiEdq82fPg",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {

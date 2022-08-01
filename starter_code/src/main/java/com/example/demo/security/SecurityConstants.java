@@ -9,4 +9,5 @@ public class SecurityConstants {
     public static final String SIGN_UP_URL = "/api/user/create";
     public static final String CART_ADD_URL = "/api/cart/addToCart";
     public static final String CART_REMOVE_URL = "/api/cart/removeFromCart";
+    public static final String ITEMS_URL = "/api/item/**";
 }
