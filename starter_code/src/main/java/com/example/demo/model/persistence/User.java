@@ -4,10 +4,13 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+import org.hibernate.annotations.Nationalized;
 
 
 @Entity
 @Table(name = "user")
+@Data
 public class User {
 
 	@Id
@@ -16,6 +19,7 @@ public class User {
 	private long id;
 	
 	@Column(nullable = false, unique = true)
+	@Nationalized
 	@JsonProperty
 	private String username;
 
@@ -23,7 +27,6 @@ public class User {
 	@Column(nullable = false)
 	private String password;
 
-	
 	@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cart_id", referencedColumnName = "id")
 	@JsonIgnore

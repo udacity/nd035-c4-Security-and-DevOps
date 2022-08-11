@@ -48,9 +48,7 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
-		Cart cart = new Cart();
-		cartRepository.save(cart);
-		user.setCart(cart);
+		user.setCart(cartRepository.save(new Cart()));
 		if (createUserRequest.getPassword().length() < 7 || !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
 			System.out.println("Error with User password. Cannot create user " + createUserRequest.getUsername());
 			return ResponseEntity.badRequest().build();
