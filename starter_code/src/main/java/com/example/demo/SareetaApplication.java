@@ -1,5 +1,8 @@
 package com.example.demo;
 
+import com.example.demo.model.persistence.User;
+import com.example.demo.model.persistence.repositories.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -19,5 +22,4 @@ public class SareetaApplication {
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-
 }
