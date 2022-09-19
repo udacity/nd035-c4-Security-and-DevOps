@@ -20,6 +20,7 @@
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
     </properties>
 
+
 	<dependencies>
 
 		<dependency>
