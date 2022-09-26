@@ -8,8 +8,11 @@ import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.json.JacksonTester;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.test.web.servlet.MockMvc;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -24,8 +27,14 @@ public class UserControllerTest {
     private CartRepository cartRepository = mock(CartRepository.class);
     private BCryptPasswordEncoder bCryptPasswordEncoder = mock(BCryptPasswordEncoder.class);
 
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Autowired
+    private JacksonTester<CreateUserRequest> json;
+
     @Before
-    public void setuo() {
+    public void setup() {
         userController = new UserController();
         TestUtils.injectObjects(userController,"userRepository", userRepository);
         TestUtils.injectObjects(userController,"cartRepository", cartRepository);
@@ -33,7 +42,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void create_user_happy_path() {
+    public void createUserHappyPath() {
         when(bCryptPasswordEncoder.encode("testpassword")).thenReturn("thisIsHashed");
         CreateUserRequest request = new CreateUserRequest();
         request.setUsername("Sina");
@@ -49,8 +58,16 @@ public class UserControllerTest {
         assertEquals(0,user.getId());
         assertEquals("Sina",user.getUsername());
         assertEquals("thisIsHashed",user.getPassword());
-
     }
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
