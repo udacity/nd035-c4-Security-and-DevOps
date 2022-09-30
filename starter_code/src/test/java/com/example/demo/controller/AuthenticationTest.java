@@ -18,6 +18,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -44,7 +46,7 @@ public class AuthenticationTest {
     CartRepository cartRepository;
 
     @Test
-    public void findByUserNameTest() throws Exception {
+    public void createUserHappyPath() throws Exception {
         CreateUserRequest request = new CreateUserRequest();
         request.setUsername("Sina");
         request.setPassword("testpassword");
@@ -61,9 +63,7 @@ public class AuthenticationTest {
 
     @Test
     public void unauthorizedFindByUserName() throws Exception {
-
         mockMvc.perform(get("/api/user/Sina"))
                 .andExpect(status().isForbidden());
-
     }
 }
