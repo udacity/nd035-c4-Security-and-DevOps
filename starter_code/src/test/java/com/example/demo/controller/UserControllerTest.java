@@ -21,55 +21,37 @@ import static org.mockito.Mockito.when;
 
 public class UserControllerTest {
 
-//    private UserController userController;
-//
-//    private UserRepository userRepository = mock(UserRepository.class);
-//    private CartRepository cartRepository = mock(CartRepository.class);
-//    private BCryptPasswordEncoder bCryptPasswordEncoder = mock(BCryptPasswordEncoder.class);
-//
-//    @Autowired
-//    private MockMvc mockMvc;
-//
-//    @Autowired
-//    private JacksonTester<CreateUserRequest> json;
-//
-//    @Before
-//    public void setup() {
-//        userController = new UserController();
-//        TestUtils.injectObjects(userController,"userRepository", userRepository);
-//        TestUtils.injectObjects(userController,"cartRepository", cartRepository);
-//        TestUtils.injectObjects(userController,"bCryptPasswordEncoder", bCryptPasswordEncoder);
-//    }
-//
-//    @Test
-//    public void createUserHappyPath() {
-//        when(bCryptPasswordEncoder.encode("testpassword")).thenReturn("thisIsHashed");
-//        CreateUserRequest request = new CreateUserRequest();
-//        request.setUsername("Sina");
-//        request.setPassword("testpassword");
-//        request.setConfirmPassword("testpassword");
-//
-//        ResponseEntity<User> response =  userController.createUser(request);
-//
-//        assertNotNull(response);
-//        assertEquals(200, response.getStatusCodeValue());
-//
-//        User user = response.getBody();
-//        assertEquals(0,user.getId());
-//        assertEquals("Sina",user.getUsername());
-//        assertEquals("thisIsHashed",user.getPassword());
-//    }
+    private UserController userController;
 
+    private UserRepository userRepository = mock(UserRepository.class);
+    private CartRepository cartRepository = mock(CartRepository.class);
+    private BCryptPasswordEncoder bCryptPasswordEncoder = mock(BCryptPasswordEncoder.class);
 
+    @Before
+    public void setup() {
+        userController = new UserController();
+        TestUtils.injectObjects(userController,"userRepository", userRepository);
+        TestUtils.injectObjects(userController,"cartRepository", cartRepository);
+        TestUtils.injectObjects(userController,"bCryptPasswordEncoder", bCryptPasswordEncoder);
+    }
+
+    @Test
+    public void createUserHappyPath() {
+        when(bCryptPasswordEncoder.encode("testpassword")).thenReturn("thisIsHashed");
+        CreateUserRequest request = new CreateUserRequest();
+        request.setUsername("Sina");
+        request.setPassword("testpassword");
+        request.setConfirmPassword("testpassword");
+
+        ResponseEntity<User> response =  userController.createUser(request);
+
+        assertNotNull(response);
+        assertEquals(200, response.getStatusCodeValue());
+
+        User user = response.getBody();
+        assertEquals(0,user.getId());
+        assertEquals("Sina",user.getUsername());
+        assertEquals("thisIsHashed",user.getPassword());
+    }
 }
-
-
-
-
-
-
-
-
-
-
 

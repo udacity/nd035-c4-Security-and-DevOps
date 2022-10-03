@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.authentication;
 
 
 import com.example.demo.controllers.UserController;
@@ -18,7 +18,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.mockito.Mockito.times;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(UserController.class)
 @AutoConfigureMockMvc
 @AutoConfigureJsonTesters
-public class AuthenticationTest {
+public class UserAuthenticationNegativeTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -64,6 +64,12 @@ public class AuthenticationTest {
     @Test
     public void unauthorizedFindByUserName() throws Exception {
         mockMvc.perform(get("/api/user/Sina"))
-                .andExpect(status().isForbidden());
+                .andExpect(status().isForbidden()).andReturn();
+    }
+
+    @Test
+    public void unauthorizedFindById() throws Exception {
+        mockMvc.perform(get("/api/user/1"))
+                .andExpect(status().isForbidden()).andReturn();
     }
 }
