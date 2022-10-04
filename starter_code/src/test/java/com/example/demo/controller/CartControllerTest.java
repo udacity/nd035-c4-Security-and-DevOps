@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.TestUtils;
 import com.example.demo.controllers.CartController;
-import com.example.demo.controllers.UserController;
 import com.example.demo.model.persistence.Cart;
 import com.example.demo.model.persistence.Item;
 import com.example.demo.model.persistence.User;
@@ -15,7 +14,6 @@ import org.junit.Test;
 import org.springframework.http.ResponseEntity;
 
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
