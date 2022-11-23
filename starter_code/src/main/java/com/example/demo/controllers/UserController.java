@@ -51,25 +51,43 @@ public class UserController {
     @PostMapping("/create")
     public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
         User user = new User();
-        user.setUsername(createUserRequest.getUsername());
         Cart cart = new Cart();
+
+        user.setUsername(createUserRequest.getUsername());
         cartRepository.save(cart);
         user.setCart(cart);
 
-        if (isValidPassword(createUserRequest.getPassword()) || createUserRequest.getPassword()
-            .equals(createUserRequest.getConfirmPassword())) {
-            
+        if (isCreateUserRequestValid(createUserRequest)) {
             user.setPassword(this.bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
             this.userRepository.save(user);
             return ResponseEntity.ok(user);
         }
-        return ResponseEntity.badRequest().build();
+        return ResponseEntity.badRequest()
+            .build();
     }
 
-    private boolean isValidPassword(String password) {
-//        Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\\]).{8,32}$");
-//        Matcher matcher = pattern.matcher(password);
-//        return matcher.find();
+    private boolean isCreateUserRequestValid(CreateUserRequest createUserRequest) {
+        Boolean isValid = false;
+        if (isValidUsername(createUserRequest.getUsername()) && this.isValidPassword(createUserRequest.getPassword(), createUserRequest.getConfirmPassword())) {
+            isValid = true;
+        }
+        return isValid;
+    }
+
+    private boolean isValidUsername(String username) {
+        if (username != null && username.length() >= 5) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isValidPassword(String password, String confirmPassword) {
+        if (password == null && confirmPassword == null && !password.equals(confirmPassword)) {
+            return false;
+        }
+        // Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\\]).{8,32}$");
+        // Matcher matcher = pattern.matcher(password);
+        // return matcher.find();
         return true;
     }
 }
