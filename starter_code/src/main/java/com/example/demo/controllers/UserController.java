@@ -1,5 +1,9 @@
 package com.example.demo.controllers;
 
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -20,6 +24,8 @@ import com.example.demo.model.requests.CreateUserRequest;
 @RequestMapping("/api/user")
 public class UserController {
 
+    private Logger log = LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     private UserRepository userRepository;
 
@@ -31,14 +37,27 @@ public class UserController {
 
     public UserController(UserRepository userRepository, CartRepository cartRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
         super();
+        log.debug("Instanciating UserController RestController...");
         this.userRepository = userRepository;
         this.cartRepository = cartRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        log.debug("Instanciated UserController succesfully");
     }
 
     @GetMapping("/id/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
-        return ResponseEntity.of(userRepository.findById(id));
+        log.info("Start findById for user id {}", id);
+        Optional<User> user = this.userRepository.findById(id);
+
+        if (user.isEmpty()) {
+            log.info("No user found for the given id {}...");
+            return ResponseEntity.badRequest()
+                .build();
+        }
+
+        User foundUser = user.get();
+        log.info("Found user for the given id: username: {}", foundUser.getUsername());
+        return ResponseEntity.of(user);
     }
 
     @GetMapping("/{username}")
@@ -50,6 +69,9 @@ public class UserController {
 
     @PostMapping("/create")
     public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
+
+        log.info("Start createUser for request with username: {}", createUserRequest.getUsername());
+
         User user = new User();
         Cart cart = new Cart();
 
@@ -57,37 +79,43 @@ public class UserController {
         cartRepository.save(cart);
         user.setCart(cart);
 
-        if (isCreateUserRequestValid(createUserRequest)) {
-            user.setPassword(this.bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
-            this.userRepository.save(user);
-            return ResponseEntity.ok(user);
+        if (!isCreateUserRequestValid(createUserRequest)) {
+            return ResponseEntity.badRequest()
+                .build();
         }
-        return ResponseEntity.badRequest()
-            .build();
+        log.info("Hashing password for storage...");
+        user.setPassword(this.bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
+        log.info("Saving user {} to the database...", createUserRequest.getUsername());
+        this.userRepository.save(user);
+        log.info("Successfully saved user {} to the database.", user.getUsername());
+        return ResponseEntity.ok(user);
     }
 
     private boolean isCreateUserRequestValid(CreateUserRequest createUserRequest) {
-        Boolean isValid = false;
+
         if (isValidUsername(createUserRequest.getUsername()) && this.isValidPassword(createUserRequest.getPassword(), createUserRequest.getConfirmPassword())) {
-            isValid = true;
+            return true;
         }
-        return isValid;
+        log.info("Bad createUserRequest for username {}", createUserRequest.getUsername());
+        return false;
     }
 
     private boolean isValidUsername(String username) {
         if (username != null && username.length() >= 5) {
             return true;
         }
+        log.info("Invalid username format for username {}...", username);
         return false;
     }
 
     private boolean isValidPassword(String password, String confirmPassword) {
-        if (password == null && confirmPassword == null && !password.equals(confirmPassword)) {
-            return false;
+        if (!(password == null && confirmPassword == null) && password.equals(confirmPassword)) {
+            return true;
         }
         // Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\\]).{8,32}$");
         // Matcher matcher = pattern.matcher(password);
         // return matcher.find();
-        return true;
+        log.info("Invalid password for password {} and confirmPassword {}...", password, confirmPassword);
+        return false;
     }
 }
