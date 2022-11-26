@@ -49,7 +49,7 @@ public class UserController {
         log.info("Start findById for user id {}", id);
         Optional<User> user = this.userRepository.findById(id);
 
-        if (user.isEmpty()) {
+        if (!user.isPresent()) {
             log.info("No user found for the given id {}...");
             return ResponseEntity.badRequest()
                 .build();
