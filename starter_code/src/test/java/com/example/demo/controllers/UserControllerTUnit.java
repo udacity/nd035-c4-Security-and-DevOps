@@ -52,7 +52,7 @@ public class UserControllerTUnit {
         assertNotNull(response.getBody()
             .getId());
         assertEquals(response.getBody()
-            .getUsername(), "test1");
+            .getUsername(), "user1");
         assertEquals(response.getBody()
             .getPassword(), "HashValue");
     }
@@ -62,7 +62,7 @@ public class UserControllerTUnit {
         when(cartRepositoryMock.save(any())).thenReturn(new Cart());
 
         CreateUserRequest request = this.buildCreateUserRequestObject();
-        request.setUsername("bad");
+        request.setUsername("badp");
         final ResponseEntity<User> response = userController.createUser(request);
 
         assertNotNull(response);
@@ -74,7 +74,7 @@ public class UserControllerTUnit {
         when(cartRepositoryMock.save(any())).thenReturn(new Cart());
 
         CreateUserRequest request = this.buildCreateUserRequestObject();
-        request.setPassword("badc");
+        request.setPassword("badp1");
         final ResponseEntity<User> response = userController.createUser(request);
 
         assertNotNull(response);
@@ -82,11 +82,11 @@ public class UserControllerTUnit {
     }
 
     private Object buildUser() {
-        return new User(1, "test1", "test1", null);
+        return new User(1, "user1", "badp", null);
     }
 
     private CreateUserRequest buildCreateUserRequestObject() {
-        return new CreateUserRequest("test1", "test1", "test1");
+        return new CreateUserRequest("user1", "Test123!", "Test123!");
     }
 
 }

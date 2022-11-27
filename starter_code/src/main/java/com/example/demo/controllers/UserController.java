@@ -1,6 +1,8 @@
 package com.example.demo.controllers;
 
 import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,10 +30,8 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
-
     @Autowired
     private CartRepository cartRepository;
-
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
@@ -109,13 +109,15 @@ public class UserController {
     }
 
     private boolean isValidPassword(String password, String confirmPassword) {
+
+        boolean isValid = false;
+
         if (!(password == null && confirmPassword == null) && password.equals(confirmPassword)) {
-            return true;
+            isValid = true;
         }
-        // Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\\]).{8,32}$");
-        // Matcher matcher = pattern.matcher(password);
-        // return matcher.find();
-        log.info("Invalid password for password {} and confirmPassword {}...", password, confirmPassword);
-        return false;
+        Pattern pattern = Pattern.compile("(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$");
+        Matcher matcher = pattern.matcher(password);
+        isValid = matcher.find();
+        return isValid;
     }
 }
