@@ -2,6 +2,8 @@ package com.example.demo.controllers;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,32 +20,42 @@ import com.example.demo.model.persistence.repositories.UserRepository;
 @RestController
 @RequestMapping("/order")
 public class OrderController {
-	
-	
-	@Autowired
-	private UserRepository userRepository;
-	
-	@Autowired
-	private OrderRepository orderRepository;
-	
-	
-	@PostMapping("/submit/{username}")
-	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
-		User user = userRepository.findByUsername(username);
-		if(user == null) {
-			return ResponseEntity.notFound().build();
-		}
-		UserOrder order = UserOrder.createFromCart(user.getCart());
-		orderRepository.save(order);
-		return ResponseEntity.ok(order);
-	}
-	
-	@GetMapping("/history/{username}")
-	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
-		User user = userRepository.findByUsername(username);
-		if(user == null) {
-			return ResponseEntity.notFound().build();
-		}
-		return ResponseEntity.ok(orderRepository.findByUser(user));
-	}
+
+    private Logger log = LogManager.getLogger(OrderController.class);
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private OrderRepository orderRepository;
+
+    @PostMapping("/submit/{username}")
+    public ResponseEntity<UserOrder> submit(@PathVariable String username) {
+        log.info("Start Order Submit for user {}", username);
+        User user = userRepository.findByUsername(username);
+        if (user == null) {
+            log.warn("Order submission for user {} failed due to user not found.");
+            return ResponseEntity.notFound()
+                .build();
+        }
+        log.info("Creating order from cart...");
+        UserOrder order = UserOrder.createFromCart(user.getCart());
+        log.info("Found order from cart with id {}", order.getId());
+        log.info("Saving order with id {} to the database...", order.getId());
+        orderRepository.save(order);
+        return ResponseEntity.ok(order);
+    }
+
+    @GetMapping("/history/{username}")
+    public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
+        log.info("Start getOrdersForUser for user {}", username);
+        User user = userRepository.findByUsername(username);
+        if (user == null) {
+            log.warn("Could not find any orders for user {}, user not found exception.", username);
+            return ResponseEntity.notFound()
+                .build();
+        }
+        log.info("Found user orders for user {}.", username);
+        return ResponseEntity.ok(orderRepository.findByUser(user));
+    }
 }

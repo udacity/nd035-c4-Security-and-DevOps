@@ -4,8 +4,9 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -26,7 +27,7 @@ import com.example.demo.model.requests.CreateUserRequest;
 @RequestMapping("/user")
 public class UserController {
 
-    private Logger log = LoggerFactory.getLogger(UserController.class);
+    private Logger log = LogManager.getLogger(UserController.class);
 
     @Autowired
     private UserRepository userRepository;
