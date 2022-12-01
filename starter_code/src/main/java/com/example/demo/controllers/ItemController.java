@@ -13,7 +13,7 @@ import com.example.demo.model.persistence.Item;
 import com.example.demo.model.persistence.repositories.ItemRepository;
 
 @RestController
-@RequestMapping("/api/item")
+@RequestMapping("/item")
 public class ItemController {
 
 	@Autowired
@@ -33,8 +33,6 @@ public class ItemController {
 	public ResponseEntity<List<Item>> getItemsByName(@PathVariable String name) {
 		List<Item> items = itemRepository.findByName(name);
 		return items == null || items.isEmpty() ? ResponseEntity.notFound().build()
-				: ResponseEntity.ok(items);
-			
+				: ResponseEntity.ok(items);	
 	}
-	
 }
