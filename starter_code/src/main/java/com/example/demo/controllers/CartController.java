@@ -24,7 +24,7 @@ import com.example.demo.model.requests.ModifyCartRequest;
 @RestController
 @RequestMapping("/cart")
 public class CartController {
-
+    
     private Logger log = LogManager.getLogger(CartController.class);
 
     @Autowired
@@ -34,6 +34,11 @@ public class CartController {
     @Autowired
     private ItemRepository itemRepository;
 
+    /**
+     * Method to handle cart addition to the database through. HTTP POST
+     * @param request The ModifyCartRequest object containing new cart's details to add to the database.
+     * @return cart that was modified with the new changes from the modifyCartRequest. 
+     */
     @PostMapping("/addToCart")
     public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
         log.info("Start addToCart for request {}", request);
@@ -56,6 +61,9 @@ public class CartController {
 
         Cart cart = user.getCart();
 
+        /* 
+         * Iterate through the cart's objects and adds items one by one. 
+         */
         IntStream.range(0, request.getQuantity())
             .forEach(i -> cart.addItem(item.get()));
 
@@ -65,6 +73,11 @@ public class CartController {
         return ResponseEntity.ok(cart);
     }
 
+    /**
+     * Method to handle http POST requests to remove items from the cart.
+     * @param request - The object containing the details to modify cart.
+     * @return - cart object after with details after being modified.
+     */
     @PostMapping("/removeFromCart")
     public ResponseEntity<Cart> removeFromcart(@RequestBody ModifyCartRequest request) {
         log.info("Start removeFromCart for request {}", request);

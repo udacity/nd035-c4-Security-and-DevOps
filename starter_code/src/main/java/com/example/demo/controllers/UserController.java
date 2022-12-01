@@ -45,6 +45,11 @@ public class UserController {
         log.debug("Instanciated UserController succesfully");
     }
 
+    /**
+     * Finds a user by its id.
+     * @param id Id of the user in the database.
+     * @return User details found in the database for the given id.
+     */
     @GetMapping("/id/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
         log.info("Start findById for user id {}", id);
@@ -61,6 +66,11 @@ public class UserController {
         return ResponseEntity.of(user);
     }
 
+    /**
+     * Finds a user by its username.
+     * @param username username of user in the database.
+     * @return User details (object) found in the database for the given username.
+     */
     @GetMapping("/{username}")
     public ResponseEntity<User> findByUserName(@PathVariable String username) {
         User user = userRepository.findByUsername(username);
@@ -68,6 +78,11 @@ public class UserController {
             .build() : ResponseEntity.ok(user);
     }
 
+    /**
+     * Creates a new user in the database.
+     * @param createUserRequest Detailed object to create the user in the database.
+     * @return Newly created User in the database with its details.
+     */
     @PostMapping("/create")
     public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 
@@ -92,6 +107,11 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
+    /**
+     * Method to validate a CreateUserRequest object fields.
+     * @param createUserRequest Object to validate
+     * @return True or False according to the validations executed.
+     */
     private boolean isCreateUserRequestValid(CreateUserRequest createUserRequest) {
 
         if (isValidUsername(createUserRequest.getUsername()) && this.isValidPassword(createUserRequest.getPassword(), createUserRequest.getConfirmPassword())) {
@@ -101,6 +121,11 @@ public class UserController {
         return false;
     }
 
+    /**
+     * Checks if a given username string value is valid.
+     * @param username String username value.
+     * @return True or False according to the validations executed.
+     */
     private boolean isValidUsername(String username) {
         if (username != null && username.length() >= 5) {
             return true;
@@ -109,6 +134,12 @@ public class UserController {
         return false;
     }
 
+    /**
+     * Validates if given password string is valid. 
+     * @param password password value to validate.
+     * @param confirmPassword ConfirmPassword to match towards password.
+     * @return True or False according to the validations executed.
+     */
     private boolean isValidPassword(String password, String confirmPassword) {
 
         boolean isValid = false;

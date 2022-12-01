@@ -25,10 +25,14 @@ public class OrderController {
 
     @Autowired
     private UserRepository userRepository;
-
     @Autowired
     private OrderRepository orderRepository;
 
+    /**
+     * Submit an order to the database for the given username.
+     * @param username the username to submit order for to database.
+     * @return the submitted order for the user.
+     */
     @PostMapping("/submit/{username}")
     public ResponseEntity<UserOrder> submit(@PathVariable String username) {
         log.info("Start Order Submit for user {}", username);
@@ -46,6 +50,11 @@ public class OrderController {
         return ResponseEntity.ok(order);
     }
 
+    /**
+     * Get all orders for the given username.
+     * @param username The username associated with the orders.
+     * @return List of Order objects for the given user (username).
+     */
     @GetMapping("/history/{username}")
     public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
         log.info("Start getOrdersForUser for user {}", username);
