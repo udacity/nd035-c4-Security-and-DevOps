@@ -42,12 +42,10 @@ public class Cart {
 	private BigDecimal total;
 	
 	public BigDecimal getTotal() {
-		return total;
+		return items.stream().map(Item::getPrice)
+				.reduce(BigDecimal.ZERO, BigDecimal::add);
 	}
 
-	public void setTotal(BigDecimal total) {
-		this.total = total;
-	}
 
 	public User getUser() {
 		return user;
