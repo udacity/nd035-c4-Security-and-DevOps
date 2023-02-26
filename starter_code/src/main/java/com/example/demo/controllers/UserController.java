@@ -34,7 +34,12 @@ public class UserController {
     @GetMapping({"/{username}"})
     public ResponseEntity<User> findByUserName(@PathVariable String username) {
         User user = this.userRepository.findByUsername(username);
-        return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
+        if (user == null) {
+            log.warn("no user found for {}", username);
+            return ResponseEntity.notFound().build();
+        } else {
+            return ResponseEntity.ok(user);
+        }
     }
 
     @PostMapping({"/create"})
@@ -47,8 +52,10 @@ public class UserController {
         if (createUserRequest.getPassword().length() >= 7 && createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
             user.setPassword(this.bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
             this.userRepository.save(user);
+            log.info("user created for username: {}",user.getUsername());
             return ResponseEntity.ok(user);
         } else {
+            log.info("invalid request for create user with password {},{}", createUserRequest.getPassword(), createUserRequest.getConfirmPassword());
             return ResponseEntity.badRequest().build();
         }
     }
