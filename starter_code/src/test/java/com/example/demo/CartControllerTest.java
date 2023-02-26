@@ -122,7 +122,7 @@ public class CartControllerTest {
         Mockito.when(cartRepository.save(cart)).thenReturn(cart);
 
         // Execute
-        ResponseEntity<Cart> response = cartController.removeFromcart(request);
+        ResponseEntity<Cart> response = cartController.removeFromCart(request);
 
         // Verify
         Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
@@ -142,7 +142,7 @@ public class CartControllerTest {
         ModifyCartRequest request = createModifyCartRequest(user, quantity, itemId);
 
         // Execute
-        ResponseEntity<Cart> response = cartController.removeFromcart(request);
+        ResponseEntity<Cart> response = cartController.removeFromCart(request);
 
         // Verify
         Assert.assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
@@ -162,7 +162,7 @@ public class CartControllerTest {
         Mockito.when(userRepository.findByUsername(user.getUsername())).thenReturn(user);
 
         // Execute
-        ResponseEntity<Cart> response = cartController.removeFromcart(request);
+        ResponseEntity<Cart> response = cartController.removeFromCart(request);
 
         // Verify
         Assert.assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
