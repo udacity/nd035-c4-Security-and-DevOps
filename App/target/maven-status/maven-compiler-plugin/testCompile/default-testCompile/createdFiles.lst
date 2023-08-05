@@ -1,1 +1,12 @@
+com/example/demo/security/SecurityConfigTest.class
+com/example/demo/model/persistence/repositories/UserRepositoryTest.class
+com/example/demo/controllers/ItemControllerTest.class
+com/example/demo/controllers/UserControllerTest.class
+com/example/demo/model/persistence/repositories/OrderRepositoryTest.class
+com/example/demo/model/persistence/repositories/CartRepositoryTest.class
 com/example/demo/SareetaApplicationTests.class
+com/example/demo/controllers/CartControllerTest.class
+com/example/demo/util/UtilsTest.class
+com/example/demo/TestUtils.class
+com/example/demo/model/persistence/repositories/ItemRepositoryTest.class
+com/example/demo/controllers/OrderControllerTest.class

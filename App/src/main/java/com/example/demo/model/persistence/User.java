@@ -15,8 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+
 @Entity
 @Table(name = "user")
 public class User {
@@ -30,7 +29,6 @@ public class User {
 	@JsonProperty
 	private String username;
 	
-	@Getter
 	@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cart_id", referencedColumnName = "id")
 	@JsonIgnore
@@ -40,13 +38,24 @@ public class User {
 	@Column(nullable = false)
 	private String password;
 
-	/*  // This is the old code that was replaced by the code above.
 	public void setCart(Cart cart) {
 		this.cart = cart;
 	}
 
+	public Cart getCart() {
+		return cart;
+	}
+
 	public long getId() {
 		return id;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public void setId(long id) {
@@ -60,7 +69,5 @@ public class User {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	*/
-	
-	
+
 }
