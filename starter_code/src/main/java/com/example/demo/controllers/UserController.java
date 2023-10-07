@@ -1,10 +1,11 @@
 package com.example.demo.controllers;
 
-import java.util.Optional;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,9 +28,15 @@ public class UserController {
 	
 	@Autowired
 	private CartRepository cartRepository;
+	
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
+	private static final Logger LOGGER = LogManager.getLogger(UserController.class);
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
+        LOGGER.info("Start get user info. ID: " + id);
 		return ResponseEntity.of(userRepository.findById(id));
 	}
 	
@@ -39,14 +46,30 @@ public class UserController {
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
 	}
 	
-	@PostMapping("/create")
+	@SuppressWarnings("deprecation")
+    @PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
+
+        // Validate
+        if (StringUtils.isEmpty(createUserRequest.getPassword()) || createUserRequest.getPassword().length() < 8) {
+            LOGGER.info("CreateUser request failures");
+            return ResponseEntity.notFound().build();
+        }
+
+        if (!createUserRequest.getPassword().equals(createUserRequest.getRePassword())) {
+            LOGGER.info("CreateUser request failures");
+            return ResponseEntity.notFound().build();
+        }
+
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
+		user.setPassword(passwordEncoder.encode(createUserRequest.getPassword()));
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
 		userRepository.save(user);
+
+        LOGGER.info("CreateUser request successes");
 		return ResponseEntity.ok(user);
 	}
 	

@@ -1,16 +1,17 @@
 package com.example.demo;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
+@EnableJpaRepositories("com.example.demo.model.persistence.repositories")
+@EntityScan("com.example.demo.model.persistence")
 public class SareetaApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	void contextLoads() {
 	}
 
 }
