@@ -22,7 +22,6 @@ import com.example.demo.model.requests.ModifyCartRequest;
 @RestController
 @RequestMapping("/api/cart")
 public class CartController {
-	
 	@Autowired
 	private UserRepository userRepository;
 	
@@ -65,5 +64,4 @@ public class CartController {
 		cartRepository.save(cart);
 		return ResponseEntity.ok(cart);
 	}
-		
 }

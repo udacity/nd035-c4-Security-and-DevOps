@@ -21,7 +21,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 @Table(name = "cart")
 public class Cart {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JsonProperty
@@ -89,9 +88,9 @@ public class Cart {
 			items = new ArrayList<>();
 		}
 		items.remove(item);
-		if(total == null) {
+		total = total.subtract(item.getPrice());
+		if (total.longValue() < 0) {
 			total = new BigDecimal(0);
 		}
-		total = total.subtract(item.getPrice());
 	}
 }

@@ -1,0 +1,29 @@
+2023-11-18 14:01:24,714 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on DESKTOP-8S2A5CF with PID 15440 (D:\Work\Udacity\nd035-c4-Security-and-DevOps\starter_code\target\classes started by Admin in D:\Work\Udacity\nd035-c4-Security-and-DevOps)
+2023-11-18 14:01:24,716 DEBUG c.e.d.SareetaApplication [main] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2023-11-18 14:01:24,717 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2023-11-18 14:01:26,281 DEBUG c.e.d.c.JwtAuthenticationFilter [main] Filter 'jwtAuthenticationFilter' configured for use
+2023-11-18 14:01:26,616 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 2.011 seconds (JVM running for 2.356)
+2023-11-18 14:01:32,207 INFO c.e.d.c.UserController [http-nio-8080-exec-1] User creation - verifying step started
+2023-11-18 14:01:32,207 INFO c.e.d.c.UserController [http-nio-8080-exec-1] User creation - verifying step - Password must be at least 8 characters long
+2023-11-18 14:01:32,207 INFO c.e.d.c.UserController [http-nio-8080-exec-1] User creation - verifying step ended
+2023-11-18 14:02:29,677 INFO c.e.d.c.UserController [http-nio-8080-exec-3] User creation - verifying step started
+2023-11-18 14:02:29,677 INFO c.e.d.c.UserController [http-nio-8080-exec-3] User creation - verifying step - Password and password confirmation mismatch
+2023-11-18 14:02:29,677 INFO c.e.d.c.UserController [http-nio-8080-exec-3] User creation - verifying step ended
+2023-11-18 14:02:38,784 INFO c.e.d.c.UserController [http-nio-8080-exec-4] User creation - verifying step started
+2023-11-18 14:02:38,855 INFO c.e.d.c.UserController [http-nio-8080-exec-4] User creation - verifying step - Username is already existed
+2023-11-18 14:02:38,855 INFO c.e.d.c.UserController [http-nio-8080-exec-4] User creation - verifying step ended
+2023-11-18 14:03:10,664 INFO c.e.d.c.UserController [http-nio-8080-exec-10] User creation - verifying step started
+2023-11-18 14:03:10,665 INFO c.e.d.c.UserController [http-nio-8080-exec-10] User creation - verifying step ended
+2023-11-18 14:03:10,665 INFO c.e.d.c.UserController [http-nio-8080-exec-10] User creation - creation step started
+2023-11-18 14:03:10,751 INFO c.e.d.c.UserController [http-nio-8080-exec-10] User creation - creation step successfully
+2023-11-18 14:03:10,751 INFO c.e.d.c.UserController [http-nio-8080-exec-10] User creation - creation step ended
+2023-11-18 14:04:40,850 INFO c.e.d.c.OrderController [http-nio-8080-exec-6] Order creation - creation step started
+2023-11-18 14:04:40,858 INFO c.e.d.c.OrderController [http-nio-8080-exec-6] Order creation - creation step ended
+2023-11-18 16:14:43,744 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on DESKTOP-8S2A5CF with PID 19368 (D:\Work\Udacity\nd035-c4-Security-and-DevOps\starter_code\target\classes started by Admin in D:\Work\Udacity\nd035-c4-Security-and-DevOps)
+2023-11-18 16:14:43,747 DEBUG c.e.d.SareetaApplication [main] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2023-11-18 16:14:43,747 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2023-11-18 16:14:45,304 DEBUG c.e.d.c.JwtAuthenticationFilter [main] Filter 'jwtAuthenticationFilter' configured for use
+2023-11-18 16:14:45,625 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 1.986 seconds (JVM running for 2.341)
+2023-11-18 16:15:03,199 INFO c.e.d.c.UserController [http-nio-8080-exec-1] User creation - verifying step started
+2023-11-18 16:15:03,199 INFO c.e.d.c.UserController [http-nio-8080-exec-1] User creation - verifying step - Password must be at least 8 characters long
+2023-11-18 16:15:03,199 INFO c.e.d.c.UserController [http-nio-8080-exec-1] User creation - verifying step ended

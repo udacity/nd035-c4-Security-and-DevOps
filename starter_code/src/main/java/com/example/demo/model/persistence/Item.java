@@ -17,7 +17,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 @Table(name = "item")
 public class Item {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JsonProperty
@@ -91,7 +90,4 @@ public class Item {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	
-	
 }
