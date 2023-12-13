@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class TestController {
     private static final Logger log = LoggerFactory.getLogger(OrderController.class);
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository userRepositoryDucTT16;
 
     @Autowired
     private OrderRepository orderRepository;
