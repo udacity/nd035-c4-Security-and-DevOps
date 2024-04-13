@@ -25,6 +25,8 @@ public class UserControllerTest {
 
     private BCryptPasswordEncoder encoder = mock(BCryptPasswordEncoder.class);
 
+
+
     @Before
     public void setUp() {
         userController = new UserController();
@@ -52,5 +54,22 @@ public class UserControllerTest {
         assertEquals(0, user.getId());
         assertEquals("test", user.getUsername());
         assertEquals("thisIsHashed", user.getPassword());
+    }
+
+    @Test
+    public void find_user_by_id_happy_path() throws Exception{
+        User user = new User();
+        user.setId(1);
+        user.setUsername("test");
+        user.setPassword("testpassword");
+        when(userRepository.findById(1L)).thenReturn(java.util.Optional.of(user));
+        ResponseEntity<User> response = userController.findById(1L);
+        assertNotNull(response);
+        assertEquals(200, response.getStatusCodeValue());
+        User userResponse = response.getBody();
+        assertNotNull(userResponse);
+        assertEquals(1, userResponse.getId());
+        assertEquals("test", userResponse.getUsername());
+        assertEquals("testpassword", userResponse.getPassword());
     }
 }
