@@ -18,6 +18,8 @@ public class SareetaApplication {
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(SareetaApplication.class, args);
+		System.out.println("E-commerce p4 Application started...");
+		System.out.println("I've just greeted the user!");
 	}
 
 }
