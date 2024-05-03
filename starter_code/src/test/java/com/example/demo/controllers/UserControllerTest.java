@@ -72,4 +72,15 @@ public class UserControllerTest {
         assertEquals("test", userResponse.getUsername());
         assertEquals("testpassword", userResponse.getPassword());
     }
+
+    @Test
+    public void password_length_validation() {
+        CreateUserRequest createUserRequest = new CreateUserRequest();
+        createUserRequest.setUsername("test");
+        createUserRequest.setPassword("test");
+        createUserRequest.setConfirmPassword("test");
+        ResponseEntity<User> response = userController.createUser(createUserRequest);
+        assertNotNull(response);
+        assertEquals(400, response.getStatusCodeValue());
+    }
 }

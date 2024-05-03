@@ -92,6 +92,23 @@ public class CartControllerTest {
         ResponseEntity<Cart> response = cartController.removeFromcart(modifyCartRequest);
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
+    }
 
+    @Test
+    public void item_not_found_in_cart() {
+        ModifyCartRequest modifyCartRequest = new ModifyCartRequest();
+        modifyCartRequest.setUsername("dani");
+        modifyCartRequest.setItemId(1);
+        modifyCartRequest.setQuantity(1);
+
+        User user = new User();
+        Cart cart = new Cart();
+        user.setCart(cart);
+        user.setUsername(modifyCartRequest.getUsername());
+        when(userRepository.findByUsername(modifyCartRequest.getUsername())).thenReturn(user);
+
+        ResponseEntity<Cart> response = cartController.addTocart(modifyCartRequest);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
     }
 }
