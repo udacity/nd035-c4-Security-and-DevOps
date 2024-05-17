@@ -1,6 +1,6 @@
 .idea/
 /starter_code/target/
-
+*/target/**
 ## removed target/ in order to deploy from docker image
 
 ### STS ###
