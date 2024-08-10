@@ -1,2 +1,6 @@
 .idea/
 /starter_code/target/
+/auth-course.iml
+/target/
+mvnw
+mvnw.cmd

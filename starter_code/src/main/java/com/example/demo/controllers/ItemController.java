@@ -1,25 +1,26 @@
 package com.example.demo.controllers;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.demo.model.persistence.Item;
+import com.example.demo.model.persistence.repositories.ItemRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.persistence.Item;
-import com.example.demo.model.persistence.repositories.ItemRepository;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/item")
 public class ItemController {
 
-	@Autowired
-	private ItemRepository itemRepository;
-	
-	@GetMapping
+	private final ItemRepository itemRepository;
+
+    public ItemController(ItemRepository itemRepository) {
+        this.itemRepository = itemRepository;
+    }
+
+    @GetMapping
 	public ResponseEntity<List<Item>> getItems() {
 		return ResponseEntity.ok(itemRepository.findAll());
 	}
