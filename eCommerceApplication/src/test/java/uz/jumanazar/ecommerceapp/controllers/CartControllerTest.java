@@ -85,6 +85,16 @@ public class CartControllerTest {
     }
 
     @Test
+    public void addToCartNotWorks(){
+        ModifyCartRequest req = new ModifyCartRequest();
+        req.setUsername("tester");
+        req.setItemId(0L);
+        ResponseEntity<Cart> response = cartController.addTocart(req);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
     public void removeFromcartWorks() {
         ModifyCartRequest req = new ModifyCartRequest();
         req.setItemId(1);

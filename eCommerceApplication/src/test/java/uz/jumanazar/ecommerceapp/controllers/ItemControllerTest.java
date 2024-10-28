@@ -53,6 +53,13 @@ public class ItemControllerTest {
     }
 
     @Test
+    public void getItemByIdNotWorks(){
+        ResponseEntity<Item> response = itemController.getItemById(0L);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
     public void getItemsByName() {
         List<Item> itemList = TestUtils.getItems();
         when(itemRepo.findByName("Banana")).thenReturn(itemList);
@@ -63,5 +70,13 @@ public class ItemControllerTest {
         List<Item> itemsReturned = response.getBody();
         assertNotNull(itemsReturned);
         assertEquals(itemList, itemsReturned);
+    }
+
+    @Test
+    public void getItemsByNameNotWorks(){
+        ResponseEntity<List<Item>> response = itemController.getItemsByName("DummyItemNotExists");
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+
     }
 }

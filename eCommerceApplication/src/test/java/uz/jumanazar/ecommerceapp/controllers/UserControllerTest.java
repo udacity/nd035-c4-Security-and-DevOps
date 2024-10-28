@@ -81,6 +81,13 @@ public class UserControllerTest {
     }
 
     @Test
+    public void findByIdNotWorks(){
+        ResponseEntity<User> response = userController.findById(10L);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
     public void findByUserName() {
         User user = new User();
         user.setUsername("test");
@@ -93,5 +100,13 @@ public class UserControllerTest {
         User userReturned = response.getBody();
         assertNotNull(userReturned);
         assertEquals(userName, userReturned.getUsername());
+    }
+
+    @Test
+    public void findByUserNameNotWorks(){
+        String userName = "testNotWorks";
+        ResponseEntity<User> response = userController.findByUserName(userName);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
     }
 }

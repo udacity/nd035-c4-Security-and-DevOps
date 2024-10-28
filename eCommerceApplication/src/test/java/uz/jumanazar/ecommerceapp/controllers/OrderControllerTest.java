@@ -50,6 +50,13 @@ public class OrderControllerTest {
     }
 
     @Test
+    public void orderSubmitNotWorks(){
+        ResponseEntity<UserOrder> response = orderController.submit("tester");
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
     public void getOrdersForUser() {
         User user = userRepo.findByUsername("test");
         assertNotNull(user);
