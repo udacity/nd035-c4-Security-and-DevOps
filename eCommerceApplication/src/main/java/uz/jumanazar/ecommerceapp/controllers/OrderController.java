@@ -2,8 +2,9 @@ package uz.jumanazar.ecommerceapp.controllers;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,7 @@ import uz.jumanazar.ecommerceapp.model.persistence.repositories.UserRepository;
 @RequestMapping("/api/order")
 public class OrderController {
 
-	private static final Logger log = LoggerFactory.getLogger(OrderController.class);
+	private static final Logger log = LogManager.getLogger(OrderController.class);
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -32,26 +33,32 @@ public class OrderController {
 	
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
-		log.info("[submit] New request for order submissing for user {}", username);
-		User user = userRepository.findByUsername(username);
-		if(user == null) {
-			log.error("[submit] User not found with username {}", username);
-			return ResponseEntity.notFound().build();
+//		log.info("[order_submit] New request for order submissing for user {}", username);
+		try {
+			User user = userRepository.findByUsername(username);
+			if(user == null) {
+				log.error("[order_submit_failure] User not found with username {}", username);
+				return ResponseEntity.notFound().build();
+			}
+			UserOrder order = UserOrder.createFromCart(user.getCart());
+			orderRepository.save(order);
+			log.info("[order_submit_success] User {}'s order was successfully submitted with details {}", username, order);
+			return ResponseEntity.ok(order);
+		}catch (Exception e){
+			log.error("[order_submit_failure] User not found with username {}, Error: {}", username, e.getMessage());
+			return ResponseEntity.status(500).build();
 		}
-		UserOrder order = UserOrder.createFromCart(user.getCart());
-		orderRepository.save(order);
-		log.info("[submit] User {}'s order was successfully submitted with details {}", username, order);
-		return ResponseEntity.ok(order);
 	}
 	
 	@GetMapping("/history/{username}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
-		log.info("[getOrdersForUser] New request getting orders for user {}", username);
+//		log.info("[getOrdersForUser] New request getting orders for user {}", username);
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
-			log.error("[getOrdersForUser] User not found with username {}", username);
+			log.error("[getOrdersForUser_failure] User not found with username {}", username);
 			return ResponseEntity.notFound().build();
 		}
+		log.info("[getOrdersForUser_success] New request getting orders for user {}", username);
 		return ResponseEntity.ok(orderRepository.findByUser(user));
 	}
 }

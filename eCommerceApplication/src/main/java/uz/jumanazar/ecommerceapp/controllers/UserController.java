@@ -1,7 +1,7 @@
 package uz.jumanazar.ecommerceapp.controllers;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -24,7 +24,7 @@ import java.util.Map;
 @RequestMapping("/api/user")
 public class UserController {
 
-    private static final Logger log = LoggerFactory.getLogger(UserController.class);
+    private static final Logger log = LogManager.getLogger(UserController.class);
 
     @Autowired
     private UserRepository userRepository;
@@ -50,26 +50,31 @@ public class UserController {
 
     @PostMapping("/create")
     public ResponseEntity<?> createUser(@RequestBody CreateUserRequest createUserRequest) {
-        log.info("[createUser] New request for user creation with request body {}", createUserRequest);
-        User user = new User();
-        user.setUsername(createUserRequest.getUsername());
-        Cart cart = new Cart();
-        cartRepository.save(cart);
-        user.setCart(cart);
-        if (createUserRequest.getPassword().length() < 7 || !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
-            Map<String, Object> response = new HashMap<>();
-            response.put("success", false);
-            response.put("statusCode", 400);
-            response.put("errorMessage", "Bad password was provided. Please, check the password requirements (at least 8 chars) " +
-                    "and make sure if the password and confirmPasswords are the same.");
-            log.error("[createUser] Bad password was provided for username {}", createUserRequest.getUsername());
-            return ResponseEntity
-                    .status(400)
-                    .body(response);
+//        log.info("[createUser] New request for user creation with request body {}", createUserRequest);
+        try {
+            User user = new User();
+            user.setUsername(createUserRequest.getUsername());
+            Cart cart = new Cart();
+            cartRepository.save(cart);
+            user.setCart(cart);
+            if (createUserRequest.getPassword().length() < 7 || !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
+                Map<String, Object> response = new HashMap<>();
+                response.put("success", false);
+                response.put("statusCode", 400);
+                response.put("errorMessage", "Bad password was provided. Please, check the password requirements (at least 8 chars) " +
+                        "and make sure if the password and confirmPasswords are the same.");
+                log.error("[createUser_failure] Bad password was provided for username {}", createUserRequest.getUsername());
+                return ResponseEntity
+                        .status(400)
+                        .body(response);
+            }
+            user.setPassword(encoder.encode(createUserRequest.getPassword()));
+            userRepository.save(user);
+            log.info("[createUser_success] User with username {} was successfully created", user.getUsername());
+            return ResponseEntity.ok(user);
+        }catch (Exception e){
+            log.error("[createUser_failure] User creation failed with error {}", e.getMessage());
         }
-        user.setPassword(encoder.encode(createUserRequest.getPassword()));
-        userRepository.save(user);
-        log.info("[createUser] ser with username {} was successfully created", user.getUsername());
-        return ResponseEntity.ok(user);
+        return ResponseEntity.status(500).build();
     }
 }
