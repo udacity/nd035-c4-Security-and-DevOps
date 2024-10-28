@@ -2,11 +2,14 @@ package uz.jumanazar.ecommerceapp.security;
 
 import com.auth0.jwt.JWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import uz.jumanazar.ecommerceapp.controllers.UserController;
 import uz.jumanazar.ecommerceapp.model.persistence.User;
 
 import javax.servlet.FilterChain;
@@ -21,7 +24,8 @@ import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
-	 private AuthenticationManager authenticationManager;
+    private AuthenticationManager authenticationManager;
+    private static final Logger log = LoggerFactory.getLogger(JWTAuthenticationFilter.class);
 
     public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
@@ -30,16 +34,17 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     @Override
     public Authentication attemptAuthentication(HttpServletRequest req,
                                                 HttpServletResponse res) throws AuthenticationException {
-    	try {
+        try {
     		User credentials = new ObjectMapper()
                     .readValue(req.getInputStream(), User.class);
-    		
+            log.info("[attemptAuthentication] New request for authentication with username {}", credentials.getUsername());
     		return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
                             credentials.getUsername(),
                             credentials.getPassword(),
                             new ArrayList<>()));
     	} catch (IOException e) {
+            log.error("[attemptAuthentication] Exception while authentication");
     		throw new RuntimeException(e);
     	}
     }
@@ -50,6 +55,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                                             FilterChain chain,
                                             Authentication auth) throws IOException, ServletException {
 
+        log.info("[successfulAuthentication] Successful authentication for user {}", ((org.springframework.security.core.userdetails.User) auth.getPrincipal()).getUsername());
         String token = JWT.create()
                 .withSubject(((org.springframework.security.core.userdetails.User) auth.getPrincipal()).getUsername())
                 .withExpiresAt(new Date(System.currentTimeMillis() + SecurityConstants.EXPIRATION_TIME))

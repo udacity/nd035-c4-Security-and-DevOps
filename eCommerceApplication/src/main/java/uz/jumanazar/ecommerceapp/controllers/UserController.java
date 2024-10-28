@@ -25,6 +25,7 @@ import java.util.Map;
 public class UserController {
 
     private static final Logger log = LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     private UserRepository userRepository;
 
@@ -36,17 +37,20 @@ public class UserController {
 
     @GetMapping("/id/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
+        log.info("[findById] New request for searching a user by ID {}", id);
         return ResponseEntity.of(userRepository.findById(id));
     }
 
     @GetMapping("/{username}")
     public ResponseEntity<User> findByUserName(@PathVariable String username) {
+        log.info("[findByUserName] New request for searching a user by userName {}", username);
         User user = userRepository.findByUsername(username);
         return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
     }
 
     @PostMapping("/create")
     public ResponseEntity<?> createUser(@RequestBody CreateUserRequest createUserRequest) {
+        log.info("[createUser] New request for user creation with request body {}", createUserRequest);
         User user = new User();
         user.setUsername(createUserRequest.getUsername());
         Cart cart = new Cart();
@@ -58,13 +62,14 @@ public class UserController {
             response.put("statusCode", 400);
             response.put("errorMessage", "Bad password was provided. Please, check the password requirements (at least 8 chars) " +
                     "and make sure if the password and confirmPasswords are the same.");
-            log.error("Bad password was provided for username {}", createUserRequest.getUsername());
+            log.error("[createUser] Bad password was provided for username {}", createUserRequest.getUsername());
             return ResponseEntity
                     .status(400)
                     .body(response);
         }
         user.setPassword(encoder.encode(createUserRequest.getPassword()));
         userRepository.save(user);
+        log.info("[createUser] ser with username {} was successfully created", user.getUsername());
         return ResponseEntity.ok(user);
     }
 }
