@@ -54,7 +54,8 @@ public class CartController {
 			IntStream.range(0, request.getQuantity())
 					.forEach(i -> cart.addItem(item.get()));
 			cartRepository.save(cart);
-			log.info("[addTocart_success] New item was added to user's cart with item details {}", item.get());
+			log.info("[addTocart_success] New item was added to user's cart with item_id:{}, " +
+					"item_name:{}, item_price:{}", item.get().getId(), item.get().getName(), item.get().getPrice());
 			return ResponseEntity.ok(cart);
 		}catch (Exception e){
 			log.error("[addTocart_failure] Item add to cart failed. Error {} ", e.getMessage());
@@ -80,7 +81,8 @@ public class CartController {
 			IntStream.range(0, request.getQuantity())
 					.forEach(i -> cart.removeItem(item.get()));
 			cartRepository.save(cart);
-			log.info("[removeFromcart_success] Item was removed from user's cart with item details {}, number of items in cart: {}", item.get(), cart.getItems().size());
+			log.info("[removeFromcart_success] Item was removed from user's cart with item_id:{}, " +
+					"item_name:{}, item_price:{}", item.get().getId(), item.get().getName(), item.get().getPrice());
 			return ResponseEntity.ok(cart);
 		}catch (Exception e){
 			log.error("[removeFromcart_failure] Item remove from cart failed. Error {}", e.getMessage());
