@@ -38,6 +38,7 @@ public class UserController {
     @GetMapping("/id/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
         log.info("[findById] New request for searching a user by ID {}", id);
+
         return ResponseEntity.of(userRepository.findById(id));
     }
 
